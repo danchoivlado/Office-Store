@@ -16,14 +16,16 @@ namespace HardwareStore
     public partial class LoginForm : Form
     {
         RegisterForm RegisterForm;
-        RegisterLoginBLL registerLoginBLL;
+        RegisterLoginInfoBLL registerLoginBLL;
+        MainForm MainForm;
+        Store_Info Store_Info;
 
         public LoginForm()
         {
             InitializeComponent();
             this.ActiveControl = NameTxtBox;
             NameTxtBox.Focus();
-            this.registerLoginBLL = new RegisterLoginBLL();
+            this.registerLoginBLL = new RegisterLoginInfoBLL();
         }
 
         private void NameTxtBox_KeyDown(object sender, KeyEventArgs e)
@@ -43,15 +45,17 @@ namespace HardwareStore
             {
                 LoginBut.PerformClick();
             }
-            //focus the next textbox
+            //presses the LoginBut button
         }
 
         private void LoginBut_Click(object sender, EventArgs e)
         {
             
-            if (this.registerLoginBLL.Login(this.NameTxtBox.Text))
+            if (this.registerLoginBLL.Login(this.NameTxtBox.Text,PasswordTxtBox.Text))
             {
-                this.Close(); //MAKE IT TO HIDE()
+                this.Hide(); //MAKE IT TO HIDE()
+                MainForm = new MainForm();
+                MainForm.Show();
             }
         }
 
@@ -66,6 +70,13 @@ namespace HardwareStore
         {
             Application.Exit();
             //closes all the processes in this form 
+        }
+
+        private void StoreInfoBut_Click(object sender, EventArgs e)
+        {
+            this.Store_Info = new Store_Info();
+            this.Hide();
+            Store_Info.Show();
         }
     }
 }

@@ -163,6 +163,7 @@
             this.Controls.Add(this.FirstNameLbl);
             this.MaximizeBox = false;
             this.Name = "RegisterForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RegisterForm";
             this.ResumeLayout(false);
             this.PerformLayout();

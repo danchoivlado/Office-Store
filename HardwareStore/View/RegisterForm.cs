@@ -14,14 +14,14 @@ namespace HardwareStore.View
     public partial class RegisterForm : Form
     {
         LoginForm LoginForm;
-        RegisterLoginBLL registerLoginBLL;
+        RegisterLoginInfoBLL registerLoginBLL;
         private  const string AdminPassword = "3073";
         public RegisterForm()
         {
             InitializeComponent();
             this.ActiveControl = FirstNameTxtBox;
             FirstNameTxtBox.Focus();
-            this.registerLoginBLL = new RegisterLoginBLL();
+            this.registerLoginBLL = new RegisterLoginInfoBLL();
         }
 
         private void LoginBut_Click(object sender, EventArgs e)
