@@ -47,7 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\MainFormBLL.cs" />
     <Compile Include="BusinessLogic\RegisterLoginInfoBLL.cs" />
+    <Compile Include="Database\MainFormDB.cs" />
     <Compile Include="Database\RegisterLoginInfoDB.cs" />
     <Compile Include="View\LoginForm.cs">
       <SubType>Form</SubType>

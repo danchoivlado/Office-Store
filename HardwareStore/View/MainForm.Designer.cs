@@ -292,6 +292,7 @@
             this.NextItemBut.TabIndex = 21;
             this.NextItemBut.Text = "Next Item";
             this.NextItemBut.UseVisualStyleBackColor = false;
+            this.NextItemBut.Click += new System.EventHandler(this.NextItemBut_Click);
             // 
             // EndTransactionBut
             // 

@@ -7,18 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HardwareStore.BusinessLogic;
 
 namespace HardwareStore.View
 {
     public partial class MainForm : Form
     {
         TextBox TextBox;
+        MainFormBLL MainFormBLL;
         //Keeps the last focused textbox
 
         public MainForm()
         {
             InitializeComponent();
             TextBox = BarcodeTxtBox;
+            this.MainFormBLL = new MainFormBLL();
         }
 
         private void OneBut_Click(object sender, EventArgs e)
@@ -226,6 +229,20 @@ namespace HardwareStore.View
                 NextItemBut.PerformClick();
             }
             //presses the AddItemBut button
+        }
+
+        private void NextItemBut_Click(object sender, EventArgs e)
+        {
+            int ItemBarcode = int.Parse(this.BarcodeTxtBox.Text);
+            int ItemQuantity = int.Parse(this.QuantityTxtBox.Text);
+
+            MainFormBLL.NextItemProceed(ItemBarcode, ItemQuantity);
+
+            this.BarcodeTxtBox.Clear();
+            this.QuantityTxtBox.Clear();
+
+            this.ActiveControl = QuantityTxtBox;
+            BarcodeTxtBox.Focus();
         }
     }
 }

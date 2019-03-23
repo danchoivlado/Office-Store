@@ -42,9 +42,11 @@ namespace HardwareStore.BusinessLogic
             //Splits and returns to BLL
         }
 
-        public void SaveData(string StoreName,string StoreAddress)
+        public void SaveData(string StoreName, string StoreAddress)
         {
             this.Base.SaveInfo(StoreName, StoreAddress);
         }
+
+       
     }
 }

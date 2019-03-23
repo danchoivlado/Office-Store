@@ -134,7 +134,7 @@ namespace HardwareStore.Database
                 {
                     while (reader.Read())
                     {
-                        NameValue= $"{reader[0]}";
+                        NameValue = $"{reader[0]}";
                         AddressValue = $"{reader[1]}";
                         //reads the NameValue and AddressValue from store_info
                     }
