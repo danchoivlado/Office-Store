@@ -15,13 +15,15 @@ namespace HardwareStore.View
     {
         TextBox TextBox;
         MainFormBLL MainFormBLL;
+        string EmployeeName;
         //Keeps the last focused textbox
 
-        public MainForm()
+        public MainForm(string EmployeeName)
         {
             InitializeComponent();
             TextBox = BarcodeTxtBox;
             this.MainFormBLL = new MainFormBLL();
+            this.EmployeeName = EmployeeName;
         }
 
         private void OneBut_Click(object sender, EventArgs e)
@@ -243,6 +245,11 @@ namespace HardwareStore.View
 
             this.ActiveControl = QuantityTxtBox;
             BarcodeTxtBox.Focus();
+        }
+
+        private void EndTransactionBut_Click(object sender, EventArgs e)
+        {
+            MainFormBLL.EndTransactionProceed(this.EmployeeName);
         }
     }
 }

@@ -9,6 +9,8 @@ namespace HardwareStore.Database
 {
     class RegisterLoginInfoDB
     {
+        private static string ConectionString= @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
+
         string Employee;
         //keeps the Name of the logined Employee
 
@@ -19,9 +21,7 @@ namespace HardwareStore.Database
 
         public string GetPasswordIfExists(string name)
         {
-            string str = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
-            //Connection String
-            using (MySqlConnection con = new MySqlConnection(str)) //Performs Connection
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
             {
                 con.Open();
                 string sqlText = $"SELECT Password FROM employees WHERE First_Name = \"{name}\"; ";
@@ -53,9 +53,7 @@ namespace HardwareStore.Database
 
         public int GetTownsId(string TownName)
         {
-            string str = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
-            //Connection String
-            using (MySqlConnection con = new MySqlConnection(str)) //Performs Connection
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
             {
                 con.Open();
                 string sqlText = $"SELECT ID FROM towns WHERE Name = \"{TownName}\";";
@@ -92,9 +90,7 @@ namespace HardwareStore.Database
 
         public void Register(string FirstName, string LastName, string Password, int TownId)
         {
-            string str = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
-            //Connection String
-            using (MySqlConnection con = new MySqlConnection(str)) //Performs Connection
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
             {
                 con.Open(); //open the connection
                 string sqlText = $"INSERT INTO employees(First_Name, Last_Name, Password, Duty_id, Town_Id) VALUE(\"{FirstName}\",\"{LastName}\",\"{Password}\",3,{TownId})";
@@ -106,9 +102,7 @@ namespace HardwareStore.Database
 
         public void SaveInfo(string StoreName, string StoreAddress)
         {
-            string str = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
-            //Connection String
-            using (MySqlConnection con = new MySqlConnection(str)) //Performs Connection
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
             {
                 con.Open(); //open the connection
                 string sqlText = $"	UPDATE store_info SET name=\"{StoreName}\", address=\"{StoreAddress}\"";
@@ -122,9 +116,7 @@ namespace HardwareStore.Database
         {
             string NameValue = string.Empty;
             string AddressValue = string.Empty;
-            string str = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
-            //Connection String
-            using (MySqlConnection con = new MySqlConnection(str)) //Performs Connection
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
             {
                 con.Open(); //Opens the connection
                 string sqlText = $"SELECT name, address FROM store_info; ";

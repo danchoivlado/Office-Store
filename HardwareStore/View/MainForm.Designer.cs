@@ -305,6 +305,7 @@
             this.EndTransactionBut.TabIndex = 22;
             this.EndTransactionBut.Text = "End Transaction";
             this.EndTransactionBut.UseVisualStyleBackColor = false;
+            this.EndTransactionBut.Click += new System.EventHandler(this.EndTransactionBut_Click);
             // 
             // PlusBut
             // 

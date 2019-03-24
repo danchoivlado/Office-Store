@@ -9,6 +9,8 @@ namespace HardwareStore.Database
 {
     class MainFormDB
     {
+        private static string ConectionString = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
+
         public MainFormDB()
         {
 
@@ -16,9 +18,7 @@ namespace HardwareStore.Database
         
         public int GetInvoiceId()
         {
-            string str = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
-            //Connection String
-            using (MySqlConnection con = new MySqlConnection(str)) //Performs Connection
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
             {
                 con.Open();
                 string sqlText = $"SELECT COUNT(*) FROM invoice; ";
@@ -40,9 +40,7 @@ namespace HardwareStore.Database
 
         public void UpdateQuantity(int ItmeQuantity,string ItemName)
         {
-            string str = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
-            //Connection String
-            using (MySqlConnection con = new MySqlConnection(str)) //Performs Connection
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
             {
                 con.Open();
                 string sqlText = $"UPDATE items SET Quantity=Quantity-{ItmeQuantity} WHERE Product_Name =\"{ItemName}\";";
@@ -54,23 +52,19 @@ namespace HardwareStore.Database
 
         public void InserIntoInvoiceItems(int ItemBarcode, int Quantity,double Single_Price, double Total,int Invoice_Id)
         {
-            string str = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
-            //Connection String
-            using (MySqlConnection con = new MySqlConnection(str)) //Performs Connection
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
             {
                 con.Open();
                 string sqlText = $"INSERT INTO invoice_items (Item_Id,Quantity,Single_Price,Total,Invoice_Id)  VALUE({ItemBarcode}, {Quantity},{Single_Price}, {Total}, {Invoice_Id});";
                 MySqlCommand command = new MySqlCommand(sqlText, con);
-                Console.WriteLine(Single_Price);
+               // Console.WriteLine(Single_Price);
                 command.ExecuteNonQuery();
             }
         }
 
         public double GetItemSinglePrice(int ItemBarcode)
         {
-            string str = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
-            //Connection String
-            using (MySqlConnection con = new MySqlConnection(str)) //Performs Connection
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
             {
                 con.Open();
                 string sqlText = $"SELECT Single_Price  FROM items WHERE Id ={ItemBarcode};";
@@ -92,9 +86,7 @@ namespace HardwareStore.Database
 
         public string GetItemName(int ItemBarcode)
         {
-            string str = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
-            //Connection String
-            using (MySqlConnection con = new MySqlConnection(str)) //Performs Connection
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
             {
                 con.Open();
                 string sqlText = $"SELECT Product_Name  FROM items WHERE Id ={ItemBarcode};";
@@ -111,6 +103,62 @@ namespace HardwareStore.Database
                     }
                     return String.Empty;
                 }
+            }
+        }
+
+        public int GetEmployeeId(string EmployeeName)
+        {
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
+            {
+                con.Open();
+                string sqlText = $"SELECT Id FROM employees WHERE First_Name = \"{EmployeeName}\"; ";
+                MySqlCommand command = new MySqlCommand(sqlText, con);
+
+                command.ExecuteScalar().ToString();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        return int.Parse(reader[0].ToString());
+                        //return the Id of Employee
+                    }
+                    return -1;
+                }
+            }
+        }
+
+        public double GetTotal(int InvoiceId)
+        {
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
+            {
+                con.Open();
+                string sqlText = $"SELECT SUM(Total) FROM invoice_items WHERE Invoice_Id = {InvoiceId}; ";
+                MySqlCommand command = new MySqlCommand(sqlText, con);
+
+                command.ExecuteScalar().ToString();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        return double.Parse(reader[0].ToString());
+                        //return the Id of Employee
+                    }
+                    return -1;
+                }
+            }
+        }
+
+        public void InsertInvoice(int InvoiceNumber,string Date,string Time,int EmployeeId,double Total)
+        {
+
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
+            {
+                con.Open();
+                string sqlText = $"INSERT INTO invoice(Order_No, Date, Time, Employee_Id, Total, Payment_Method_Id,Store_Info_Id) VALUE({InvoiceNumber},\"{Date}\",\"{Time}\",{ EmployeeId},{Total},1,1); ";
+                MySqlCommand command = new MySqlCommand(sqlText, con);
+                command.ExecuteNonQuery();
             }
         }
     }

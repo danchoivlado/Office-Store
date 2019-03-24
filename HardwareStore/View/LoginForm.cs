@@ -54,7 +54,7 @@ namespace HardwareStore
             if (this.registerLoginBLL.Login(this.NameTxtBox.Text,PasswordTxtBox.Text))
             {
                 this.Hide(); //MAKE IT TO HIDE()
-                MainForm = new MainForm();
+                MainForm = new MainForm(this.NameTxtBox.Text);
                 MainForm.Show();
             }
         }
