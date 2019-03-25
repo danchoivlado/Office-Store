@@ -161,5 +161,124 @@ namespace HardwareStore.Database
                 command.ExecuteNonQuery();
             }
         }
+
+        public string GetNameAddressIfExist()
+        {
+            string NameValue = string.Empty;
+            string AddressValue = string.Empty;
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
+            {
+                con.Open(); //Opens the connection
+                string sqlText = $"SELECT name, address FROM store_info; ";
+                MySqlCommand command = new MySqlCommand(sqlText, con);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        NameValue = $"{reader[0]}";
+                        AddressValue = $"{reader[1]}";
+                        //reads the NameValue and AddressValue from store_info
+                    }
+
+                    return $"{NameValue.ToString().Trim()};{AddressValue.ToString().Trim()}";
+                }
+            }
+        }
+
+        public string GetDate(int OrderNumber)
+        {
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
+            {
+                con.Open();
+                string sqlText = $"SELECT date FROM invoice WHERE Id =  {OrderNumber};";
+                MySqlCommand command = new MySqlCommand(sqlText, con);
+
+                command.ExecuteScalar().ToString();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        return reader[0].ToString();
+                        //read the Count of the Invoices
+                    }
+                    return String.Empty;
+                }
+            }
+        }
+
+        public string GetTime(int OrderNumber)
+        {
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
+            {
+                con.Open();
+                string sqlText = $"SELECT time FROM invoice WHERE Id =  {OrderNumber};";
+                MySqlCommand command = new MySqlCommand(sqlText, con);
+
+                command.ExecuteScalar().ToString();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        return reader[0].ToString();
+                        //read the Count of the Invoices
+                    }
+                    return String.Empty;
+                }
+            }
+        }
+
+        public int GetCountOfItems(int OrderNumber)
+        {
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
+            {
+                con.Open();
+                string sqlText = $"SELECT COUNT(i.Product_Name) FROM items AS i INNER JOIN invoice_items AS it ON it.Item_Id = i.id WHERE Invoice_Id = {OrderNumber}; ";
+                MySqlCommand command = new MySqlCommand(sqlText, con);
+
+                command.ExecuteScalar().ToString();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        return int.Parse(reader[0].ToString());
+                        //read the Count of the Invoices
+                    }
+                    return -1;
+                }
+            }
+        }
+
+        public List<string[]> InvoiceItems(int CountOfInvoiceItems)
+        {
+            using (MySqlConnection con = new MySqlConnection(ConectionString)) //Performs Connection
+            {
+                List<string[]> InvoiceItems = new List<string[]>();
+                string[] ItemInfo = new string[4];
+                con.Open();
+                string sqlText = $"SELECT i.Product_Name, it.Quantity, i.Single_Price, it.Total FROM items AS i INNER JOIN invoice_items AS it ON it.Item_Id = i.id WHERE Invoice_Id = {CountOfInvoiceItems}; ";
+                MySqlCommand command = new MySqlCommand(sqlText, con);
+
+                command.ExecuteScalar().ToString();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        ItemInfo[0] = reader[0].ToString();
+                        ItemInfo[1] = reader[1].ToString();
+                        ItemInfo[2] = reader[2].ToString();
+                        ItemInfo[3] = reader[3].ToString();
+                        InvoiceItems.Add(ItemInfo);
+                        ItemInfo = new string[4];
+                        //read the Count of the Invoices
+                    }
+                    return InvoiceItems;
+                }
+            }
+        }
     }
 }

@@ -95,6 +95,7 @@
             this.ShowReceiptBut.TabIndex = 3;
             this.ShowReceiptBut.Text = "Show Receipt";
             this.ShowReceiptBut.UseVisualStyleBackColor = true;
+            this.ShowReceiptBut.Click += new System.EventHandler(this.ShowReceiptBut_Click);
             // 
             // PrintReceiptBut
             // 

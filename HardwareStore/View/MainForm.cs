@@ -251,5 +251,10 @@ namespace HardwareStore.View
         {
             MainFormBLL.EndTransactionProceed(this.EmployeeName);
         }
+
+        private void ShowReceiptBut_Click(object sender, EventArgs e)
+        {
+            MainFormBLL.ShowInvoice(EmployeeName);
+        }
     }
 }
