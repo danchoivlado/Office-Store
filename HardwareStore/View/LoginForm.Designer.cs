@@ -34,7 +34,6 @@
             this.LoginBut = new System.Windows.Forms.Button();
             this.NameTxtBox = new System.Windows.Forms.TextBox();
             this.RegisterBut = new System.Windows.Forms.Button();
-            this.StoreInfoBut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // NameLabel
@@ -62,8 +61,7 @@
             this.PasswordTxtBox.Name = "PasswordTxtBox";
             this.PasswordTxtBox.PasswordChar = '*';
             this.PasswordTxtBox.Size = new System.Drawing.Size(218, 36);
-            this.PasswordTxtBox.TabIndex = 3;
-            this.PasswordTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordTxtBox_KeyDown);
+            this.PasswordTxtBox.TabIndex = 2;
             // 
             // LoginBut
             // 
@@ -71,7 +69,7 @@
             this.LoginBut.Location = new System.Drawing.Point(191, 194);
             this.LoginBut.Name = "LoginBut";
             this.LoginBut.Size = new System.Drawing.Size(162, 50);
-            this.LoginBut.TabIndex = 4;
+            this.LoginBut.TabIndex = 3;
             this.LoginBut.Text = "Login";
             this.LoginBut.UseVisualStyleBackColor = true;
             this.LoginBut.Click += new System.EventHandler(this.LoginBut_Click);
@@ -82,8 +80,7 @@
             this.NameTxtBox.Location = new System.Drawing.Point(279, 47);
             this.NameTxtBox.Name = "NameTxtBox";
             this.NameTxtBox.Size = new System.Drawing.Size(218, 36);
-            this.NameTxtBox.TabIndex = 5;
-            this.NameTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.NameTxtBox_KeyDown);
+            this.NameTxtBox.TabIndex = 1;
             // 
             // RegisterBut
             // 
@@ -91,28 +88,16 @@
             this.RegisterBut.Location = new System.Drawing.Point(440, 210);
             this.RegisterBut.Name = "RegisterBut";
             this.RegisterBut.Size = new System.Drawing.Size(80, 36);
-            this.RegisterBut.TabIndex = 6;
+            this.RegisterBut.TabIndex = 4;
             this.RegisterBut.Text = "Register";
             this.RegisterBut.UseVisualStyleBackColor = true;
             this.RegisterBut.Click += new System.EventHandler(this.RegisterBut_Click);
-            // 
-            // StoreInfoBut
-            // 
-            this.StoreInfoBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StoreInfoBut.Location = new System.Drawing.Point(20, 211);
-            this.StoreInfoBut.Name = "StoreInfoBut";
-            this.StoreInfoBut.Size = new System.Drawing.Size(80, 36);
-            this.StoreInfoBut.TabIndex = 7;
-            this.StoreInfoBut.Text = "Store Info";
-            this.StoreInfoBut.UseVisualStyleBackColor = true;
-            this.StoreInfoBut.Click += new System.EventHandler(this.StoreInfoBut_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(532, 260);
-            this.Controls.Add(this.StoreInfoBut);
             this.Controls.Add(this.RegisterBut);
             this.Controls.Add(this.NameTxtBox);
             this.Controls.Add(this.LoginBut);
@@ -123,7 +108,6 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LoginForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -137,7 +121,6 @@
         private System.Windows.Forms.Button LoginBut;
         private System.Windows.Forms.TextBox NameTxtBox;
         private System.Windows.Forms.Button RegisterBut;
-        private System.Windows.Forms.Button StoreInfoBut;
     }
 }
 

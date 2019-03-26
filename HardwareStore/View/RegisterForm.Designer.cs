@@ -48,7 +48,6 @@
             this.FirstNameTxtBox.Name = "FirstNameTxtBox";
             this.FirstNameTxtBox.Size = new System.Drawing.Size(218, 36);
             this.FirstNameTxtBox.TabIndex = 10;
-            this.FirstNameTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FirstNameTxtBox_KeyDown);
             // 
             // RegisterBut
             // 
@@ -69,7 +68,6 @@
             this.AdminPasswordTxtBox.PasswordChar = '*';
             this.AdminPasswordTxtBox.Size = new System.Drawing.Size(218, 36);
             this.AdminPasswordTxtBox.TabIndex = 8;
-            this.AdminPasswordTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AdminPasswordTxtBox_KeyDown);
             // 
             // PasswordLabel
             // 
@@ -106,7 +104,6 @@
             this.LastNameTxtBox.Name = "LastNameTxtBox";
             this.LastNameTxtBox.Size = new System.Drawing.Size(218, 36);
             this.LastNameTxtBox.TabIndex = 12;
-            this.LastNameTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LastNameTxtBox_KeyDown);
             // 
             // TownTxtBox
             // 
@@ -115,7 +112,6 @@
             this.TownTxtBox.Name = "TownTxtBox";
             this.TownTxtBox.Size = new System.Drawing.Size(218, 36);
             this.TownTxtBox.TabIndex = 14;
-            this.TownTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TownTxtBox_KeyDown);
             // 
             // TownLbl
             // 
@@ -134,7 +130,6 @@
             this.PasswordTxtBox.PasswordChar = '*';
             this.PasswordTxtBox.Size = new System.Drawing.Size(218, 36);
             this.PasswordTxtBox.TabIndex = 16;
-            this.PasswordTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PasswordTxtBox_KeyDown);
             // 
             // PasswordLbl
             // 
@@ -164,7 +159,7 @@
             this.MaximizeBox = false;
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "RegisterForm";
+            this.Text = "Register";
             this.ResumeLayout(false);
             this.PerformLayout();
 

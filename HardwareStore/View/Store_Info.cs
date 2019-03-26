@@ -14,7 +14,7 @@ namespace HardwareStore.View
     public partial class Store_Info : Form
     {
         RegisterLoginInfoBLL RegisterLoginInfoBLL;
-        LoginForm LoginForm;
+        MainFrom MainForm;
 
         public Store_Info()
         {
@@ -50,8 +50,8 @@ namespace HardwareStore.View
             RegisterLoginInfoBLL.SaveData(StoreName, StoreAddress); 
             //Update The TxtBoxes
             this.Hide();// Hides the Form
-            this.LoginForm = new LoginForm();
-            this.LoginForm.Show();
+            this.MainForm = new MainFrom();
+            this.MainForm.Show();
         }
 
         private void Store_Info_FormClosing(object sender, FormClosingEventArgs e)
