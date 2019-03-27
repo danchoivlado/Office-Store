@@ -42,7 +42,6 @@
             this.StoreAddressTxtBox.Name = "StoreAddressTxtBox";
             this.StoreAddressTxtBox.Size = new System.Drawing.Size(218, 36);
             this.StoreAddressTxtBox.TabIndex = 16;
-            this.StoreAddressTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.StoreAddressTxtBox_KeyDown);
             // 
             // StoreAdreesLbl
             // 
@@ -60,7 +59,6 @@
             this.StoreNameTxtBox.Name = "StoreNameTxtBox";
             this.StoreNameTxtBox.Size = new System.Drawing.Size(218, 36);
             this.StoreNameTxtBox.TabIndex = 14;
-            this.StoreNameTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.StoreNameTxtBox_KeyDown);
             // 
             // StoreNameLbl
             // 
@@ -95,7 +93,6 @@
             this.Name = "Store_Info";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Store_Info";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Store_Info_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -6,7 +6,7 @@ namespace HardwareStore.Models
     public partial class InvoiceItems
     {
         public int Id { get; set; }
-        public int ItemId { get; set; }
+        public string ItemId { get; set; }
         public int Quantity { get; set; }
         public double SinglePrice { get; set; }
         public double Total { get; set; }

@@ -16,7 +16,7 @@ namespace HardwareStore.View
         Store_Info Store_Info;
         RegisterForm RegisterForm;
         InvoiceForm InvoiceForm;
-
+        NewItemForm NewItemForm;
 
         public MainFrom()
         {
@@ -27,21 +27,18 @@ namespace HardwareStore.View
         {
             this.Store_Info = new Store_Info();
             Store_Info.Show();
-            this.Dispose();
         }
 
         private void NewEmployeeBut_Click(object sender, EventArgs e)
         {
             this.RegisterForm = new RegisterForm();
             RegisterForm.Show();
-            this.Dispose();
         }
 
         private void NewInvoiceBut_Click(object sender, EventArgs e)
         {
             this.InvoiceForm = new InvoiceForm();
             this.InvoiceForm.Show();
-            this.Dispose();
         }
 
 
@@ -93,6 +90,12 @@ namespace HardwareStore.View
         private void NewEmployeeBut_MouseLeave(object sender, EventArgs e)
         {
             this.NewEmployeeBut.Image = HardwareStore.Properties.Resources.Employees1;
+        }
+
+        private void AddItemBut_Click(object sender, EventArgs e)
+        {
+            this.NewItemForm = new NewItemForm();
+            this.NewItemForm.Show();
         }
     }
 }

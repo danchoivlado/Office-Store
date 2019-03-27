@@ -65,6 +65,7 @@
             this.AddItemBut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.AddItemBut.TabIndex = 1;
             this.AddItemBut.TabStop = false;
+            this.AddItemBut.Click += new System.EventHandler(this.AddItemBut_Click);
             this.AddItemBut.MouseLeave += new System.EventHandler(this.AddItemBut_MouseLeave);
             this.AddItemBut.MouseMove += new System.Windows.Forms.MouseEventHandler(this.AddItemBut_MouseMove);
             // 

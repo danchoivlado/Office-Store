@@ -12,24 +12,20 @@ namespace HardwareStore.BusinessLogic
 {
     class RegisterLoginInfoBLL
     {
-        RegisterLoginInfoDB Base;
-        officestoreContext officestoreContext;
+        OfficeStoreContext officestoreContext;
 
         public RegisterLoginInfoBLL()
         {
-            this.Base = new RegisterLoginInfoDB();
-            this.officestoreContext = new officestoreContext();
+            this.officestoreContext = new OfficeStoreContext();
         }
 
         public bool Login(string LoginName, string password)
         {
-            using (officestoreContext = new officestoreContext())
+
+            var HasEmployeeWithName = officestoreContext.Employees.FirstOrDefault(a => a.FirstName == LoginName && a.Password == password);
+            if (HasEmployeeWithName != null)
             {
-                var HasEmployeeWithName = officestoreContext.Employees.FirstOrDefault(a => a.FirstName == LoginName && a.Password == password);
-                if (HasEmployeeWithName != null)
-                {
-                    return true;
-                }
+                return true;
             }
             return false;
         }
@@ -60,17 +56,26 @@ namespace HardwareStore.BusinessLogic
 
         public string[] GetNameAddressIfExists()
         {
-            string NameAddress = Base.GetNameAddressIfExist();
-            //gets the Name and Address from DB
-            return NameAddress.Split(';').ToArray();
-            //Splits and returns to BLL
+            var StoreInfo = officestoreContext.StoreInfo.First(a => a.Id ==1);
+
+            return new string[2] { StoreInfo.Name, StoreInfo.Address };
         }
 
         public void SaveData(string StoreName, string StoreAddress)
         {
-            this.Base.SaveInfo(StoreName, StoreAddress);
+            var StoreInfo = officestoreContext.StoreInfo.ToList().First(a => a.Id == 1);
+            StoreInfo.Name = StoreName;
+            StoreInfo.Address = StoreAddress;
+
+            this.officestoreContext.SaveChanges();
         }
 
-
+        public void SaveLogined(string EmployeeName)
+        {
+            var Employee = this.officestoreContext.Employees.First(a => a.FirstName == EmployeeName);
+            this.officestoreContext.LastLogin.Add(new LastLogin() { EmployeeId = Employee.Id, DateLimeLogined = DateTime.Now });
+            this.officestoreContext.SaveChanges();
+        }
     }
 }
+    

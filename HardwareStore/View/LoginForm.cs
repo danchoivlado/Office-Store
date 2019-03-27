@@ -20,22 +20,21 @@ namespace HardwareStore
         RegisterLoginInfoBLL registerLoginBLL;
         MainFrom MainForm;
         Thread thread;
-       
+
 
         public LoginForm()
         {
             InitializeComponent();
-            //this.ActiveControl = NameTxtBox;
-            //NameTxtBox.Focus();
             this.registerLoginBLL = new RegisterLoginInfoBLL();
         }
 
 
         private void LoginBut_Click(object sender, EventArgs e)
         {
-            
-            if (this.registerLoginBLL.Login(this.NameTxtBox.Text,this.PasswordTxtBox.Text))
+
+            if (this.registerLoginBLL.Login(this.NameTxtBox.Text, this.PasswordTxtBox.Text))
             {
+                this.registerLoginBLL.SaveLogined(this.NameTxtBox.Text);
                 MainForm = new MainFrom();
                 GenerateForm();
             }

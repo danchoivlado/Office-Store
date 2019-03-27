@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace HardwareStore.Models
 {
-    public partial class officestoreContext : DbContext
+    public partial class OfficeStoreContext : DbContext
     {
-        public officestoreContext()
+        public OfficeStoreContext()
         {
         }
 
-        public officestoreContext(DbContextOptions<officestoreContext> options)
+        public OfficeStoreContext(DbContextOptions<OfficeStoreContext> options)
             : base(options)
         {
         }
@@ -30,7 +30,7 @@ namespace HardwareStore.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseMySQL("server=localhost;port=3306;user=root;password=3073;database=officestore");
+                optionsBuilder.UseMySQL("server=localhost;port=3306;user=root;password=3073;database=OfficeStore");
             }
         }
 
@@ -166,8 +166,10 @@ namespace HardwareStore.Models
                     .HasColumnType("int(11)");
 
                 entity.Property(e => e.ItemId)
+                    .IsRequired()
                     .HasColumnName("Item_Id")
-                    .HasColumnType("int(11)");
+                    .HasMaxLength(15)
+                    .IsUnicode(false);
 
                 entity.Property(e => e.Quantity).HasColumnType("int(11)");
 
@@ -184,7 +186,10 @@ namespace HardwareStore.Models
             {
                 entity.ToTable("items", "officestore");
 
-                entity.Property(e => e.Id).HasColumnType("int(11)");
+                entity.Property(e => e.Id)
+                    .HasMaxLength(15)
+                    .IsUnicode(false)
+                    .ValueGeneratedNever();
 
                 entity.Property(e => e.OriginalPrice).HasColumnName("Original_Price");
 
@@ -198,7 +203,7 @@ namespace HardwareStore.Models
 
                 entity.Property(e => e.SalesPrice).HasColumnName("Sales_Price");
 
-                entity.Property(e => e.Status).HasColumnType("enum('Factory new','Second hand')");
+                entity.Property(e => e.Status).HasColumnType("enum('Factory New','Second Hand')");
             });
 
             modelBuilder.Entity<LastLogin>(entity =>

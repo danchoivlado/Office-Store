@@ -10,7 +10,7 @@ namespace HardwareStore.Models
             InvoiceItems = new HashSet<InvoiceItems>();
         }
 
-        public int Id { get; set; }
+        public string Id { get; set; }
         public string ProductName { get; set; }
         public double OriginalPrice { get; set; }
         public double SalesPrice { get; set; }

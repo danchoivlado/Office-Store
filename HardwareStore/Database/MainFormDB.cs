@@ -9,11 +9,11 @@ namespace HardwareStore.Database
 {
     class MainFormDB
     {
-        private static string ConectionString = @"Server=localhost;database=HardwareStore;port=3306;user=root;password=3073";
+        private static string ConectionString = @"Server=localhost;database=OfficeStore;port=3306;user=root;password=3073";
 
         public MainFormDB()
         {
-
+             
         }
         
         public int GetInvoiceId()
