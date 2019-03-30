@@ -14,12 +14,11 @@ using HardwareStore.View;
 
 namespace HardwareStore
 {
-    public partial class LoginForm : Form
+    public partial class LoginForm : Form 
     {
         RegisterForm RegisterForm;
         RegisterLoginInfoBLL registerLoginBLL;
         MainFrom MainForm;
-        Thread thread;
 
 
         public LoginForm()
@@ -30,12 +29,11 @@ namespace HardwareStore
         }
 
 
-        private void LoginBut_Click(object sender, EventArgs e)
+        private void SignInBut_Click(object sender, EventArgs e)
         {
-
-            if (this.registerLoginBLL.Login(this.NameTxtBox.Text, this.PasswordTxtBox.Text))
+            if (this.registerLoginBLL.Login(this.NameTxtBox.text, this.PasswordTxtBox.text))
             {
-                this.registerLoginBLL.SaveLogined(this.NameTxtBox.Text);
+                this.registerLoginBLL.SaveLogined(this.NameTxtBox.text);
                 MainForm = new MainFrom();
                 this.Hide();
                 MainForm.ShowDialog();
@@ -43,23 +41,20 @@ namespace HardwareStore
             }
         }
 
-        private void RegisterBut_Click(object sender, EventArgs e)
+        private void SignUpBut_Click(object sender, EventArgs e)
         {
             this.RegisterForm = new RegisterForm();
-            RegisterForm.Show();
+            RegisterForm.ShowDialog();
         }
 
-        //private void GenerateForm()
-        //{
-        //    this.Close();
-        //    thread = new Thread(oppenedform);
-        //    thread.SetApartmentState(ApartmentState.STA);
-        //    thread.Start();
-        //}
+        private void SignUpBut_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.SignUpBut.ForeColor = Color.MediumSeaGreen;
+        }
 
-        //private void oppenedform()
-        //{
-        //    Application.Run(this.MainForm = new MainFrom());
-        //}
+        private void SignUpBut_MouseLeave(object sender, EventArgs e)
+        {
+            this.SignUpBut.ForeColor = Color.SeaGreen;
+        }
     }
 }
