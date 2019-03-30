@@ -153,6 +153,7 @@
             // CreateBut
             // 
             this.CreateBut.BackColor = System.Drawing.Color.YellowGreen;
+            this.CreateBut.DialogResult = System.Windows.Forms.DialogResult.OK;
             this.CreateBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateBut.Location = new System.Drawing.Point(319, 474);
             this.CreateBut.Name = "CreateBut";
@@ -191,8 +192,10 @@
             this.Controls.Add(this.BarcodeTxtBox);
             this.Controls.Add(this.BarcodeLbl);
             this.Controls.Add(this.pictureBox1);
-            this.MinimizeBox = false;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "NewItemForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Item";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

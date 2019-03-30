@@ -90,6 +90,7 @@
             this.Controls.Add(this.StoreAdreesLbl);
             this.Controls.Add(this.StoreNameTxtBox);
             this.Controls.Add(this.StoreNameLbl);
+            this.MaximizeBox = false;
             this.Name = "Store_Info";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Store_Info";

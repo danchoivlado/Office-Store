@@ -24,6 +24,7 @@ namespace HardwareStore.View
             this.ActiveControl = FirstNameTxtBox;
             FirstNameTxtBox.Focus();
             this.registerLoginBLL = new RegisterLoginInfoBLL();
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
 

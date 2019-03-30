@@ -22,6 +22,7 @@ namespace HardwareStore.View
             string[] NameAddress = RegisterLoginInfoBLL.GetNameAddressIfExists();
             this.StoreNameTxtBox.Text = NameAddress[0];
             this.StoreAddressTxtBox.Text = NameAddress[1];
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
         private void SaveBut_Click(object sender, EventArgs e)

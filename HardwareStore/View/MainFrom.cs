@@ -17,22 +17,25 @@ namespace HardwareStore.View
         RegisterForm RegisterForm;
         InvoiceForm InvoiceForm;
         NewItemForm NewItemForm;
+        StoreItemsForm StoreItemsForm;
+        SalesReportForm SalesReportForm;
 
         public MainFrom()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
         private void StoreInfoBut_Click(object sender, EventArgs e)
         {
             this.Store_Info = new Store_Info();
-            Store_Info.Show();
+            Store_Info.ShowDialog();
         }
 
         private void NewEmployeeBut_Click(object sender, EventArgs e)
         {
             this.RegisterForm = new RegisterForm();
-            RegisterForm.Show();
+            RegisterForm.ShowDialog();
         }
 
         private void NewInvoiceBut_Click(object sender, EventArgs e)
@@ -95,7 +98,29 @@ namespace HardwareStore.View
         private void AddItemBut_Click(object sender, EventArgs e)
         {
             this.NewItemForm = new NewItemForm();
-            this.NewItemForm.Show();
+            this.NewItemForm.ShowDialog();
+        }
+
+        private void pictureBox5_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.StoreItemsPicBox.Image = HardwareStore.Properties.Resources.Selected;
+        }
+
+        private void StoreItemsPicBox_MouseLeave(object sender, EventArgs e)
+        {
+            this.StoreItemsPicBox.Image = HardwareStore.Properties.Resources.Not_Selected;
+        }
+
+        private void StoreItemsPicBox_Click(object sender, EventArgs e)
+        {
+            this.StoreItemsForm = new StoreItemsForm();
+            this.StoreItemsForm.ShowDialog();
+        }
+
+        private void DailySalesBut_Click(object sender, EventArgs e)
+        {
+            this.SalesReportForm = new SalesReportForm();
+            this.SalesReportForm.ShowDialog();
         }
     }
 }

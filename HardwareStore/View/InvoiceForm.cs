@@ -254,5 +254,6 @@ namespace HardwareStore.View
         {
            // MainFormBLL.ShowInvoice(EmployeeName);
         }
+
     }
 }

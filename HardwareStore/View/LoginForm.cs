@@ -26,6 +26,7 @@ namespace HardwareStore
         {
             InitializeComponent();
             this.registerLoginBLL = new RegisterLoginInfoBLL();
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
 
@@ -36,7 +37,9 @@ namespace HardwareStore
             {
                 this.registerLoginBLL.SaveLogined(this.NameTxtBox.Text);
                 MainForm = new MainFrom();
-                GenerateForm();
+                this.Hide();
+                MainForm.ShowDialog();
+                this.Close();
             }
         }
 
@@ -46,17 +49,17 @@ namespace HardwareStore
             RegisterForm.Show();
         }
 
-        private void GenerateForm()
-        {
-            this.Close();
-            thread = new Thread(oppenedform);
-            thread.SetApartmentState(ApartmentState.STA);
-            thread.Start();
-        }
+        //private void GenerateForm()
+        //{
+        //    this.Close();
+        //    thread = new Thread(oppenedform);
+        //    thread.SetApartmentState(ApartmentState.STA);
+        //    thread.Start();
+        //}
 
-        private void oppenedform()
-        {
-            Application.Run(this.MainForm = new MainFrom());
-        }
+        //private void oppenedform()
+        //{
+        //    Application.Run(this.MainForm = new MainFrom());
+        //}
     }
 }
