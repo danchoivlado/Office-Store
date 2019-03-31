@@ -20,20 +20,18 @@ namespace HardwareStore.View
             InitializeComponent();
             this.RegisterLoginInfoBLL = new RegisterLoginInfoBLL();
             string[] NameAddress = RegisterLoginInfoBLL.GetNameAddressIfExists();
-            this.StoreNameTxtBox.Text = NameAddress[0];
-            this.StoreAddressTxtBox.Text = NameAddress[1];
+            this.StoreNameTxtBox.text = NameAddress[0];
+            this.StoreAddressTxtBox.text = NameAddress[1];
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
-        private void SaveBut_Click(object sender, EventArgs e)
+        private void SaveBut_Click_1(object sender, EventArgs e)
         {
-            string StoreName = this.StoreNameTxtBox.Text;
-            string StoreAddress = this.StoreAddressTxtBox.Text;
-            RegisterLoginInfoBLL.SaveData(StoreName, StoreAddress); 
+            string StoreName = this.StoreNameTxtBox.text;
+            string StoreAddress = this.StoreAddressTxtBox.text;
+            RegisterLoginInfoBLL.SaveData(StoreName, StoreAddress);
             //Update The TxtBoxes
             this.Close();// Hides the Form
         }
-
-       
     }
 }

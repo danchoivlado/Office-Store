@@ -26,6 +26,7 @@ namespace HardwareStore
             InitializeComponent();
             this.registerLoginBLL = new RegisterLoginInfoBLL();
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.PasswordTxtBox._TextBox.PasswordChar = '*';
         }
 
 

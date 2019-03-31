@@ -28,68 +28,111 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.StoreAddressTxtBox = new System.Windows.Forms.TextBox();
-            this.StoreAdreesLbl = new System.Windows.Forms.Label();
-            this.StoreNameTxtBox = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Store_Info));
+            this.SaveBut = new ePOSOne.btnProduct.Button_WOC();
+            this.StoreAddressTxtBox = new Bunifu.Framework.UI.BunifuTextbox();
+            this.StoreAddressLbl = new System.Windows.Forms.Label();
+            this.StoreNameTxtBox = new Bunifu.Framework.UI.BunifuTextbox();
             this.StoreNameLbl = new System.Windows.Forms.Label();
-            this.SaveBut = new System.Windows.Forms.Button();
+            this.StoreInfoLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // StoreAddressTxtBox
-            // 
-            this.StoreAddressTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StoreAddressTxtBox.Location = new System.Drawing.Point(281, 85);
-            this.StoreAddressTxtBox.Name = "StoreAddressTxtBox";
-            this.StoreAddressTxtBox.Size = new System.Drawing.Size(218, 36);
-            this.StoreAddressTxtBox.TabIndex = 16;
-            // 
-            // StoreAdreesLbl
-            // 
-            this.StoreAdreesLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StoreAdreesLbl.Location = new System.Drawing.Point(19, 89);
-            this.StoreAdreesLbl.Name = "StoreAdreesLbl";
-            this.StoreAdreesLbl.Size = new System.Drawing.Size(190, 32);
-            this.StoreAdreesLbl.TabIndex = 15;
-            this.StoreAdreesLbl.Text = "Store Address";
-            // 
-            // StoreNameTxtBox
-            // 
-            this.StoreNameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StoreNameTxtBox.Location = new System.Drawing.Point(281, 25);
-            this.StoreNameTxtBox.Name = "StoreNameTxtBox";
-            this.StoreNameTxtBox.Size = new System.Drawing.Size(218, 36);
-            this.StoreNameTxtBox.TabIndex = 14;
-            // 
-            // StoreNameLbl
-            // 
-            this.StoreNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StoreNameLbl.Location = new System.Drawing.Point(19, 29);
-            this.StoreNameLbl.Name = "StoreNameLbl";
-            this.StoreNameLbl.Size = new System.Drawing.Size(155, 32);
-            this.StoreNameLbl.TabIndex = 13;
-            this.StoreNameLbl.Text = "Store Name";
             // 
             // SaveBut
             // 
-            this.SaveBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SaveBut.Location = new System.Drawing.Point(170, 167);
+            this.SaveBut.BorderColor = System.Drawing.Color.Silver;
+            this.SaveBut.ButtonColor = System.Drawing.Color.SeaGreen;
+            this.SaveBut.FlatAppearance.BorderSize = 0;
+            this.SaveBut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.SaveBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.SaveBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SaveBut.Location = new System.Drawing.Point(193, 458);
             this.SaveBut.Name = "SaveBut";
-            this.SaveBut.Size = new System.Drawing.Size(162, 50);
-            this.SaveBut.TabIndex = 17;
+            this.SaveBut.OnHoverBorderColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.SaveBut.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
+            this.SaveBut.OnHoverTextColor = System.Drawing.Color.White;
+            this.SaveBut.Size = new System.Drawing.Size(177, 63);
+            this.SaveBut.TabIndex = 11;
             this.SaveBut.Text = "Save";
+            this.SaveBut.TextColor = System.Drawing.Color.White;
             this.SaveBut.UseVisualStyleBackColor = true;
-            this.SaveBut.Click += new System.EventHandler(this.SaveBut_Click);
+            this.SaveBut.Click += new System.EventHandler(this.SaveBut_Click_1);
+            // 
+            // StoreAddressTxtBox
+            // 
+            this.StoreAddressTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.StoreAddressTxtBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoreAddressTxtBox.BackgroundImage")));
+            this.StoreAddressTxtBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.StoreAddressTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StoreAddressTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.StoreAddressTxtBox.Icon = ((System.Drawing.Image)(resources.GetObject("StoreAddressTxtBox.Icon")));
+            this.StoreAddressTxtBox.Location = new System.Drawing.Point(106, 338);
+            this.StoreAddressTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StoreAddressTxtBox.Name = "StoreAddressTxtBox";
+            this.StoreAddressTxtBox.Size = new System.Drawing.Size(357, 58);
+            this.StoreAddressTxtBox.TabIndex = 10;
+            this.StoreAddressTxtBox.text = "";
+            // 
+            // StoreAddressLbl
+            // 
+            this.StoreAddressLbl.AutoSize = true;
+            this.StoreAddressLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StoreAddressLbl.ForeColor = System.Drawing.Color.Silver;
+            this.StoreAddressLbl.Location = new System.Drawing.Point(100, 303);
+            this.StoreAddressLbl.Name = "StoreAddressLbl";
+            this.StoreAddressLbl.Size = new System.Drawing.Size(186, 31);
+            this.StoreAddressLbl.TabIndex = 9;
+            this.StoreAddressLbl.Text = "Store Address";
+            // 
+            // StoreNameTxtBox
+            // 
+            this.StoreNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.StoreNameTxtBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("StoreNameTxtBox.BackgroundImage")));
+            this.StoreNameTxtBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.StoreNameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StoreNameTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.StoreNameTxtBox.Icon = ((System.Drawing.Image)(resources.GetObject("StoreNameTxtBox.Icon")));
+            this.StoreNameTxtBox.Location = new System.Drawing.Point(106, 188);
+            this.StoreNameTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.StoreNameTxtBox.Name = "StoreNameTxtBox";
+            this.StoreNameTxtBox.Size = new System.Drawing.Size(357, 54);
+            this.StoreNameTxtBox.TabIndex = 8;
+            this.StoreNameTxtBox.text = "";
+            // 
+            // StoreNameLbl
+            // 
+            this.StoreNameLbl.AutoSize = true;
+            this.StoreNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StoreNameLbl.ForeColor = System.Drawing.Color.Silver;
+            this.StoreNameLbl.Location = new System.Drawing.Point(100, 153);
+            this.StoreNameLbl.Name = "StoreNameLbl";
+            this.StoreNameLbl.Size = new System.Drawing.Size(158, 31);
+            this.StoreNameLbl.TabIndex = 7;
+            this.StoreNameLbl.Text = "Store Name";
+            // 
+            // StoreInfoLbl
+            // 
+            this.StoreInfoLbl.AutoSize = true;
+            this.StoreInfoLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StoreInfoLbl.ForeColor = System.Drawing.Color.Silver;
+            this.StoreInfoLbl.Location = new System.Drawing.Point(152, 40);
+            this.StoreInfoLbl.Name = "StoreInfoLbl";
+            this.StoreInfoLbl.Size = new System.Drawing.Size(252, 58);
+            this.StoreInfoLbl.TabIndex = 6;
+            this.StoreInfoLbl.Text = "Store Info";
             // 
             // Store_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(516, 243);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(563, 563);
             this.Controls.Add(this.SaveBut);
             this.Controls.Add(this.StoreAddressTxtBox);
-            this.Controls.Add(this.StoreAdreesLbl);
+            this.Controls.Add(this.StoreAddressLbl);
             this.Controls.Add(this.StoreNameTxtBox);
             this.Controls.Add(this.StoreNameLbl);
+            this.Controls.Add(this.StoreInfoLbl);
             this.MaximizeBox = false;
             this.Name = "Store_Info";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -101,10 +144,11 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox StoreAddressTxtBox;
-        private System.Windows.Forms.Label StoreAdreesLbl;
-        private System.Windows.Forms.TextBox StoreNameTxtBox;
+        private ePOSOne.btnProduct.Button_WOC SaveBut;
+        private Bunifu.Framework.UI.BunifuTextbox StoreAddressTxtBox;
+        private System.Windows.Forms.Label StoreAddressLbl;
+        private Bunifu.Framework.UI.BunifuTextbox StoreNameTxtBox;
         private System.Windows.Forms.Label StoreNameLbl;
-        private System.Windows.Forms.Button SaveBut;
+        private System.Windows.Forms.Label StoreInfoLbl;
     }
 }
