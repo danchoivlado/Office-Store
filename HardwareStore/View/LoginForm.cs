@@ -14,7 +14,7 @@ using HardwareStore.View;
 
 namespace HardwareStore
 {
-    public partial class LoginForm : Form 
+    public partial class LoginForm : Form
     {
         RegisterForm RegisterForm;
         RegisterLoginInfoBLL registerLoginBLL;

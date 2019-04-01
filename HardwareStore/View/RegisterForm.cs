@@ -25,14 +25,16 @@ namespace HardwareStore.View
             FirstNameTxtBox.Focus();
             this.registerLoginBLL = new RegisterLoginInfoBLL();
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.AdminPasswordTxtBox._TextBox.PasswordChar = '*';
+            this.PasswordTxtBox._TextBox.PasswordChar = '*';
+
         }
 
-
-        private void LoginBut_Click(object sender, EventArgs e)
+        private void SignUpBut_Click(object sender, EventArgs e)
         {
-            if (AdminPasswordTxtBox.Text == AdminPassword)
+            if (AdminPasswordTxtBox.text == AdminPassword)
             {
-                registerLoginBLL.Register(FirstNameTxtBox.Text,LastNameTxtBox.Text,TownTxtBox.Text,PasswordTxtBox.Text);
+                registerLoginBLL.Register(FirstNameTxtBox.text, LastNameTxtBox.text, TownTxtBox.text, PasswordTxtBox.text);
                 //send the info to BusinessLogic
                 this.Close();
             }

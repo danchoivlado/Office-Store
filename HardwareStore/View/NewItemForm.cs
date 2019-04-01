@@ -38,9 +38,9 @@ namespace HardwareStore.View
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
         }
 
-        private void CreateBut_Click(object sender, EventArgs e)
+        private void CreateBut_Click_1(object sender, EventArgs e)
         {
-            
+
             string BarcodeText = this.BarcodeTxtBox.Text;
 
             if (!this.updateCreateSalesReportBLL.IsItemExists(Item.Id))
@@ -79,11 +79,11 @@ namespace HardwareStore.View
 
         private void ClearDataFromTxtBoxes()
         {
-            this.BarcodeTxtBox.Clear();
-            this.ProductNameTxtBox.Clear();
-            this.OriginalPriceTxtBox.Clear();
-            this.SalesPriceTxtBox.Clear();
-            this.QuantityTxtBox.Clear();
+            this.BarcodeTxtBox.ResetText();
+            this.ProductNameTxtBox.ResetText();
+            this.OriginalPriceTxtBox.ResetText();
+            this.SalesPriceTxtBox.ResetText();
+            this.QuantityTxtBox.ResetText();
             this.SecondHandCheckBox.Checked = false;
         }
 
@@ -112,7 +112,6 @@ namespace HardwareStore.View
             };
             return item;
         }
-
 
     }
 }

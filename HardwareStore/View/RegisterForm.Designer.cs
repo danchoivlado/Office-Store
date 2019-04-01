@@ -28,134 +28,216 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.FirstNameTxtBox = new System.Windows.Forms.TextBox();
-            this.RegisterBut = new System.Windows.Forms.Button();
-            this.AdminPasswordTxtBox = new System.Windows.Forms.TextBox();
-            this.PasswordLabel = new System.Windows.Forms.Label();
-            this.FirstNameLbl = new System.Windows.Forms.Label();
-            this.LastNameLbl = new System.Windows.Forms.Label();
-            this.LastNameTxtBox = new System.Windows.Forms.TextBox();
-            this.TownTxtBox = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
+            this.SignUpBut = new ePOSOne.btnProduct.Button_WOC();
+            this.TownTxtBox = new Bunifu.Framework.UI.BunifuTextbox();
             this.TownLbl = new System.Windows.Forms.Label();
-            this.PasswordTxtBox = new System.Windows.Forms.TextBox();
+            this.FirstNameTxtBox = new Bunifu.Framework.UI.BunifuTextbox();
+            this.FirstNameLbl = new System.Windows.Forms.Label();
+            this.SignUpLbl = new System.Windows.Forms.Label();
+            this.LastNameTxtBox = new Bunifu.Framework.UI.BunifuTextbox();
+            this.LastNameLbl = new System.Windows.Forms.Label();
+            this.PasswordTxtBox = new Bunifu.Framework.UI.BunifuTextbox();
             this.PasswordLbl = new System.Windows.Forms.Label();
+            this.AdminPasswordTxtBox = new Bunifu.Framework.UI.BunifuTextbox();
+            this.AdminLbl = new System.Windows.Forms.Label();
+            this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.SuspendLayout();
             // 
-            // FirstNameTxtBox
+            // SignUpBut
             // 
-            this.FirstNameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameTxtBox.Location = new System.Drawing.Point(280, 37);
-            this.FirstNameTxtBox.Name = "FirstNameTxtBox";
-            this.FirstNameTxtBox.Size = new System.Drawing.Size(218, 36);
-            this.FirstNameTxtBox.TabIndex = 10;
-            // 
-            // RegisterBut
-            // 
-            this.RegisterBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterBut.Location = new System.Drawing.Point(181, 363);
-            this.RegisterBut.Name = "RegisterBut";
-            this.RegisterBut.Size = new System.Drawing.Size(170, 50);
-            this.RegisterBut.TabIndex = 9;
-            this.RegisterBut.Text = "Register";
-            this.RegisterBut.UseVisualStyleBackColor = true;
-            this.RegisterBut.Click += new System.EventHandler(this.LoginBut_Click);
-            // 
-            // AdminPasswordTxtBox
-            // 
-            this.AdminPasswordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AdminPasswordTxtBox.Location = new System.Drawing.Point(280, 281);
-            this.AdminPasswordTxtBox.Name = "AdminPasswordTxtBox";
-            this.AdminPasswordTxtBox.PasswordChar = '*';
-            this.AdminPasswordTxtBox.Size = new System.Drawing.Size(218, 36);
-            this.AdminPasswordTxtBox.TabIndex = 8;
-            // 
-            // PasswordLabel
-            // 
-            this.PasswordLabel.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.PasswordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLabel.Location = new System.Drawing.Point(16, 281);
-            this.PasswordLabel.Name = "PasswordLabel";
-            this.PasswordLabel.Size = new System.Drawing.Size(198, 32);
-            this.PasswordLabel.TabIndex = 7;
-            this.PasswordLabel.Text = "AdminPassword";
-            // 
-            // FirstNameLbl
-            // 
-            this.FirstNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FirstNameLbl.Location = new System.Drawing.Point(18, 41);
-            this.FirstNameLbl.Name = "FirstNameLbl";
-            this.FirstNameLbl.Size = new System.Drawing.Size(155, 32);
-            this.FirstNameLbl.TabIndex = 6;
-            this.FirstNameLbl.Text = "First Name";
-            // 
-            // LastNameLbl
-            // 
-            this.LastNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameLbl.Location = new System.Drawing.Point(18, 101);
-            this.LastNameLbl.Name = "LastNameLbl";
-            this.LastNameLbl.Size = new System.Drawing.Size(155, 32);
-            this.LastNameLbl.TabIndex = 11;
-            this.LastNameLbl.Text = "LastName";
-            // 
-            // LastNameTxtBox
-            // 
-            this.LastNameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LastNameTxtBox.Location = new System.Drawing.Point(280, 97);
-            this.LastNameTxtBox.Name = "LastNameTxtBox";
-            this.LastNameTxtBox.Size = new System.Drawing.Size(218, 36);
-            this.LastNameTxtBox.TabIndex = 12;
+            this.SignUpBut.BorderColor = System.Drawing.Color.Silver;
+            this.SignUpBut.ButtonColor = System.Drawing.Color.SeaGreen;
+            this.SignUpBut.FlatAppearance.BorderSize = 0;
+            this.SignUpBut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.SignUpBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.SignUpBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SignUpBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUpBut.Location = new System.Drawing.Point(201, 675);
+            this.SignUpBut.Name = "SignUpBut";
+            this.SignUpBut.OnHoverBorderColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.SignUpBut.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
+            this.SignUpBut.OnHoverTextColor = System.Drawing.Color.White;
+            this.SignUpBut.Size = new System.Drawing.Size(177, 63);
+            this.SignUpBut.TabIndex = 6;
+            this.SignUpBut.Text = "SIgn Up";
+            this.SignUpBut.TextColor = System.Drawing.Color.White;
+            this.SignUpBut.UseVisualStyleBackColor = true;
+            this.SignUpBut.Click += new System.EventHandler(this.SignUpBut_Click);
             // 
             // TownTxtBox
             // 
-            this.TownTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TownTxtBox.Location = new System.Drawing.Point(280, 157);
+            this.TownTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.TownTxtBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("TownTxtBox.BackgroundImage")));
+            this.TownTxtBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.TownTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TownTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.TownTxtBox.Icon = ((System.Drawing.Image)(resources.GetObject("TownTxtBox.Icon")));
+            this.TownTxtBox.Location = new System.Drawing.Point(87, 305);
+            this.TownTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TownTxtBox.Name = "TownTxtBox";
-            this.TownTxtBox.Size = new System.Drawing.Size(218, 36);
-            this.TownTxtBox.TabIndex = 14;
+            this.TownTxtBox.Size = new System.Drawing.Size(418, 52);
+            this.TownTxtBox.TabIndex = 3;
+            this.TownTxtBox.text = "";
             // 
             // TownLbl
             // 
-            this.TownLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TownLbl.Location = new System.Drawing.Point(16, 161);
+            this.TownLbl.AutoSize = true;
+            this.TownLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TownLbl.ForeColor = System.Drawing.Color.Silver;
+            this.TownLbl.Location = new System.Drawing.Point(81, 270);
             this.TownLbl.Name = "TownLbl";
-            this.TownLbl.Size = new System.Drawing.Size(155, 32);
-            this.TownLbl.TabIndex = 13;
+            this.TownLbl.Size = new System.Drawing.Size(81, 31);
+            this.TownLbl.TabIndex = 9;
             this.TownLbl.Text = "Town";
+            // 
+            // FirstNameTxtBox
+            // 
+            this.FirstNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.FirstNameTxtBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("FirstNameTxtBox.BackgroundImage")));
+            this.FirstNameTxtBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.FirstNameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.FirstNameTxtBox.Icon = ((System.Drawing.Image)(resources.GetObject("FirstNameTxtBox.Icon")));
+            this.FirstNameTxtBox.Location = new System.Drawing.Point(87, 184);
+            this.FirstNameTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.FirstNameTxtBox.Name = "FirstNameTxtBox";
+            this.FirstNameTxtBox.Size = new System.Drawing.Size(196, 52);
+            this.FirstNameTxtBox.TabIndex = 1;
+            this.FirstNameTxtBox.text = "";
+            // 
+            // FirstNameLbl
+            // 
+            this.FirstNameLbl.AutoSize = true;
+            this.FirstNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FirstNameLbl.ForeColor = System.Drawing.Color.Silver;
+            this.FirstNameLbl.Location = new System.Drawing.Point(81, 149);
+            this.FirstNameLbl.Name = "FirstNameLbl";
+            this.FirstNameLbl.Size = new System.Drawing.Size(147, 31);
+            this.FirstNameLbl.TabIndex = 7;
+            this.FirstNameLbl.Text = "First Name";
+            // 
+            // SignUpLbl
+            // 
+            this.SignUpLbl.AutoSize = true;
+            this.SignUpLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SignUpLbl.ForeColor = System.Drawing.Color.Silver;
+            this.SignUpLbl.Location = new System.Drawing.Point(191, 34);
+            this.SignUpLbl.Name = "SignUpLbl";
+            this.SignUpLbl.Size = new System.Drawing.Size(209, 58);
+            this.SignUpLbl.TabIndex = 6;
+            this.SignUpLbl.Text = "Sign Up";
+            // 
+            // LastNameTxtBox
+            // 
+            this.LastNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.LastNameTxtBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("LastNameTxtBox.BackgroundImage")));
+            this.LastNameTxtBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.LastNameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.LastNameTxtBox.Icon = ((System.Drawing.Image)(resources.GetObject("LastNameTxtBox.Icon")));
+            this.LastNameTxtBox.Location = new System.Drawing.Point(309, 184);
+            this.LastNameTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LastNameTxtBox.Name = "LastNameTxtBox";
+            this.LastNameTxtBox.Size = new System.Drawing.Size(196, 52);
+            this.LastNameTxtBox.TabIndex = 2;
+            this.LastNameTxtBox.text = "";
+            // 
+            // LastNameLbl
+            // 
+            this.LastNameLbl.AutoSize = true;
+            this.LastNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LastNameLbl.ForeColor = System.Drawing.Color.Silver;
+            this.LastNameLbl.Location = new System.Drawing.Point(303, 149);
+            this.LastNameLbl.Name = "LastNameLbl";
+            this.LastNameLbl.Size = new System.Drawing.Size(145, 31);
+            this.LastNameLbl.TabIndex = 13;
+            this.LastNameLbl.Text = "Last Name";
             // 
             // PasswordTxtBox
             // 
-            this.PasswordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordTxtBox.Location = new System.Drawing.Point(280, 221);
+            this.PasswordTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.PasswordTxtBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PasswordTxtBox.BackgroundImage")));
+            this.PasswordTxtBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.PasswordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.PasswordTxtBox.Icon = ((System.Drawing.Image)(resources.GetObject("PasswordTxtBox.Icon")));
+            this.PasswordTxtBox.Location = new System.Drawing.Point(87, 438);
+            this.PasswordTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.PasswordTxtBox.Name = "PasswordTxtBox";
-            this.PasswordTxtBox.PasswordChar = '*';
-            this.PasswordTxtBox.Size = new System.Drawing.Size(218, 36);
-            this.PasswordTxtBox.TabIndex = 16;
+            this.PasswordTxtBox.Size = new System.Drawing.Size(418, 52);
+            this.PasswordTxtBox.TabIndex = 4;
+            this.PasswordTxtBox.text = "";
             // 
             // PasswordLbl
             // 
-            this.PasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PasswordLbl.Location = new System.Drawing.Point(16, 221);
+            this.PasswordLbl.AutoSize = true;
+            this.PasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PasswordLbl.ForeColor = System.Drawing.Color.Silver;
+            this.PasswordLbl.Location = new System.Drawing.Point(81, 403);
             this.PasswordLbl.Name = "PasswordLbl";
-            this.PasswordLbl.Size = new System.Drawing.Size(155, 32);
-            this.PasswordLbl.TabIndex = 15;
+            this.PasswordLbl.Size = new System.Drawing.Size(134, 31);
+            this.PasswordLbl.TabIndex = 14;
             this.PasswordLbl.Text = "Password";
+            // 
+            // AdminPasswordTxtBox
+            // 
+            this.AdminPasswordTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.AdminPasswordTxtBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AdminPasswordTxtBox.BackgroundImage")));
+            this.AdminPasswordTxtBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AdminPasswordTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminPasswordTxtBox.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AdminPasswordTxtBox.Icon = ((System.Drawing.Image)(resources.GetObject("AdminPasswordTxtBox.Icon")));
+            this.AdminPasswordTxtBox.Location = new System.Drawing.Point(87, 565);
+            this.AdminPasswordTxtBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AdminPasswordTxtBox.Name = "AdminPasswordTxtBox";
+            this.AdminPasswordTxtBox.Size = new System.Drawing.Size(418, 52);
+            this.AdminPasswordTxtBox.TabIndex = 5;
+            this.AdminPasswordTxtBox.text = "";
+            // 
+            // AdminLbl
+            // 
+            this.AdminLbl.AutoSize = true;
+            this.AdminLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminLbl.ForeColor = System.Drawing.Color.DarkCyan;
+            this.AdminLbl.Location = new System.Drawing.Point(81, 530);
+            this.AdminLbl.Name = "AdminLbl";
+            this.AdminLbl.Size = new System.Drawing.Size(217, 31);
+            this.AdminLbl.TabIndex = 16;
+            this.AdminLbl.Text = "Admin Password";
+            // 
+            // bunifuSeparator1
+            // 
+            this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.bunifuSeparator1.LineThickness = 5;
+            this.bunifuSeparator1.Location = new System.Drawing.Point(201, 92);
+            this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuSeparator1.Name = "bunifuSeparator1";
+            this.bunifuSeparator1.Size = new System.Drawing.Size(185, 14);
+            this.bunifuSeparator1.TabIndex = 18;
+            this.bunifuSeparator1.Transparency = 255;
+            this.bunifuSeparator1.Vertical = false;
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(514, 453);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(583, 750);
+            this.Controls.Add(this.bunifuSeparator1);
+            this.Controls.Add(this.AdminPasswordTxtBox);
+            this.Controls.Add(this.AdminLbl);
             this.Controls.Add(this.PasswordTxtBox);
             this.Controls.Add(this.PasswordLbl);
+            this.Controls.Add(this.LastNameLbl);
+            this.Controls.Add(this.LastNameTxtBox);
+            this.Controls.Add(this.SignUpBut);
             this.Controls.Add(this.TownTxtBox);
             this.Controls.Add(this.TownLbl);
-            this.Controls.Add(this.LastNameTxtBox);
-            this.Controls.Add(this.LastNameLbl);
             this.Controls.Add(this.FirstNameTxtBox);
-            this.Controls.Add(this.RegisterBut);
-            this.Controls.Add(this.AdminPasswordTxtBox);
-            this.Controls.Add(this.PasswordLabel);
             this.Controls.Add(this.FirstNameLbl);
+            this.Controls.Add(this.SignUpLbl);
             this.MaximizeBox = false;
             this.Name = "RegisterForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -167,16 +249,18 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox FirstNameTxtBox;
-        private System.Windows.Forms.Button RegisterBut;
-        private System.Windows.Forms.TextBox AdminPasswordTxtBox;
-        private System.Windows.Forms.Label PasswordLabel;
-        private System.Windows.Forms.Label FirstNameLbl;
-        private System.Windows.Forms.Label LastNameLbl;
-        private System.Windows.Forms.TextBox LastNameTxtBox;
-        private System.Windows.Forms.TextBox TownTxtBox;
+        private ePOSOne.btnProduct.Button_WOC SignUpBut;
+        private Bunifu.Framework.UI.BunifuTextbox TownTxtBox;
         private System.Windows.Forms.Label TownLbl;
-        private System.Windows.Forms.TextBox PasswordTxtBox;
+        private Bunifu.Framework.UI.BunifuTextbox FirstNameTxtBox;
+        private System.Windows.Forms.Label FirstNameLbl;
+        private System.Windows.Forms.Label SignUpLbl;
+        private Bunifu.Framework.UI.BunifuTextbox LastNameTxtBox;
+        private System.Windows.Forms.Label LastNameLbl;
+        private Bunifu.Framework.UI.BunifuTextbox PasswordTxtBox;
         private System.Windows.Forms.Label PasswordLbl;
+        private Bunifu.Framework.UI.BunifuTextbox AdminPasswordTxtBox;
+        private System.Windows.Forms.Label AdminLbl;
+        private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
     }
 }

@@ -30,18 +30,18 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewItemForm));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BarcodeLbl = new System.Windows.Forms.Label();
-            this.BarcodeTxtBox = new System.Windows.Forms.TextBox();
-            this.ProductNameTxtBox = new System.Windows.Forms.TextBox();
-            this.ProductNameLbl = new System.Windows.Forms.Label();
-            this.QuantityTxtBox = new System.Windows.Forms.TextBox();
-            this.QuantityLbl = new System.Windows.Forms.Label();
-            this.SalesPriceTxtBox = new System.Windows.Forms.TextBox();
-            this.SalesPriceLbl = new System.Windows.Forms.Label();
-            this.OriginalPriceTxtBox = new System.Windows.Forms.TextBox();
-            this.OriginalPriceLbl = new System.Windows.Forms.Label();
-            this.CreateBut = new System.Windows.Forms.Button();
             this.SecondHandCheckBox = new System.Windows.Forms.CheckBox();
+            this.ProductNumberLbl = new System.Windows.Forms.Label();
+            this.BarcodeLbl = new System.Windows.Forms.Label();
+            this.SalesPriceLbl = new System.Windows.Forms.Label();
+            this.OriginalPriceLbl = new System.Windows.Forms.Label();
+            this.QuantityLbl = new System.Windows.Forms.Label();
+            this.BarcodeTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.ProductNameTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.OriginalPriceTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.SalesPriceTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.QuantityTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.CreateBut = new ePOSOne.btnProduct.Button_WOC();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,142 +55,202 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // BarcodeLbl
-            // 
-            this.BarcodeLbl.AutoSize = true;
-            this.BarcodeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BarcodeLbl.Location = new System.Drawing.Point(24, 236);
-            this.BarcodeLbl.Name = "BarcodeLbl";
-            this.BarcodeLbl.Size = new System.Drawing.Size(123, 33);
-            this.BarcodeLbl.TabIndex = 1;
-            this.BarcodeLbl.Text = "Barcode";
-            // 
-            // BarcodeTxtBox
-            // 
-            this.BarcodeTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BarcodeTxtBox.Location = new System.Drawing.Point(168, 236);
-            this.BarcodeTxtBox.Name = "BarcodeTxtBox";
-            this.BarcodeTxtBox.Size = new System.Drawing.Size(277, 36);
-            this.BarcodeTxtBox.TabIndex = 2;
-            this.BarcodeTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BarcodeTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarcodeTxtBox_KeyDown);
-            // 
-            // ProductNameTxtBox
-            // 
-            this.ProductNameTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameTxtBox.Location = new System.Drawing.Point(252, 303);
-            this.ProductNameTxtBox.Name = "ProductNameTxtBox";
-            this.ProductNameTxtBox.Size = new System.Drawing.Size(193, 36);
-            this.ProductNameTxtBox.TabIndex = 4;
-            // 
-            // ProductNameLbl
-            // 
-            this.ProductNameLbl.AutoSize = true;
-            this.ProductNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductNameLbl.Location = new System.Drawing.Point(24, 306);
-            this.ProductNameLbl.Name = "ProductNameLbl";
-            this.ProductNameLbl.Size = new System.Drawing.Size(201, 33);
-            this.ProductNameLbl.TabIndex = 3;
-            this.ProductNameLbl.Text = "Product Name";
-            // 
-            // QuantityTxtBox
-            // 
-            this.QuantityTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityTxtBox.Location = new System.Drawing.Point(712, 379);
-            this.QuantityTxtBox.Name = "QuantityTxtBox";
-            this.QuantityTxtBox.Size = new System.Drawing.Size(82, 36);
-            this.QuantityTxtBox.TabIndex = 14;
-            this.QuantityTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // QuantityLbl
-            // 
-            this.QuantityLbl.AutoSize = true;
-            this.QuantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityLbl.Location = new System.Drawing.Point(503, 382);
-            this.QuantityLbl.Name = "QuantityLbl";
-            this.QuantityLbl.Size = new System.Drawing.Size(124, 33);
-            this.QuantityLbl.TabIndex = 13;
-            this.QuantityLbl.Text = "Quantity";
-            // 
-            // SalesPriceTxtBox
-            // 
-            this.SalesPriceTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalesPriceTxtBox.Location = new System.Drawing.Point(712, 306);
-            this.SalesPriceTxtBox.Name = "SalesPriceTxtBox";
-            this.SalesPriceTxtBox.Size = new System.Drawing.Size(82, 36);
-            this.SalesPriceTxtBox.TabIndex = 12;
-            this.SalesPriceTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // SalesPriceLbl
-            // 
-            this.SalesPriceLbl.AutoSize = true;
-            this.SalesPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalesPriceLbl.Location = new System.Drawing.Point(503, 309);
-            this.SalesPriceLbl.Name = "SalesPriceLbl";
-            this.SalesPriceLbl.Size = new System.Drawing.Size(163, 33);
-            this.SalesPriceLbl.TabIndex = 11;
-            this.SalesPriceLbl.Text = "Sales Price";
-            // 
-            // OriginalPriceTxtBox
-            // 
-            this.OriginalPriceTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OriginalPriceTxtBox.Location = new System.Drawing.Point(712, 233);
-            this.OriginalPriceTxtBox.Name = "OriginalPriceTxtBox";
-            this.OriginalPriceTxtBox.Size = new System.Drawing.Size(82, 36);
-            this.OriginalPriceTxtBox.TabIndex = 10;
-            this.OriginalPriceTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // OriginalPriceLbl
-            // 
-            this.OriginalPriceLbl.AutoSize = true;
-            this.OriginalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OriginalPriceLbl.Location = new System.Drawing.Point(503, 236);
-            this.OriginalPriceLbl.Name = "OriginalPriceLbl";
-            this.OriginalPriceLbl.Size = new System.Drawing.Size(192, 33);
-            this.OriginalPriceLbl.TabIndex = 9;
-            this.OriginalPriceLbl.Text = "Original Price";
-            // 
-            // CreateBut
-            // 
-            this.CreateBut.BackColor = System.Drawing.Color.YellowGreen;
-            this.CreateBut.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.CreateBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateBut.Location = new System.Drawing.Point(319, 474);
-            this.CreateBut.Name = "CreateBut";
-            this.CreateBut.Size = new System.Drawing.Size(248, 64);
-            this.CreateBut.TabIndex = 15;
-            this.CreateBut.Text = "Create";
-            this.CreateBut.UseVisualStyleBackColor = false;
-            this.CreateBut.Click += new System.EventHandler(this.CreateBut_Click);
-            // 
             // SecondHandCheckBox
             // 
             this.SecondHandCheckBox.AutoSize = true;
             this.SecondHandCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SecondHandCheckBox.Location = new System.Drawing.Point(99, 378);
+            this.SecondHandCheckBox.ForeColor = System.Drawing.Color.Silver;
+            this.SecondHandCheckBox.Location = new System.Drawing.Point(99, 491);
             this.SecondHandCheckBox.Name = "SecondHandCheckBox";
             this.SecondHandCheckBox.Size = new System.Drawing.Size(212, 37);
             this.SecondHandCheckBox.TabIndex = 16;
             this.SecondHandCheckBox.Text = "Second Hand";
             this.SecondHandCheckBox.UseVisualStyleBackColor = true;
             // 
+            // ProductNumberLbl
+            // 
+            this.ProductNumberLbl.AutoSize = true;
+            this.ProductNumberLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductNumberLbl.ForeColor = System.Drawing.Color.Silver;
+            this.ProductNumberLbl.Location = new System.Drawing.Point(93, 344);
+            this.ProductNumberLbl.Name = "ProductNumberLbl";
+            this.ProductNumberLbl.Size = new System.Drawing.Size(187, 31);
+            this.ProductNumberLbl.TabIndex = 19;
+            this.ProductNumberLbl.Text = "Product Name";
+            // 
+            // BarcodeLbl
+            // 
+            this.BarcodeLbl.AutoSize = true;
+            this.BarcodeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BarcodeLbl.ForeColor = System.Drawing.Color.Silver;
+            this.BarcodeLbl.Location = new System.Drawing.Point(93, 227);
+            this.BarcodeLbl.Name = "BarcodeLbl";
+            this.BarcodeLbl.Size = new System.Drawing.Size(115, 31);
+            this.BarcodeLbl.TabIndex = 17;
+            this.BarcodeLbl.Text = "Barcode";
+            // 
+            // SalesPriceLbl
+            // 
+            this.SalesPriceLbl.AutoSize = true;
+            this.SalesPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalesPriceLbl.ForeColor = System.Drawing.Color.Silver;
+            this.SalesPriceLbl.Location = new System.Drawing.Point(584, 344);
+            this.SalesPriceLbl.Name = "SalesPriceLbl";
+            this.SalesPriceLbl.Size = new System.Drawing.Size(151, 31);
+            this.SalesPriceLbl.TabIndex = 23;
+            this.SalesPriceLbl.Text = "Sales Price";
+            // 
+            // OriginalPriceLbl
+            // 
+            this.OriginalPriceLbl.AutoSize = true;
+            this.OriginalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.OriginalPriceLbl.ForeColor = System.Drawing.Color.Silver;
+            this.OriginalPriceLbl.Location = new System.Drawing.Point(584, 227);
+            this.OriginalPriceLbl.Name = "OriginalPriceLbl";
+            this.OriginalPriceLbl.Size = new System.Drawing.Size(176, 31);
+            this.OriginalPriceLbl.TabIndex = 21;
+            this.OriginalPriceLbl.Text = "Original Price";
+            // 
+            // QuantityLbl
+            // 
+            this.QuantityLbl.AutoSize = true;
+            this.QuantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityLbl.ForeColor = System.Drawing.Color.Silver;
+            this.QuantityLbl.Location = new System.Drawing.Point(584, 454);
+            this.QuantityLbl.Name = "QuantityLbl";
+            this.QuantityLbl.Size = new System.Drawing.Size(116, 31);
+            this.QuantityLbl.TabIndex = 25;
+            this.QuantityLbl.Text = "Quantity";
+            // 
+            // BarcodeTxtBox
+            // 
+            this.BarcodeTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.BarcodeTxtBox.BorderColorFocused = System.Drawing.Color.SeaGreen;
+            this.BarcodeTxtBox.BorderColorIdle = System.Drawing.Color.Silver;
+            this.BarcodeTxtBox.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
+            this.BarcodeTxtBox.BorderThickness = 3;
+            this.BarcodeTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.BarcodeTxtBox.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.BarcodeTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.BarcodeTxtBox.isPassword = false;
+            this.BarcodeTxtBox.Location = new System.Drawing.Point(99, 262);
+            this.BarcodeTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.BarcodeTxtBox.Name = "BarcodeTxtBox";
+            this.BarcodeTxtBox.Size = new System.Drawing.Size(319, 44);
+            this.BarcodeTxtBox.TabIndex = 28;
+            this.BarcodeTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ProductNameTxtBox
+            // 
+            this.ProductNameTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ProductNameTxtBox.BorderColorFocused = System.Drawing.Color.SeaGreen;
+            this.ProductNameTxtBox.BorderColorIdle = System.Drawing.Color.Silver;
+            this.ProductNameTxtBox.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
+            this.ProductNameTxtBox.BorderThickness = 3;
+            this.ProductNameTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ProductNameTxtBox.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.ProductNameTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.ProductNameTxtBox.isPassword = false;
+            this.ProductNameTxtBox.Location = new System.Drawing.Point(99, 379);
+            this.ProductNameTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ProductNameTxtBox.Name = "ProductNameTxtBox";
+            this.ProductNameTxtBox.Size = new System.Drawing.Size(319, 44);
+            this.ProductNameTxtBox.TabIndex = 29;
+            this.ProductNameTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // OriginalPriceTxtBox
+            // 
+            this.OriginalPriceTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.OriginalPriceTxtBox.BorderColorFocused = System.Drawing.Color.SeaGreen;
+            this.OriginalPriceTxtBox.BorderColorIdle = System.Drawing.Color.Silver;
+            this.OriginalPriceTxtBox.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
+            this.OriginalPriceTxtBox.BorderThickness = 3;
+            this.OriginalPriceTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.OriginalPriceTxtBox.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.OriginalPriceTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.OriginalPriceTxtBox.isPassword = false;
+            this.OriginalPriceTxtBox.Location = new System.Drawing.Point(590, 262);
+            this.OriginalPriceTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.OriginalPriceTxtBox.Name = "OriginalPriceTxtBox";
+            this.OriginalPriceTxtBox.Size = new System.Drawing.Size(133, 44);
+            this.OriginalPriceTxtBox.TabIndex = 30;
+            this.OriginalPriceTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // SalesPriceTxtBox
+            // 
+            this.SalesPriceTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.SalesPriceTxtBox.BorderColorFocused = System.Drawing.Color.SeaGreen;
+            this.SalesPriceTxtBox.BorderColorIdle = System.Drawing.Color.Silver;
+            this.SalesPriceTxtBox.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
+            this.SalesPriceTxtBox.BorderThickness = 3;
+            this.SalesPriceTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.SalesPriceTxtBox.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.SalesPriceTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.SalesPriceTxtBox.isPassword = false;
+            this.SalesPriceTxtBox.Location = new System.Drawing.Point(590, 379);
+            this.SalesPriceTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.SalesPriceTxtBox.Name = "SalesPriceTxtBox";
+            this.SalesPriceTxtBox.Size = new System.Drawing.Size(133, 44);
+            this.SalesPriceTxtBox.TabIndex = 31;
+            this.SalesPriceTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // QuantityTxtBox
+            // 
+            this.QuantityTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.QuantityTxtBox.BorderColorFocused = System.Drawing.Color.SeaGreen;
+            this.QuantityTxtBox.BorderColorIdle = System.Drawing.Color.Silver;
+            this.QuantityTxtBox.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
+            this.QuantityTxtBox.BorderThickness = 3;
+            this.QuantityTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.QuantityTxtBox.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.QuantityTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.QuantityTxtBox.isPassword = false;
+            this.QuantityTxtBox.Location = new System.Drawing.Point(590, 491);
+            this.QuantityTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.QuantityTxtBox.Name = "QuantityTxtBox";
+            this.QuantityTxtBox.Size = new System.Drawing.Size(133, 44);
+            this.QuantityTxtBox.TabIndex = 32;
+            this.QuantityTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // CreateBut
+            // 
+            this.CreateBut.BorderColor = System.Drawing.Color.Silver;
+            this.CreateBut.ButtonColor = System.Drawing.Color.SeaGreen;
+            this.CreateBut.FlatAppearance.BorderSize = 0;
+            this.CreateBut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.CreateBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.CreateBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CreateBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CreateBut.Location = new System.Drawing.Point(319, 603);
+            this.CreateBut.Name = "CreateBut";
+            this.CreateBut.OnHoverBorderColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.CreateBut.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
+            this.CreateBut.OnHoverTextColor = System.Drawing.Color.White;
+            this.CreateBut.Size = new System.Drawing.Size(248, 63);
+            this.CreateBut.TabIndex = 33;
+            this.CreateBut.Text = "Create";
+            this.CreateBut.TextColor = System.Drawing.Color.White;
+            this.CreateBut.UseVisualStyleBackColor = true;
+            this.CreateBut.Click += new System.EventHandler(this.CreateBut_Click_1);
+            // 
             // NewItemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 550);
-            this.Controls.Add(this.SecondHandCheckBox);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(839, 687);
             this.Controls.Add(this.CreateBut);
             this.Controls.Add(this.QuantityTxtBox);
-            this.Controls.Add(this.QuantityLbl);
             this.Controls.Add(this.SalesPriceTxtBox);
-            this.Controls.Add(this.SalesPriceLbl);
             this.Controls.Add(this.OriginalPriceTxtBox);
-            this.Controls.Add(this.OriginalPriceLbl);
             this.Controls.Add(this.ProductNameTxtBox);
-            this.Controls.Add(this.ProductNameLbl);
             this.Controls.Add(this.BarcodeTxtBox);
+            this.Controls.Add(this.QuantityLbl);
+            this.Controls.Add(this.SalesPriceLbl);
+            this.Controls.Add(this.OriginalPriceLbl);
+            this.Controls.Add(this.ProductNumberLbl);
             this.Controls.Add(this.BarcodeLbl);
+            this.Controls.Add(this.SecondHandCheckBox);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
@@ -206,17 +266,17 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label BarcodeLbl;
-        private System.Windows.Forms.TextBox BarcodeTxtBox;
-        private System.Windows.Forms.TextBox ProductNameTxtBox;
-        private System.Windows.Forms.Label ProductNameLbl;
-        private System.Windows.Forms.TextBox QuantityTxtBox;
-        private System.Windows.Forms.Label QuantityLbl;
-        private System.Windows.Forms.TextBox SalesPriceTxtBox;
-        private System.Windows.Forms.Label SalesPriceLbl;
-        private System.Windows.Forms.TextBox OriginalPriceTxtBox;
-        private System.Windows.Forms.Label OriginalPriceLbl;
-        private System.Windows.Forms.Button CreateBut;
         private System.Windows.Forms.CheckBox SecondHandCheckBox;
+        private System.Windows.Forms.Label ProductNumberLbl;
+        private System.Windows.Forms.Label BarcodeLbl;
+        private System.Windows.Forms.Label SalesPriceLbl;
+        private System.Windows.Forms.Label OriginalPriceLbl;
+        private System.Windows.Forms.Label QuantityLbl;
+        private Bunifu.Framework.UI.BunifuMetroTextbox BarcodeTxtBox;
+        private Bunifu.Framework.UI.BunifuMetroTextbox ProductNameTxtBox;
+        private Bunifu.Framework.UI.BunifuMetroTextbox OriginalPriceTxtBox;
+        private Bunifu.Framework.UI.BunifuMetroTextbox SalesPriceTxtBox;
+        private Bunifu.Framework.UI.BunifuMetroTextbox QuantityTxtBox;
+        private ePOSOne.btnProduct.Button_WOC CreateBut;
     }
 }
