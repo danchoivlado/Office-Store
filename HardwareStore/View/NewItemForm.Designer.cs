@@ -42,6 +42,11 @@
             this.SalesPriceTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.QuantityTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.CreateBut = new ePOSOne.btnProduct.Button_WOC();
+            this.InvalidBarcodeLbl = new System.Windows.Forms.Label();
+            this.InvalidProductNameLbl = new System.Windows.Forms.Label();
+            this.InvalidOriginalPriceLbl = new System.Windows.Forms.Label();
+            this.InvalidSalesPriceLbl = new System.Windows.Forms.Label();
+            this.InvalidQuantityLbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -233,12 +238,77 @@
             this.CreateBut.UseVisualStyleBackColor = true;
             this.CreateBut.Click += new System.EventHandler(this.CreateBut_Click_1);
             // 
+            // InvalidBarcodeLbl
+            // 
+            this.InvalidBarcodeLbl.AutoSize = true;
+            this.InvalidBarcodeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidBarcodeLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidBarcodeLbl.Location = new System.Drawing.Point(94, 310);
+            this.InvalidBarcodeLbl.Name = "InvalidBarcodeLbl";
+            this.InvalidBarcodeLbl.Size = new System.Drawing.Size(319, 25);
+            this.InvalidBarcodeLbl.TabIndex = 34;
+            this.InvalidBarcodeLbl.Text = "Barcode must be at least 8 symbols";
+            this.InvalidBarcodeLbl.Visible = false;
+            // 
+            // InvalidProductNameLbl
+            // 
+            this.InvalidProductNameLbl.AutoSize = true;
+            this.InvalidProductNameLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidProductNameLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidProductNameLbl.Location = new System.Drawing.Point(94, 427);
+            this.InvalidProductNameLbl.Name = "InvalidProductNameLbl";
+            this.InvalidProductNameLbl.Size = new System.Drawing.Size(370, 25);
+            this.InvalidProductNameLbl.TabIndex = 35;
+            this.InvalidProductNameLbl.Text = "Product Name must be at least 3 symbols";
+            this.InvalidProductNameLbl.Visible = false;
+            // 
+            // InvalidOriginalPriceLbl
+            // 
+            this.InvalidOriginalPriceLbl.AutoSize = true;
+            this.InvalidOriginalPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidOriginalPriceLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidOriginalPriceLbl.Location = new System.Drawing.Point(585, 310);
+            this.InvalidOriginalPriceLbl.Name = "InvalidOriginalPriceLbl";
+            this.InvalidOriginalPriceLbl.Size = new System.Drawing.Size(109, 25);
+            this.InvalidOriginalPriceLbl.TabIndex = 36;
+            this.InvalidOriginalPriceLbl.Text = "Insert Price";
+            this.InvalidOriginalPriceLbl.Visible = false;
+            // 
+            // InvalidSalesPriceLbl
+            // 
+            this.InvalidSalesPriceLbl.AutoSize = true;
+            this.InvalidSalesPriceLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidSalesPriceLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidSalesPriceLbl.Location = new System.Drawing.Point(591, 427);
+            this.InvalidSalesPriceLbl.Name = "InvalidSalesPriceLbl";
+            this.InvalidSalesPriceLbl.Size = new System.Drawing.Size(109, 25);
+            this.InvalidSalesPriceLbl.TabIndex = 37;
+            this.InvalidSalesPriceLbl.Text = "Insert Price";
+            this.InvalidSalesPriceLbl.Visible = false;
+            // 
+            // InvalidQuantityLbl
+            // 
+            this.InvalidQuantityLbl.AutoSize = true;
+            this.InvalidQuantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidQuantityLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidQuantityLbl.Location = new System.Drawing.Point(591, 539);
+            this.InvalidQuantityLbl.Name = "InvalidQuantityLbl";
+            this.InvalidQuantityLbl.Size = new System.Drawing.Size(109, 25);
+            this.InvalidQuantityLbl.TabIndex = 38;
+            this.InvalidQuantityLbl.Text = "Insert Price";
+            this.InvalidQuantityLbl.Visible = false;
+            // 
             // NewItemForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(839, 687);
+            this.Controls.Add(this.InvalidQuantityLbl);
+            this.Controls.Add(this.InvalidSalesPriceLbl);
+            this.Controls.Add(this.InvalidOriginalPriceLbl);
+            this.Controls.Add(this.InvalidProductNameLbl);
+            this.Controls.Add(this.InvalidBarcodeLbl);
             this.Controls.Add(this.CreateBut);
             this.Controls.Add(this.QuantityTxtBox);
             this.Controls.Add(this.SalesPriceTxtBox);
@@ -278,5 +348,10 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox SalesPriceTxtBox;
         private Bunifu.Framework.UI.BunifuMetroTextbox QuantityTxtBox;
         private ePOSOne.btnProduct.Button_WOC CreateBut;
+        private System.Windows.Forms.Label InvalidBarcodeLbl;
+        private System.Windows.Forms.Label InvalidProductNameLbl;
+        private System.Windows.Forms.Label InvalidOriginalPriceLbl;
+        private System.Windows.Forms.Label InvalidSalesPriceLbl;
+        private System.Windows.Forms.Label InvalidQuantityLbl;
     }
 }

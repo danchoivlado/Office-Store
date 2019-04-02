@@ -46,9 +46,9 @@
             // StoreItemsPicBox
             // 
             this.StoreItemsPicBox.Image = ((System.Drawing.Image)(resources.GetObject("StoreItemsPicBox.Image")));
-            this.StoreItemsPicBox.Location = new System.Drawing.Point(624, 295);
+            this.StoreItemsPicBox.Location = new System.Drawing.Point(900, 446);
             this.StoreItemsPicBox.Name = "StoreItemsPicBox";
-            this.StoreItemsPicBox.Size = new System.Drawing.Size(250, 127);
+            this.StoreItemsPicBox.Size = new System.Drawing.Size(330, 168);
             this.StoreItemsPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.StoreItemsPicBox.TabIndex = 5;
             this.StoreItemsPicBox.TabStop = false;
@@ -59,9 +59,9 @@
             // NewInvoiceBut
             // 
             this.NewInvoiceBut.Image = ((System.Drawing.Image)(resources.GetObject("NewInvoiceBut.Image")));
-            this.NewInvoiceBut.Location = new System.Drawing.Point(624, 129);
+            this.NewInvoiceBut.Location = new System.Drawing.Point(900, 220);
             this.NewInvoiceBut.Name = "NewInvoiceBut";
-            this.NewInvoiceBut.Size = new System.Drawing.Size(250, 127);
+            this.NewInvoiceBut.Size = new System.Drawing.Size(330, 168);
             this.NewInvoiceBut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.NewInvoiceBut.TabIndex = 4;
             this.NewInvoiceBut.TabStop = false;
@@ -72,9 +72,9 @@
             // NewEmployeeBut
             // 
             this.NewEmployeeBut.Image = ((System.Drawing.Image)(resources.GetObject("NewEmployeeBut.Image")));
-            this.NewEmployeeBut.Location = new System.Drawing.Point(325, 295);
+            this.NewEmployeeBut.Location = new System.Drawing.Point(473, 446);
             this.NewEmployeeBut.Name = "NewEmployeeBut";
-            this.NewEmployeeBut.Size = new System.Drawing.Size(250, 127);
+            this.NewEmployeeBut.Size = new System.Drawing.Size(330, 168);
             this.NewEmployeeBut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.NewEmployeeBut.TabIndex = 3;
             this.NewEmployeeBut.TabStop = false;
@@ -85,9 +85,9 @@
             // DailySalesBut
             // 
             this.DailySalesBut.Image = ((System.Drawing.Image)(resources.GetObject("DailySalesBut.Image")));
-            this.DailySalesBut.Location = new System.Drawing.Point(325, 129);
+            this.DailySalesBut.Location = new System.Drawing.Point(473, 220);
             this.DailySalesBut.Name = "DailySalesBut";
-            this.DailySalesBut.Size = new System.Drawing.Size(250, 127);
+            this.DailySalesBut.Size = new System.Drawing.Size(330, 168);
             this.DailySalesBut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.DailySalesBut.TabIndex = 2;
             this.DailySalesBut.TabStop = false;
@@ -98,9 +98,9 @@
             // AddItemBut
             // 
             this.AddItemBut.Image = ((System.Drawing.Image)(resources.GetObject("AddItemBut.Image")));
-            this.AddItemBut.Location = new System.Drawing.Point(26, 295);
+            this.AddItemBut.Location = new System.Drawing.Point(46, 446);
             this.AddItemBut.Name = "AddItemBut";
-            this.AddItemBut.Size = new System.Drawing.Size(250, 127);
+            this.AddItemBut.Size = new System.Drawing.Size(330, 168);
             this.AddItemBut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.AddItemBut.TabIndex = 1;
             this.AddItemBut.TabStop = false;
@@ -111,9 +111,9 @@
             // StoreInfoBut
             // 
             this.StoreInfoBut.Image = ((System.Drawing.Image)(resources.GetObject("StoreInfoBut.Image")));
-            this.StoreInfoBut.Location = new System.Drawing.Point(26, 129);
+            this.StoreInfoBut.Location = new System.Drawing.Point(46, 220);
             this.StoreInfoBut.Name = "StoreInfoBut";
-            this.StoreInfoBut.Size = new System.Drawing.Size(250, 127);
+            this.StoreInfoBut.Size = new System.Drawing.Size(330, 168);
             this.StoreInfoBut.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.StoreInfoBut.TabIndex = 0;
             this.StoreInfoBut.TabStop = false;
@@ -125,7 +125,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(1282, 653);
             this.Controls.Add(this.StoreItemsPicBox);
             this.Controls.Add(this.NewInvoiceBut);
             this.Controls.Add(this.NewEmployeeBut);

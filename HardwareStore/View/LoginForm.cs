@@ -40,6 +40,8 @@ namespace HardwareStore
                 MainForm.ShowDialog();
                 this.Close();
             }
+            else
+                this.WrongDataLbl.Visible = true;
         }
 
         private void SignUpBut_Click(object sender, EventArgs e)

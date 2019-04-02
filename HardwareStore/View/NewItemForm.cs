@@ -16,7 +16,7 @@ namespace HardwareStore.View
     public partial class NewItemForm : Form
     {
         UpdateCreateSalesReportBLL updateCreateSalesReportBLL = new UpdateCreateSalesReportBLL();
-        private string FirsBarcode;
+        // private string FirsBarcode;
         Items Item;
         StoreItemsForm StoreItemsForm;
 
@@ -31,7 +31,7 @@ namespace HardwareStore.View
         {
             InitializeComponent();
             PasteItemInfo(Item);
-            this.FirsBarcode = Item.Id;
+            // this.FirsBarcode = Item.Id;
             this.Item = new Items();
             this.Item = Item;
             this.BarcodeTxtBox.Enabled = false;
@@ -45,13 +45,21 @@ namespace HardwareStore.View
 
             if (!this.updateCreateSalesReportBLL.IsItemExists(Item.Id))
             {
-                this.updateCreateSalesReportBLL.CreateItem(this.ToClass());
-                ClearDataFromTxtBoxes();
+                if (!Validate(this.BarcodeTxtBox.Text, this.ProductNameTxtBox.Text,this.OriginalPriceTxtBox.Text,
+                    this.SalesPriceTxtBox.Text,this.QuantityTxtBox.Text))
+                {
+                    this.updateCreateSalesReportBLL.CreateItem(this.ToClass());
+                    ClearDataFromTxtBoxes();
+                }
             }
             else
             {
-                this.updateCreateSalesReportBLL.UpdateItem(ToClass(), Item.Id);
-                GenerateForm();
+                if (!Validate(this.BarcodeTxtBox.Text, this.ProductNameTxtBox.Text,this.OriginalPriceTxtBox.Text,
+                    this.SalesPriceTxtBox.Text, this.QuantityTxtBox.Text))
+                {
+                    this.updateCreateSalesReportBLL.UpdateItem(ToClass(), Item.Id);
+                    GenerateForm();
+                }
             }
         }
 
@@ -63,7 +71,7 @@ namespace HardwareStore.View
             this.Close();
         }
 
-       
+
 
         private void BarcodeTxtBox_KeyDown(object sender, KeyEventArgs e)
         {
@@ -75,7 +83,7 @@ namespace HardwareStore.View
 
         }
 
-       
+
 
         private void ClearDataFromTxtBoxes()
         {
@@ -96,7 +104,7 @@ namespace HardwareStore.View
             this.QuantityTxtBox.Text = Item.Quantity.ToString();
             this.SecondHandCheckBox.Checked = this.updateCreateSalesReportBLL.IsChecked(Item.Status);
             this.CreateBut.Text = "Save";
-            
+
         }
 
         private Items ToClass()
@@ -113,5 +121,64 @@ namespace HardwareStore.View
             return item;
         }
 
+        private bool Validate(string Barcode, string ProductName, string OriginalPrice,
+            string SalesPrice, string Quantity)
+        {
+            bool IsInvalid = false;
+
+            if (Barcode.Length < 8)
+            {
+                this.InvalidBarcodeLbl.Visible = true;
+                IsInvalid = true;
+            }
+            else
+            {
+                this.InvalidBarcodeLbl.Visible = false;
+            }
+
+            if (ProductName.Length < 3)
+            {
+                this.InvalidProductNameLbl.Visible = true;
+                IsInvalid = true;
+            }
+            else
+            {
+                this.InvalidProductNameLbl.Visible = false;
+            }
+
+            if (OriginalPrice == String.Empty)
+            {
+                this.InvalidOriginalPriceLbl.Visible = true;
+                IsInvalid = true;
+            }
+            else
+            {
+                this.InvalidOriginalPriceLbl.Visible = false;
+            }
+
+            if (SalesPrice == String.Empty)
+            {
+                this.InvalidSalesPriceLbl.Visible = true;
+                IsInvalid = true;
+            }
+            else
+            {
+                this.InvalidSalesPriceLbl.Visible = false;
+            }
+
+            if (Quantity == String.Empty)
+            {
+                this.InvalidQuantityLbl.Visible = true;
+                IsInvalid = true;
+            }
+            else
+            {
+                this.InvalidQuantityLbl.Visible = false;
+            }
+
+            return IsInvalid;
+        }
+
+   
     }
 }

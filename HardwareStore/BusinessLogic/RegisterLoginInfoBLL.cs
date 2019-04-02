@@ -76,6 +76,8 @@ namespace HardwareStore.BusinessLogic
             this.officestoreContext.LastLogin.Add(new LastLogin() { EmployeeId = Employee.Id, DateLimeLogined = DateTime.Now });
             this.officestoreContext.SaveChanges();
         }
+
+       
     }
 }
     

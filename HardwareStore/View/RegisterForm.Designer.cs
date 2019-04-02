@@ -42,6 +42,10 @@
             this.AdminPasswordTxtBox = new Bunifu.Framework.UI.BunifuTextbox();
             this.AdminLbl = new System.Windows.Forms.Label();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
+            this.InvalidNamesLbl = new System.Windows.Forms.Label();
+            this.InvalidTownLbl = new System.Windows.Forms.Label();
+            this.InvalidPasswordLbl = new System.Windows.Forms.Label();
+            this.InvalidAdminPasswordLbl = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SignUpBut
@@ -219,12 +223,64 @@
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
             // 
+            // InvalidNamesLbl
+            // 
+            this.InvalidNamesLbl.AutoSize = true;
+            this.InvalidNamesLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidNamesLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidNamesLbl.Location = new System.Drawing.Point(82, 241);
+            this.InvalidNamesLbl.Name = "InvalidNamesLbl";
+            this.InvalidNamesLbl.Size = new System.Drawing.Size(477, 25);
+            this.InvalidNamesLbl.TabIndex = 21;
+            this.InvalidNamesLbl.Text = "First Name and Last Name must be at least 4 symbols";
+            this.InvalidNamesLbl.Visible = false;
+            // 
+            // InvalidTownLbl
+            // 
+            this.InvalidTownLbl.AutoSize = true;
+            this.InvalidTownLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidTownLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidTownLbl.Location = new System.Drawing.Point(82, 362);
+            this.InvalidTownLbl.Name = "InvalidTownLbl";
+            this.InvalidTownLbl.Size = new System.Drawing.Size(352, 25);
+            this.InvalidTownLbl.TabIndex = 22;
+            this.InvalidTownLbl.Text = "Town Name must be at least 4 symbols";
+            this.InvalidTownLbl.Visible = false;
+            // 
+            // InvalidPasswordLbl
+            // 
+            this.InvalidPasswordLbl.AutoSize = true;
+            this.InvalidPasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidPasswordLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidPasswordLbl.Location = new System.Drawing.Point(82, 495);
+            this.InvalidPasswordLbl.Name = "InvalidPasswordLbl";
+            this.InvalidPasswordLbl.Size = new System.Drawing.Size(332, 25);
+            this.InvalidPasswordLbl.TabIndex = 23;
+            this.InvalidPasswordLbl.Text = "Password must be at least 6 symbols";
+            this.InvalidPasswordLbl.Visible = false;
+            // 
+            // InvalidAdminPasswordLbl
+            // 
+            this.InvalidAdminPasswordLbl.AutoSize = true;
+            this.InvalidAdminPasswordLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidAdminPasswordLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidAdminPasswordLbl.Location = new System.Drawing.Point(82, 621);
+            this.InvalidAdminPasswordLbl.Name = "InvalidAdminPasswordLbl";
+            this.InvalidAdminPasswordLbl.Size = new System.Drawing.Size(220, 25);
+            this.InvalidAdminPasswordLbl.TabIndex = 24;
+            this.InvalidAdminPasswordLbl.Text = "Invalid Admin Password";
+            this.InvalidAdminPasswordLbl.Visible = false;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(583, 750);
+            this.Controls.Add(this.InvalidAdminPasswordLbl);
+            this.Controls.Add(this.InvalidPasswordLbl);
+            this.Controls.Add(this.InvalidTownLbl);
+            this.Controls.Add(this.InvalidNamesLbl);
             this.Controls.Add(this.bunifuSeparator1);
             this.Controls.Add(this.AdminPasswordTxtBox);
             this.Controls.Add(this.AdminLbl);
@@ -262,5 +318,9 @@
         private Bunifu.Framework.UI.BunifuTextbox AdminPasswordTxtBox;
         private System.Windows.Forms.Label AdminLbl;
         private Bunifu.Framework.UI.BunifuSeparator bunifuSeparator1;
+        private System.Windows.Forms.Label InvalidNamesLbl;
+        private System.Windows.Forms.Label InvalidTownLbl;
+        private System.Windows.Forms.Label InvalidPasswordLbl;
+        private System.Windows.Forms.Label InvalidAdminPasswordLbl;
     }
 }
