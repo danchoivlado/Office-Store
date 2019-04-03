@@ -43,7 +43,9 @@ namespace HardwareStore.View
         private void NewInvoiceBut_Click(object sender, EventArgs e)
         {
             this.InvoiceFormL = new InvoiceFormL();
-            this.InvoiceFormL.Show();
+            this.Hide();
+            this.InvoiceFormL.ShowDialog();
+            this.Close();
         }
 
 

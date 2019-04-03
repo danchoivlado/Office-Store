@@ -34,14 +34,18 @@
             this.QuantityTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.QuantityLbl = new System.Windows.Forms.Label();
             this.CustomerInfoTxtList = new System.Windows.Forms.ListBox();
-            this.NextItemBut = new ePOSOne.btnProduct.Button_WOC();
             this.PayBut = new System.Windows.Forms.Button();
+            this.DeleteItemBut = new System.Windows.Forms.Button();
+            this.QuantityMinusBut = new System.Windows.Forms.Button();
+            this.NextItemBut = new ePOSOne.btnProduct.Button_WOC();
+            this.MainMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // ItemsDataGrid
             // 
             this.ItemsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ItemsDataGrid.BackgroundColor = System.Drawing.Color.Gray;
             this.ItemsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ItemsDataGrid.Location = new System.Drawing.Point(25, 194);
             this.ItemsDataGrid.Name = "ItemsDataGrid";
@@ -122,6 +126,48 @@
             this.CustomerInfoTxtList.Size = new System.Drawing.Size(551, 259);
             this.CustomerInfoTxtList.TabIndex = 35;
             // 
+            // PayBut
+            // 
+            this.PayBut.BackColor = System.Drawing.Color.SeaGreen;
+            this.PayBut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PayBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PayBut.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.PayBut.Location = new System.Drawing.Point(704, 310);
+            this.PayBut.Name = "PayBut";
+            this.PayBut.Size = new System.Drawing.Size(551, 72);
+            this.PayBut.TabIndex = 36;
+            this.PayBut.Text = "PAY";
+            this.PayBut.UseVisualStyleBackColor = false;
+            this.PayBut.Click += new System.EventHandler(this.PayBut_Click);
+            // 
+            // DeleteItemBut
+            // 
+            this.DeleteItemBut.BackColor = System.Drawing.Color.DarkGray;
+            this.DeleteItemBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteItemBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteItemBut.ForeColor = System.Drawing.Color.Maroon;
+            this.DeleteItemBut.Location = new System.Drawing.Point(1118, 418);
+            this.DeleteItemBut.Name = "DeleteItemBut";
+            this.DeleteItemBut.Size = new System.Drawing.Size(137, 118);
+            this.DeleteItemBut.TabIndex = 37;
+            this.DeleteItemBut.Text = "Delete Item";
+            this.DeleteItemBut.UseVisualStyleBackColor = false;
+            this.DeleteItemBut.Click += new System.EventHandler(this.DeleteItemBut_Click);
+            // 
+            // QuantityMinusBut
+            // 
+            this.QuantityMinusBut.BackColor = System.Drawing.Color.DarkGray;
+            this.QuantityMinusBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.QuantityMinusBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityMinusBut.ForeColor = System.Drawing.Color.Black;
+            this.QuantityMinusBut.Location = new System.Drawing.Point(911, 418);
+            this.QuantityMinusBut.Name = "QuantityMinusBut";
+            this.QuantityMinusBut.Size = new System.Drawing.Size(137, 118);
+            this.QuantityMinusBut.TabIndex = 38;
+            this.QuantityMinusBut.Text = "Quantity Minus";
+            this.QuantityMinusBut.UseVisualStyleBackColor = false;
+            this.QuantityMinusBut.Click += new System.EventHandler(this.ChangeQuantityBut_Click);
+            // 
             // NextItemBut
             // 
             this.NextItemBut.BorderColor = System.Drawing.Color.Silver;
@@ -143,19 +189,19 @@
             this.NextItemBut.UseVisualStyleBackColor = true;
             this.NextItemBut.Click += new System.EventHandler(this.NextItemBut_Click);
             // 
-            // PayBut
+            // MainMenu
             // 
-            this.PayBut.BackColor = System.Drawing.Color.SeaGreen;
-            this.PayBut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.PayBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PayBut.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.PayBut.Location = new System.Drawing.Point(704, 310);
-            this.PayBut.Name = "PayBut";
-            this.PayBut.Size = new System.Drawing.Size(551, 72);
-            this.PayBut.TabIndex = 36;
-            this.PayBut.Text = "PAY";
-            this.PayBut.UseVisualStyleBackColor = false;
-            this.PayBut.Click += new System.EventHandler(this.PayBut_Click);
+            this.MainMenu.BackColor = System.Drawing.Color.DarkGray;
+            this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenu.ForeColor = System.Drawing.Color.Black;
+            this.MainMenu.Location = new System.Drawing.Point(704, 418);
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.Size = new System.Drawing.Size(137, 118);
+            this.MainMenu.TabIndex = 39;
+            this.MainMenu.Text = "Main Menu";
+            this.MainMenu.UseVisualStyleBackColor = false;
+            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
             // 
             // InvoiceFormL
             // 
@@ -163,6 +209,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1282, 903);
+            this.Controls.Add(this.MainMenu);
+            this.Controls.Add(this.QuantityMinusBut);
+            this.Controls.Add(this.DeleteItemBut);
             this.Controls.Add(this.PayBut);
             this.Controls.Add(this.CustomerInfoTxtList);
             this.Controls.Add(this.NextItemBut);
@@ -190,5 +239,8 @@
         private ePOSOne.btnProduct.Button_WOC NextItemBut;
         private System.Windows.Forms.ListBox CustomerInfoTxtList;
         private System.Windows.Forms.Button PayBut;
+        private System.Windows.Forms.Button DeleteItemBut;
+        private System.Windows.Forms.Button QuantityMinusBut;
+        private System.Windows.Forms.Button MainMenu;
     }
 }

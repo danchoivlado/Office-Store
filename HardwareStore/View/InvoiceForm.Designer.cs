@@ -42,15 +42,17 @@
             this.ZeroBut = new System.Windows.Forms.Button();
             this.EndTransactionBut = new System.Windows.Forms.Button();
             this.CashAmount = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.PayBut = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.AllFive = new System.Windows.Forms.Button();
+            this.AllTen = new System.Windows.Forms.Button();
+            this.AllTwenty = new System.Windows.Forms.Button();
+            this.AllFifty = new System.Windows.Forms.Button();
+            this.AllHundred = new System.Windows.Forms.Button();
             this.ScanBarcodeLbl = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.ChangeTxtBox = new System.Windows.Forms.TextBox();
             this.button5 = new System.Windows.Forms.Button();
+            this.TotalTxtBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // OneBut
@@ -215,7 +217,7 @@
             this.EndTransactionBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EndTransactionBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndTransactionBut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.EndTransactionBut.Location = new System.Drawing.Point(648, 242);
+            this.EndTransactionBut.Location = new System.Drawing.Point(645, 259);
             this.EndTransactionBut.Name = "EndTransactionBut";
             this.EndTransactionBut.Size = new System.Drawing.Size(137, 182);
             this.EndTransactionBut.TabIndex = 22;
@@ -241,70 +243,75 @@
             this.CashAmount.TabIndex = 30;
             this.CashAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // PayBut
+            // AllFive
             // 
-            this.PayBut.BackColor = System.Drawing.Color.SeaGreen;
-            this.PayBut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.PayBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PayBut.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.PayBut.Location = new System.Drawing.Point(12, 562);
-            this.PayBut.Name = "PayBut";
-            this.PayBut.Size = new System.Drawing.Size(118, 62);
-            this.PayBut.TabIndex = 37;
-            this.PayBut.Text = "5$";
-            this.PayBut.UseVisualStyleBackColor = false;
+            this.AllFive.BackColor = System.Drawing.Color.SeaGreen;
+            this.AllFive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AllFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AllFive.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AllFive.Location = new System.Drawing.Point(12, 562);
+            this.AllFive.Name = "AllFive";
+            this.AllFive.Size = new System.Drawing.Size(118, 62);
+            this.AllFive.TabIndex = 37;
+            this.AllFive.Text = "5$";
+            this.AllFive.UseVisualStyleBackColor = false;
+            this.AllFive.Click += new System.EventHandler(this.AllFive_Click);
             // 
-            // button1
+            // AllTen
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(175, 562);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 62);
-            this.button1.TabIndex = 38;
-            this.button1.Text = "10$";
-            this.button1.UseVisualStyleBackColor = false;
+            this.AllTen.BackColor = System.Drawing.Color.SeaGreen;
+            this.AllTen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AllTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AllTen.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AllTen.Location = new System.Drawing.Point(175, 562);
+            this.AllTen.Name = "AllTen";
+            this.AllTen.Size = new System.Drawing.Size(118, 62);
+            this.AllTen.TabIndex = 38;
+            this.AllTen.Text = "10$";
+            this.AllTen.UseVisualStyleBackColor = false;
+            this.AllTen.Click += new System.EventHandler(this.AllTen_Click);
             // 
-            // button2
+            // AllTwenty
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(338, 562);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 62);
-            this.button2.TabIndex = 39;
-            this.button2.Text = "20$";
-            this.button2.UseVisualStyleBackColor = false;
+            this.AllTwenty.BackColor = System.Drawing.Color.SeaGreen;
+            this.AllTwenty.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AllTwenty.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AllTwenty.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AllTwenty.Location = new System.Drawing.Point(338, 562);
+            this.AllTwenty.Name = "AllTwenty";
+            this.AllTwenty.Size = new System.Drawing.Size(118, 62);
+            this.AllTwenty.TabIndex = 39;
+            this.AllTwenty.Text = "20$";
+            this.AllTwenty.UseVisualStyleBackColor = false;
+            this.AllTwenty.Click += new System.EventHandler(this.AllTwenty_Click);
             // 
-            // button3
+            // AllFifty
             // 
-            this.button3.BackColor = System.Drawing.Color.SeaGreen;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Location = new System.Drawing.Point(501, 562);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(118, 62);
-            this.button3.TabIndex = 40;
-            this.button3.Text = "50$";
-            this.button3.UseVisualStyleBackColor = false;
+            this.AllFifty.BackColor = System.Drawing.Color.SeaGreen;
+            this.AllFifty.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AllFifty.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AllFifty.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AllFifty.Location = new System.Drawing.Point(501, 562);
+            this.AllFifty.Name = "AllFifty";
+            this.AllFifty.Size = new System.Drawing.Size(118, 62);
+            this.AllFifty.TabIndex = 40;
+            this.AllFifty.Text = "50$";
+            this.AllFifty.UseVisualStyleBackColor = false;
+            this.AllFifty.Click += new System.EventHandler(this.AllFifty_Click);
             // 
-            // button4
+            // AllHundred
             // 
-            this.button4.BackColor = System.Drawing.Color.SeaGreen;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(664, 562);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(118, 62);
-            this.button4.TabIndex = 41;
-            this.button4.Text = "100$";
-            this.button4.UseVisualStyleBackColor = false;
+            this.AllHundred.BackColor = System.Drawing.Color.SeaGreen;
+            this.AllHundred.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.AllHundred.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AllHundred.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.AllHundred.Location = new System.Drawing.Point(664, 562);
+            this.AllHundred.Name = "AllHundred";
+            this.AllHundred.Size = new System.Drawing.Size(118, 62);
+            this.AllHundred.TabIndex = 41;
+            this.AllHundred.Text = "100$";
+            this.AllHundred.UseVisualStyleBackColor = false;
+            this.AllHundred.Click += new System.EventHandler(this.AllHundred_Click);
             // 
             // ScanBarcodeLbl
             // 
@@ -318,27 +325,15 @@
             this.ScanBarcodeLbl.TabIndex = 42;
             this.ScanBarcodeLbl.Text = "Insert Price";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(440, 40);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(263, 39);
-            this.label1.TabIndex = 44;
-            this.label1.Text = "Change Amount";
-            // 
             // ChangeTxtBox
             // 
             this.ChangeTxtBox.BackColor = System.Drawing.Color.Black;
-            this.ChangeTxtBox.Enabled = false;
             this.ChangeTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ChangeTxtBox.ForeColor = System.Drawing.Color.Green;
-            this.ChangeTxtBox.Location = new System.Drawing.Point(447, 82);
+            this.ChangeTxtBox.Location = new System.Drawing.Point(593, 124);
             this.ChangeTxtBox.Name = "ChangeTxtBox";
-            this.ChangeTxtBox.Size = new System.Drawing.Size(335, 53);
+            this.ChangeTxtBox.ReadOnly = true;
+            this.ChangeTxtBox.Size = new System.Drawing.Size(189, 53);
             this.ChangeTxtBox.TabIndex = 45;
             this.ChangeTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -348,6 +343,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.button5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.button5.Location = new System.Drawing.Point(645, 472);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(137, 62);
@@ -356,21 +352,59 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // TotalTxtBox
+            // 
+            this.TotalTxtBox.BackColor = System.Drawing.Color.Black;
+            this.TotalTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalTxtBox.ForeColor = System.Drawing.Color.Green;
+            this.TotalTxtBox.Location = new System.Drawing.Point(593, 40);
+            this.TotalTxtBox.Name = "TotalTxtBox";
+            this.TotalTxtBox.ReadOnly = true;
+            this.TotalTxtBox.Size = new System.Drawing.Size(189, 53);
+            this.TotalTxtBox.TabIndex = 48;
+            this.TotalTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(408, 138);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(146, 39);
+            this.label2.TabIndex = 47;
+            this.label2.Text = "Change ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(408, 54);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(93, 39);
+            this.label1.TabIndex = 49;
+            this.label1.Text = "Total";
+            // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(797, 636);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TotalTxtBox);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.ChangeTxtBox);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.ScanBarcodeLbl);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.PayBut);
+            this.Controls.Add(this.AllHundred);
+            this.Controls.Add(this.AllFifty);
+            this.Controls.Add(this.AllTwenty);
+            this.Controls.Add(this.AllTen);
+            this.Controls.Add(this.AllFive);
             this.Controls.Add(this.CashAmount);
             this.Controls.Add(this.EndTransactionBut);
             this.Controls.Add(this.ZeroBut);
@@ -409,14 +443,16 @@
         private System.Windows.Forms.Button ZeroBut;
         private System.Windows.Forms.Button EndTransactionBut;
         private Bunifu.Framework.UI.BunifuMetroTextbox CashAmount;
-        private System.Windows.Forms.Button PayBut;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button AllFive;
+        private System.Windows.Forms.Button AllTen;
+        private System.Windows.Forms.Button AllTwenty;
+        private System.Windows.Forms.Button AllFifty;
+        private System.Windows.Forms.Button AllHundred;
         private System.Windows.Forms.Label ScanBarcodeLbl;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ChangeTxtBox;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox TotalTxtBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

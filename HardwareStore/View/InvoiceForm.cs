@@ -14,15 +14,15 @@ namespace HardwareStore.View
 {
     public partial class InvoiceForm : Form
     {
-        OfficeStoreContext officeStoreContext;//this should be not here
+       //this should be not here
         List<CartItem> cartItems;
-
+        InvoiceBLL InvoiceBLL;
         public InvoiceForm(List<CartItem> cartItems)
         {
             InitializeComponent();
             this.cartItems = cartItems;
-            this.ChangeTxtBox.ReadOnly = true;
-            this.officeStoreContext = new OfficeStoreContext();
+            this.TotalTxtBox.Text = $"{cartItems.Sum(a => a.Total):f2}";
+            this.InvoiceBLL = new InvoiceBLL();
         }
 
         private void OneBut_Click(object sender, EventArgs e)
@@ -87,33 +87,8 @@ namespace HardwareStore.View
 
         private void EndTransactionBut_Click(object sender, EventArgs e)
         {
-            var Id = this.officeStoreContext.Invoice.Count()+1;
-            foreach (var item in this.cartItems)
-            {
-                InvoiceItems InvoiceItem = new InvoiceItems()
-                {
-                    ItemId = item.Barcode,
-                    Quantity = item.Quantity,
-                    SinglePrice = item.SinglePrice,
-                    Total = item.Total,
-                    InvoiceId = Id
-                };
-                this.officeStoreContext.InvoiceItems.Add(InvoiceItem);
-            }
-            Invoice invoice = new Invoice()
-            {
-                OrderNo = Id + 1000,
-                Date = DateTime.Now.Date,
-                Time = DateTime.Now.TimeOfDay,
-                EmployeeId = this.officeStoreContext.LastLogin.Last().EmployeeId,
-                Total = this.cartItems.Sum(a => a.Total),
-                PaymentMethodId = 1,
-                StoreInfoId = 1
-            };
-
-
-            this.officeStoreContext.Invoice.Add(invoice);
-            this.officeStoreContext.SaveChanges();
+           
+            this.ChangeTxtBox.Text = $"{this.InvoiceBLL.SaveInvoice(this.cartItems,this.CashAmount.Text):f2}";
 
         }
 
@@ -121,7 +96,36 @@ namespace HardwareStore.View
         {
             this.Close();
         }
-       
 
+        private void AllHundred_Click(object sender, EventArgs e)
+        {
+            CashAmount.Text =(int.Parse(CashAmount.Text )+100).ToString();
+        }
+
+        private void AllFifty_Click(object sender, EventArgs e)
+        {
+            CashAmount.Text = (int.Parse(CashAmount.Text )+ 50).ToString();
+
+        }
+
+        private void AllTwenty_Click(object sender, EventArgs e)
+        {
+            CashAmount.Text = (int.Parse(CashAmount.Text) + 20).ToString();
+
+        }
+
+        private void AllTen_Click(object sender, EventArgs e)
+        {
+            CashAmount.Text = (int.Parse(CashAmount.Text) + 10).ToString();
+
+        }
+
+        private void AllFive_Click(object sender, EventArgs e)
+        {
+            CashAmount.Text = (int.Parse(CashAmount.Text) + 5).ToString();
+
+        }
+
+       
     }
 }

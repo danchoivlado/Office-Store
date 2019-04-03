@@ -16,7 +16,10 @@ namespace HardwareStore.BusinessLogic
        // public int InvoiceId { get; set; }
         OfficeStoreContext officestoreContext;
 
+        public CartItem()
+        {
 
+        }
         public CartItem(string Barcode, string Quantity)
         {
             this.officestoreContext = new OfficeStoreContext();
@@ -27,6 +30,12 @@ namespace HardwareStore.BusinessLogic
             this.SinglePrice = Item.SalesPrice;
             this.Total = this.Quantity*this.SinglePrice;
             //this.InvoiceId = InvoiceId;
+        }
+
+        public void QuantityMinus()
+        {
+            this.Quantity--;
+            this.Total = this.Quantity * this.SinglePrice;
         }
     }
 }

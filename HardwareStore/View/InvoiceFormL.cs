@@ -15,6 +15,7 @@ namespace HardwareStore.View
     {
         List<CartItem> cartItems;
         InvoiceForm InvoiceForm;
+        MainFrom MainFrom;
 
         public InvoiceFormL()
         {
@@ -30,37 +31,43 @@ namespace HardwareStore.View
             this.CustomerInfoTxtList.Items.Add($"Item Quantity                {0}");
             this.CustomerInfoTxtList.Items.Add($"Item Total                      {0:f2}");
             this.CustomerInfoTxtList.Items.Add("");
-            this.CustomerInfoTxtList.Items.Add($"Grand Total                    {0:f2}");
+            this.CustomerInfoTxtList.Items.Add($"Grand Total                    {cartItems.Sum(a => a.Total):f2}");
             this.CustomerInfoTxtList.SelectionMode = SelectionMode.None;
         }
 
         private void NextItemBut_Click(object sender, EventArgs e)
         {
             CartItem Item = this.cartItems.FirstOrDefault(a => a.Barcode == this.ScanBarcodeTxtBox.Text);
-            if (Item != null) 
+            if (Item != null)
             {
                 this.cartItems.Find(a => a.Barcode == this.ScanBarcodeTxtBox.Text).
                     Quantity += int.Parse(this.QuantityTxtBox.Text);
 
                 this.cartItems.Find(a => a.Barcode == this.ScanBarcodeTxtBox.Text).
-                    Total += int.Parse(this.QuantityTxtBox.Text)*Item.SinglePrice;
+                    Total += int.Parse(this.QuantityTxtBox.Text) * Item.SinglePrice;
 
-                this.CustomerInfoTxtList.Items[0]=$"Item Single Price           {Item.SinglePrice:f2}";
-                this.CustomerInfoTxtList.Items[1]=$"Item Quantity                {Item.Quantity}";
-                this.CustomerInfoTxtList.Items[2] =$"Item Total                      {Item.Total:f2}";
+                UpdateTextbox(Item);
+
             }
             else
             {
                 CartItem Item2 = new CartItem(this.ScanBarcodeTxtBox.Text, this.QuantityTxtBox.Text);
                 this.cartItems.Add(Item2);
-                this.CustomerInfoTxtList.Items[0]=$"Item Single Price           {Item2.SinglePrice:f2}";
-                this.CustomerInfoTxtList.Items[1]=$"Item Quantity                {Item2.Quantity}";
-                this.CustomerInfoTxtList.Items[2]=$"Item Total                      {Item2.Total:f2}";
-            }
-            this.CustomerInfoTxtList.Items[4] =$"Grand Total                    {cartItems.Sum(a=>a.Total):f2}";
-            this.ItemsDataGrid.DataSource = this.cartItems.ToList();
 
+                UpdateTextbox(Item2);
+            }
+            this.ItemsDataGrid.DataSource = this.cartItems.ToList();
+            ItemsDataGrid.Columns[2].Width = 185;
         }
+
+        private void UpdateTextbox(CartItem Item)
+        {
+            this.CustomerInfoTxtList.Items[0] = $"Item Single Price           {Item.SinglePrice:f2}";
+            this.CustomerInfoTxtList.Items[1] = $"Item Quantity                {Item.Quantity}";
+            this.CustomerInfoTxtList.Items[2] = $"Item Total                      {Item.Total:f2}";
+            this.CustomerInfoTxtList.Items[4] = $"Grand Total                    {cartItems.Sum(a => a.Total):f2}";
+        }
+
 
 
 
@@ -71,14 +78,15 @@ namespace HardwareStore.View
             ItemsDataGrid.CellBorderStyle = DataGridViewCellBorderStyle.SingleHorizontal;
             ItemsDataGrid.DefaultCellStyle.SelectionBackColor = Color.MediumSeaGreen;
             ItemsDataGrid.DefaultCellStyle.SelectionForeColor = Color.WhiteSmoke;
-            ItemsDataGrid.BackgroundColor = Color.White;
+            //  ItemsDataGrid.BackgroundColor = new Color(;
             ItemsDataGrid.EnableHeadersVisualStyles = false;
             ItemsDataGrid.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             ItemsDataGrid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(20, 25, 72);
             ItemsDataGrid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             ItemsDataGrid.ReadOnly = true;
             ItemsDataGrid.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            ItemsDataGrid.Font = new Font("Arial",16);
+            ItemsDataGrid.Font = new Font("Arial", 20);
+            ItemsDataGrid.RowTemplate.Height = 50;
         }
 
         private void PayBut_Click(object sender, EventArgs e)
@@ -86,6 +94,38 @@ namespace HardwareStore.View
             this.InvoiceForm = new InvoiceForm(this.cartItems);
             this.InvoiceForm.ShowDialog();
         }
+
+        private void DeleteItemBut_Click(object sender, EventArgs e)
+        {
+            var Item = ItemsDataGrid.SelectedRows[0].Cells;
+            var Barcode = Item[0].Value.ToString();
+            CartItem DeletedItem = this.cartItems.First(a => a.Barcode == Barcode);
+            this.cartItems.Remove(DeletedItem);
+            this.ItemsDataGrid.DataSource = this.cartItems.ToList();
+
+
+            UpdateTextbox(new CartItem());
+        }
+
+        private void ChangeQuantityBut_Click(object sender, EventArgs e)
+        {
+            var Item = ItemsDataGrid.SelectedRows[0].Cells;
+            var Barcode = Item[0].Value.ToString();
+            CartItem DeletedItem = this.cartItems.First(a => a.Barcode == Barcode);
+            DeletedItem.QuantityMinus();
+            this.ItemsDataGrid.DataSource = this.cartItems.ToList();
+            this.ItemsDataGrid.Rows[0].Selected = false;
+
+            UpdateTextbox(DeletedItem);
+        }
+
+        private void MainMenu_Click(object sender, EventArgs e)
+        {
+            this.MainFrom = new MainFrom();
+            this.Hide();
+            this.MainFrom.ShowDialog();
+            this.Close();
+        }
     }
-   
+
 }
