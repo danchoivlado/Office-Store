@@ -14,14 +14,14 @@ namespace HardwareStore.View
     public partial class InvoiceForm : Form
     {
         TextBox TextBox;
-        MainFormBLL MainFormBLL;
+        InvoiceBLL MainFormBLL;
         //Keeps the last focused textbox
 
         public InvoiceForm()
         {
             InitializeComponent();
             TextBox = BarcodeTxtBox;
-            this.MainFormBLL = new MainFormBLL();
+            this.MainFormBLL = new InvoiceBLL();
         }
 
         private void OneBut_Click(object sender, EventArgs e)

@@ -19,6 +19,8 @@ namespace HardwareStore.View
         NewItemForm NewItemForm;
         StoreItemsForm StoreItemsForm;
         SalesReportForm SalesReportForm;
+        InvoiceFormL InvoiceFormL;
+
 
         public MainFrom()
         {
@@ -40,8 +42,8 @@ namespace HardwareStore.View
 
         private void NewInvoiceBut_Click(object sender, EventArgs e)
         {
-            this.InvoiceForm = new InvoiceForm();
-            this.InvoiceForm.Show();
+            this.InvoiceFormL = new InvoiceFormL();
+            this.InvoiceFormL.Show();
         }
 
 

@@ -144,8 +144,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\CartItem.cs" />
     <Compile Include="BusinessLogic\DailySales.cs" />
-    <Compile Include="BusinessLogic\MainFormBLL.cs" />
+    <Compile Include="BusinessLogic\InvoiceBLL.cs" />
     <Compile Include="BusinessLogic\RegisterLoginInfoBLL.cs" />
     <Compile Include="BusinessLogic\UpdateCreateSalesReportBLL.cs" />
     <Compile Include="Button_WOC.cs">
@@ -163,6 +164,12 @@
     <Compile Include="DataBase\Models\Paymentmethod.cs" />
     <Compile Include="DataBase\Models\StoreInfo.cs" />
     <Compile Include="DataBase\Models\Towns.cs" />
+    <Compile Include="View\InvoiceFormL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\InvoiceFormL.Designer.cs">
+      <DependentUpon>InvoiceFormL.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,6 +220,9 @@
     <Compile Include="View\Store_Info.Designer.cs">
       <DependentUpon>Store_Info.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="View\InvoiceFormL.resx">
+      <DependentUpon>InvoiceFormL.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
