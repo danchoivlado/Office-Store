@@ -28,12 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.BarcodeTxtBox = new System.Windows.Forms.TextBox();
-            this.QuantityTxtBox = new System.Windows.Forms.TextBox();
-            this.QuantityLbl = new System.Windows.Forms.Label();
-            this.ShowReceiptBut = new System.Windows.Forms.Button();
-            this.PrintReceiptBut = new System.Windows.Forms.Button();
-            this.ResetReceiptBut = new System.Windows.Forms.Button();
             this.OneBut = new System.Windows.Forms.Button();
             this.TwoBut = new System.Windows.Forms.Button();
             this.ThreeBut = new System.Windows.Forms.Button();
@@ -46,83 +40,25 @@
             this.DoubleZeroBut = new System.Windows.Forms.Button();
             this.ComaBut = new System.Windows.Forms.Button();
             this.ZeroBut = new System.Windows.Forms.Button();
-            this.TotalTxtBox = new System.Windows.Forms.TextBox();
-            this.DiscountBut = new System.Windows.Forms.Button();
-            this.NextItemBut = new System.Windows.Forms.Button();
             this.EndTransactionBut = new System.Windows.Forms.Button();
-            this.PlusBut = new System.Windows.Forms.Button();
-            this.DeleteNumberBut = new System.Windows.Forms.Button();
+            this.CashAmount = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.PayBut = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.ScanBarcodeLbl = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ChangeTxtBox = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // BarcodeTxtBox
-            // 
-            this.BarcodeTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BarcodeTxtBox.Location = new System.Drawing.Point(12, 12);
-            this.BarcodeTxtBox.Name = "BarcodeTxtBox";
-            this.BarcodeTxtBox.Size = new System.Drawing.Size(254, 36);
-            this.BarcodeTxtBox.TabIndex = 0;
-            this.BarcodeTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.BarcodeTxtBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.BarcodeTxtBox_MouseClick);
-            this.BarcodeTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarcodeTxtBox_KeyDown);
-            // 
-            // QuantityTxtBox
-            // 
-            this.QuantityTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityTxtBox.Location = new System.Drawing.Point(199, 64);
-            this.QuantityTxtBox.Name = "QuantityTxtBox";
-            this.QuantityTxtBox.Size = new System.Drawing.Size(67, 36);
-            this.QuantityTxtBox.TabIndex = 1;
-            this.QuantityTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.QuantityTxtBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.QuantityTxtBox_MouseClick);
-            this.QuantityTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.QuantityTxtBox_KeyDown);
-            // 
-            // QuantityLbl
-            // 
-            this.QuantityLbl.AutoSize = true;
-            this.QuantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.QuantityLbl.Location = new System.Drawing.Point(12, 64);
-            this.QuantityLbl.Name = "QuantityLbl";
-            this.QuantityLbl.Size = new System.Drawing.Size(133, 36);
-            this.QuantityLbl.TabIndex = 2;
-            this.QuantityLbl.Text = "Quantity ";
-            // 
-            // ShowReceiptBut
-            // 
-            this.ShowReceiptBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ShowReceiptBut.Location = new System.Drawing.Point(12, 239);
-            this.ShowReceiptBut.Name = "ShowReceiptBut";
-            this.ShowReceiptBut.Size = new System.Drawing.Size(254, 37);
-            this.ShowReceiptBut.TabIndex = 3;
-            this.ShowReceiptBut.Text = "Show Receipt";
-            this.ShowReceiptBut.UseVisualStyleBackColor = true;
-            this.ShowReceiptBut.Click += new System.EventHandler(this.ShowReceiptBut_Click);
-            // 
-            // PrintReceiptBut
-            // 
-            this.PrintReceiptBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PrintReceiptBut.Location = new System.Drawing.Point(12, 292);
-            this.PrintReceiptBut.Name = "PrintReceiptBut";
-            this.PrintReceiptBut.Size = new System.Drawing.Size(254, 34);
-            this.PrintReceiptBut.TabIndex = 4;
-            this.PrintReceiptBut.Text = "Print Receipt";
-            this.PrintReceiptBut.UseVisualStyleBackColor = true;
-            // 
-            // ResetReceiptBut
-            // 
-            this.ResetReceiptBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetReceiptBut.ForeColor = System.Drawing.Color.Red;
-            this.ResetReceiptBut.Location = new System.Drawing.Point(12, 144);
-            this.ResetReceiptBut.Name = "ResetReceiptBut";
-            this.ResetReceiptBut.Size = new System.Drawing.Size(254, 34);
-            this.ResetReceiptBut.TabIndex = 6;
-            this.ResetReceiptBut.Text = "Reset Receipt";
-            this.ResetReceiptBut.UseVisualStyleBackColor = true;
             // 
             // OneBut
             // 
-            this.OneBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.OneBut.BackColor = System.Drawing.Color.Green;
             this.OneBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OneBut.Location = new System.Drawing.Point(287, 209);
+            this.OneBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.OneBut.Location = new System.Drawing.Point(31, 300);
             this.OneBut.Name = "OneBut";
             this.OneBut.Size = new System.Drawing.Size(79, 55);
             this.OneBut.TabIndex = 7;
@@ -132,9 +68,10 @@
             // 
             // TwoBut
             // 
-            this.TwoBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.TwoBut.BackColor = System.Drawing.Color.Green;
             this.TwoBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TwoBut.Location = new System.Drawing.Point(383, 209);
+            this.TwoBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.TwoBut.Location = new System.Drawing.Point(127, 300);
             this.TwoBut.Name = "TwoBut";
             this.TwoBut.Size = new System.Drawing.Size(79, 55);
             this.TwoBut.TabIndex = 8;
@@ -144,9 +81,10 @@
             // 
             // ThreeBut
             // 
-            this.ThreeBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ThreeBut.BackColor = System.Drawing.Color.Green;
             this.ThreeBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThreeBut.Location = new System.Drawing.Point(479, 209);
+            this.ThreeBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ThreeBut.Location = new System.Drawing.Point(223, 300);
             this.ThreeBut.Name = "ThreeBut";
             this.ThreeBut.Size = new System.Drawing.Size(79, 55);
             this.ThreeBut.TabIndex = 9;
@@ -156,9 +94,10 @@
             // 
             // SixBut
             // 
-            this.SixBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.SixBut.BackColor = System.Drawing.Color.Green;
             this.SixBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SixBut.Location = new System.Drawing.Point(479, 135);
+            this.SixBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.SixBut.Location = new System.Drawing.Point(223, 226);
             this.SixBut.Name = "SixBut";
             this.SixBut.Size = new System.Drawing.Size(79, 55);
             this.SixBut.TabIndex = 12;
@@ -168,9 +107,10 @@
             // 
             // FiveBut
             // 
-            this.FiveBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.FiveBut.BackColor = System.Drawing.Color.Green;
             this.FiveBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FiveBut.Location = new System.Drawing.Point(383, 135);
+            this.FiveBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.FiveBut.Location = new System.Drawing.Point(127, 226);
             this.FiveBut.Name = "FiveBut";
             this.FiveBut.Size = new System.Drawing.Size(79, 55);
             this.FiveBut.TabIndex = 11;
@@ -180,9 +120,10 @@
             // 
             // FourBut
             // 
-            this.FourBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.FourBut.BackColor = System.Drawing.Color.Green;
             this.FourBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FourBut.Location = new System.Drawing.Point(287, 135);
+            this.FourBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.FourBut.Location = new System.Drawing.Point(31, 226);
             this.FourBut.Name = "FourBut";
             this.FourBut.Size = new System.Drawing.Size(79, 55);
             this.FourBut.TabIndex = 10;
@@ -192,9 +133,10 @@
             // 
             // NineBut
             // 
-            this.NineBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.NineBut.BackColor = System.Drawing.Color.Green;
             this.NineBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NineBut.Location = new System.Drawing.Point(479, 61);
+            this.NineBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.NineBut.Location = new System.Drawing.Point(223, 152);
             this.NineBut.Name = "NineBut";
             this.NineBut.Size = new System.Drawing.Size(79, 55);
             this.NineBut.TabIndex = 15;
@@ -204,9 +146,10 @@
             // 
             // EightBut
             // 
-            this.EightBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.EightBut.BackColor = System.Drawing.Color.Green;
             this.EightBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EightBut.Location = new System.Drawing.Point(383, 61);
+            this.EightBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.EightBut.Location = new System.Drawing.Point(127, 152);
             this.EightBut.Name = "EightBut";
             this.EightBut.Size = new System.Drawing.Size(79, 55);
             this.EightBut.TabIndex = 14;
@@ -216,9 +159,10 @@
             // 
             // SevenBut
             // 
-            this.SevenBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.SevenBut.BackColor = System.Drawing.Color.Green;
             this.SevenBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SevenBut.Location = new System.Drawing.Point(287, 61);
+            this.SevenBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.SevenBut.Location = new System.Drawing.Point(31, 152);
             this.SevenBut.Name = "SevenBut";
             this.SevenBut.Size = new System.Drawing.Size(79, 55);
             this.SevenBut.TabIndex = 13;
@@ -228,9 +172,10 @@
             // 
             // DoubleZeroBut
             // 
-            this.DoubleZeroBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.DoubleZeroBut.BackColor = System.Drawing.Color.Green;
             this.DoubleZeroBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DoubleZeroBut.Location = new System.Drawing.Point(287, 278);
+            this.DoubleZeroBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.DoubleZeroBut.Location = new System.Drawing.Point(31, 369);
             this.DoubleZeroBut.Name = "DoubleZeroBut";
             this.DoubleZeroBut.Size = new System.Drawing.Size(125, 55);
             this.DoubleZeroBut.TabIndex = 16;
@@ -240,9 +185,10 @@
             // 
             // ComaBut
             // 
-            this.ComaBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ComaBut.BackColor = System.Drawing.Color.Green;
             this.ComaBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComaBut.Location = new System.Drawing.Point(418, 278);
+            this.ComaBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ComaBut.Location = new System.Drawing.Point(162, 369);
             this.ComaBut.Name = "ComaBut";
             this.ComaBut.Size = new System.Drawing.Size(44, 55);
             this.ComaBut.TabIndex = 17;
@@ -252,9 +198,10 @@
             // 
             // ZeroBut
             // 
-            this.ZeroBut.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.ZeroBut.BackColor = System.Drawing.Color.Green;
             this.ZeroBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZeroBut.Location = new System.Drawing.Point(479, 278);
+            this.ZeroBut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ZeroBut.Location = new System.Drawing.Point(223, 369);
             this.ZeroBut.Name = "ZeroBut";
             this.ZeroBut.Size = new System.Drawing.Size(79, 55);
             this.ZeroBut.TabIndex = 18;
@@ -262,45 +209,13 @@
             this.ZeroBut.UseVisualStyleBackColor = false;
             this.ZeroBut.Click += new System.EventHandler(this.ZeroBut_Click);
             // 
-            // TotalTxtBox
-            // 
-            this.TotalTxtBox.Enabled = false;
-            this.TotalTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalTxtBox.Location = new System.Drawing.Point(323, 12);
-            this.TotalTxtBox.Name = "TotalTxtBox";
-            this.TotalTxtBox.Size = new System.Drawing.Size(196, 36);
-            this.TotalTxtBox.TabIndex = 19;
-            this.TotalTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // DiscountBut
-            // 
-            this.DiscountBut.BackColor = System.Drawing.Color.Gold;
-            this.DiscountBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DiscountBut.Location = new System.Drawing.Point(578, 12);
-            this.DiscountBut.Name = "DiscountBut";
-            this.DiscountBut.Size = new System.Drawing.Size(207, 53);
-            this.DiscountBut.TabIndex = 20;
-            this.DiscountBut.Text = "Use Discount";
-            this.DiscountBut.UseVisualStyleBackColor = false;
-            // 
-            // NextItemBut
-            // 
-            this.NextItemBut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.NextItemBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextItemBut.Location = new System.Drawing.Point(578, 83);
-            this.NextItemBut.Name = "NextItemBut";
-            this.NextItemBut.Size = new System.Drawing.Size(207, 53);
-            this.NextItemBut.TabIndex = 21;
-            this.NextItemBut.Text = "Next Item";
-            this.NextItemBut.UseVisualStyleBackColor = false;
-            this.NextItemBut.Click += new System.EventHandler(this.NextItemBut_Click);
-            // 
             // EndTransactionBut
             // 
             this.EndTransactionBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.EndTransactionBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EndTransactionBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndTransactionBut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.EndTransactionBut.Location = new System.Drawing.Point(648, 151);
+            this.EndTransactionBut.Location = new System.Drawing.Point(648, 242);
             this.EndTransactionBut.Name = "EndTransactionBut";
             this.EndTransactionBut.Size = new System.Drawing.Size(137, 182);
             this.EndTransactionBut.TabIndex = 22;
@@ -308,40 +223,156 @@
             this.EndTransactionBut.UseVisualStyleBackColor = false;
             this.EndTransactionBut.Click += new System.EventHandler(this.EndTransactionBut_Click);
             // 
-            // PlusBut
+            // CashAmount
             // 
-            this.PlusBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PlusBut.Location = new System.Drawing.Point(578, 209);
-            this.PlusBut.Name = "PlusBut";
-            this.PlusBut.Size = new System.Drawing.Size(64, 127);
-            this.PlusBut.TabIndex = 23;
-            this.PlusBut.Text = "+";
-            this.PlusBut.UseVisualStyleBackColor = true;
-            this.PlusBut.Click += new System.EventHandler(this.PlusBut_Click);
+            this.CashAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.CashAmount.BorderColorFocused = System.Drawing.Color.SeaGreen;
+            this.CashAmount.BorderColorIdle = System.Drawing.Color.Silver;
+            this.CashAmount.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
+            this.CashAmount.BorderThickness = 3;
+            this.CashAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.CashAmount.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.CashAmount.ForeColor = System.Drawing.Color.Silver;
+            this.CashAmount.isPassword = false;
+            this.CashAmount.Location = new System.Drawing.Point(31, 83);
+            this.CashAmount.Margin = new System.Windows.Forms.Padding(4);
+            this.CashAmount.Name = "CashAmount";
+            this.CashAmount.Size = new System.Drawing.Size(271, 44);
+            this.CashAmount.TabIndex = 30;
+            this.CashAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // DeleteNumberBut
+            // PayBut
             // 
-            this.DeleteNumberBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteNumberBut.Location = new System.Drawing.Point(578, 148);
-            this.DeleteNumberBut.Name = "DeleteNumberBut";
-            this.DeleteNumberBut.Size = new System.Drawing.Size(64, 54);
-            this.DeleteNumberBut.TabIndex = 24;
-            this.DeleteNumberBut.Text = "C";
-            this.DeleteNumberBut.UseVisualStyleBackColor = true;
-            this.DeleteNumberBut.Click += new System.EventHandler(this.DeleteNumberBut_Click);
+            this.PayBut.BackColor = System.Drawing.Color.SeaGreen;
+            this.PayBut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PayBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PayBut.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.PayBut.Location = new System.Drawing.Point(12, 562);
+            this.PayBut.Name = "PayBut";
+            this.PayBut.Size = new System.Drawing.Size(118, 62);
+            this.PayBut.TabIndex = 37;
+            this.PayBut.Text = "5$";
+            this.PayBut.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SeaGreen;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(175, 562);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 62);
+            this.button1.TabIndex = 38;
+            this.button1.Text = "10$";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SeaGreen;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(338, 562);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(118, 62);
+            this.button2.TabIndex = 39;
+            this.button2.Text = "20$";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.SeaGreen;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Location = new System.Drawing.Point(501, 562);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(118, 62);
+            this.button3.TabIndex = 40;
+            this.button3.Text = "50$";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.SeaGreen;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button4.Location = new System.Drawing.Point(664, 562);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(118, 62);
+            this.button4.TabIndex = 41;
+            this.button4.Text = "100$";
+            this.button4.UseVisualStyleBackColor = false;
+            // 
+            // ScanBarcodeLbl
+            // 
+            this.ScanBarcodeLbl.AutoSize = true;
+            this.ScanBarcodeLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ScanBarcodeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ScanBarcodeLbl.ForeColor = System.Drawing.Color.White;
+            this.ScanBarcodeLbl.Location = new System.Drawing.Point(24, 40);
+            this.ScanBarcodeLbl.Name = "ScanBarcodeLbl";
+            this.ScanBarcodeLbl.Size = new System.Drawing.Size(189, 39);
+            this.ScanBarcodeLbl.TabIndex = 42;
+            this.ScanBarcodeLbl.Text = "Insert Price";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(440, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(263, 39);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "Change Amount";
+            // 
+            // ChangeTxtBox
+            // 
+            this.ChangeTxtBox.BackColor = System.Drawing.Color.Black;
+            this.ChangeTxtBox.Enabled = false;
+            this.ChangeTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChangeTxtBox.ForeColor = System.Drawing.Color.Green;
+            this.ChangeTxtBox.Location = new System.Drawing.Point(447, 82);
+            this.ChangeTxtBox.Name = "ChangeTxtBox";
+            this.ChangeTxtBox.Size = new System.Drawing.Size(335, 53);
+            this.ChangeTxtBox.TabIndex = 45;
+            this.ChangeTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Crimson;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.button5.Location = new System.Drawing.Point(645, 472);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(137, 62);
+            this.button5.TabIndex = 46;
+            this.button5.Text = "Cencel";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(797, 348);
-            this.Controls.Add(this.DeleteNumberBut);
-            this.Controls.Add(this.PlusBut);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(797, 636);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.ChangeTxtBox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ScanBarcodeLbl);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.PayBut);
+            this.Controls.Add(this.CashAmount);
             this.Controls.Add(this.EndTransactionBut);
-            this.Controls.Add(this.NextItemBut);
-            this.Controls.Add(this.DiscountBut);
-            this.Controls.Add(this.TotalTxtBox);
             this.Controls.Add(this.ZeroBut);
             this.Controls.Add(this.ComaBut);
             this.Controls.Add(this.DoubleZeroBut);
@@ -354,12 +385,6 @@
             this.Controls.Add(this.ThreeBut);
             this.Controls.Add(this.TwoBut);
             this.Controls.Add(this.OneBut);
-            this.Controls.Add(this.ResetReceiptBut);
-            this.Controls.Add(this.PrintReceiptBut);
-            this.Controls.Add(this.ShowReceiptBut);
-            this.Controls.Add(this.QuantityLbl);
-            this.Controls.Add(this.QuantityTxtBox);
-            this.Controls.Add(this.BarcodeTxtBox);
             this.MaximizeBox = false;
             this.Name = "InvoiceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -370,13 +395,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox BarcodeTxtBox;
-        private System.Windows.Forms.TextBox QuantityTxtBox;
-        private System.Windows.Forms.Label QuantityLbl;
-        private System.Windows.Forms.Button ShowReceiptBut;
-        private System.Windows.Forms.Button PrintReceiptBut;
-        private System.Windows.Forms.Button ResetReceiptBut;
         private System.Windows.Forms.Button OneBut;
         private System.Windows.Forms.Button TwoBut;
         private System.Windows.Forms.Button ThreeBut;
@@ -389,11 +407,16 @@
         private System.Windows.Forms.Button DoubleZeroBut;
         private System.Windows.Forms.Button ComaBut;
         private System.Windows.Forms.Button ZeroBut;
-        private System.Windows.Forms.TextBox TotalTxtBox;
-        private System.Windows.Forms.Button DiscountBut;
-        private System.Windows.Forms.Button NextItemBut;
         private System.Windows.Forms.Button EndTransactionBut;
-        private System.Windows.Forms.Button PlusBut;
-        private System.Windows.Forms.Button DeleteNumberBut;
+        private Bunifu.Framework.UI.BunifuMetroTextbox CashAmount;
+        private System.Windows.Forms.Button PayBut;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Label ScanBarcodeLbl;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox ChangeTxtBox;
+        private System.Windows.Forms.Button button5;
     }
 }

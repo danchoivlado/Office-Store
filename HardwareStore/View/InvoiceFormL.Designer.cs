@@ -33,7 +33,9 @@
             this.ScanBarcodeTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.QuantityTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.QuantityLbl = new System.Windows.Forms.Label();
+            this.CustomerInfoTxtList = new System.Windows.Forms.ListBox();
             this.NextItemBut = new ePOSOne.btnProduct.Button_WOC();
+            this.PayBut = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             this.ScanBarcodeLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ScanBarcodeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScanBarcodeLbl.ForeColor = System.Drawing.Color.White;
-            this.ScanBarcodeLbl.Location = new System.Drawing.Point(18, 67);
+            this.ScanBarcodeLbl.Location = new System.Drawing.Point(18, 72);
             this.ScanBarcodeLbl.Name = "ScanBarcodeLbl";
             this.ScanBarcodeLbl.Size = new System.Drawing.Size(231, 39);
             this.ScanBarcodeLbl.TabIndex = 2;
@@ -71,7 +73,7 @@
             this.ScanBarcodeTxtBox.Font = new System.Drawing.Font("Century Gothic", 17F);
             this.ScanBarcodeTxtBox.ForeColor = System.Drawing.Color.Silver;
             this.ScanBarcodeTxtBox.isPassword = false;
-            this.ScanBarcodeTxtBox.Location = new System.Drawing.Point(25, 110);
+            this.ScanBarcodeTxtBox.Location = new System.Drawing.Point(25, 115);
             this.ScanBarcodeTxtBox.Margin = new System.Windows.Forms.Padding(4);
             this.ScanBarcodeTxtBox.Name = "ScanBarcodeTxtBox";
             this.ScanBarcodeTxtBox.Size = new System.Drawing.Size(297, 44);
@@ -89,7 +91,7 @@
             this.QuantityTxtBox.Font = new System.Drawing.Font("Century Gothic", 17F);
             this.QuantityTxtBox.ForeColor = System.Drawing.Color.Silver;
             this.QuantityTxtBox.isPassword = false;
-            this.QuantityTxtBox.Location = new System.Drawing.Point(344, 110);
+            this.QuantityTxtBox.Location = new System.Drawing.Point(344, 115);
             this.QuantityTxtBox.Margin = new System.Windows.Forms.Padding(4);
             this.QuantityTxtBox.Name = "QuantityTxtBox";
             this.QuantityTxtBox.Size = new System.Drawing.Size(178, 44);
@@ -102,11 +104,23 @@
             this.QuantityLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.QuantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.QuantityLbl.ForeColor = System.Drawing.Color.White;
-            this.QuantityLbl.Location = new System.Drawing.Point(337, 67);
+            this.QuantityLbl.Location = new System.Drawing.Point(337, 72);
             this.QuantityLbl.Name = "QuantityLbl";
             this.QuantityLbl.Size = new System.Drawing.Size(143, 39);
             this.QuantityLbl.TabIndex = 30;
             this.QuantityLbl.Text = "Quantity";
+            // 
+            // CustomerInfoTxtList
+            // 
+            this.CustomerInfoTxtList.BackColor = System.Drawing.SystemColors.MenuText;
+            this.CustomerInfoTxtList.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerInfoTxtList.ForeColor = System.Drawing.Color.Green;
+            this.CustomerInfoTxtList.FormattingEnabled = true;
+            this.CustomerInfoTxtList.ItemHeight = 51;
+            this.CustomerInfoTxtList.Location = new System.Drawing.Point(704, 45);
+            this.CustomerInfoTxtList.Name = "CustomerInfoTxtList";
+            this.CustomerInfoTxtList.Size = new System.Drawing.Size(551, 259);
+            this.CustomerInfoTxtList.TabIndex = 35;
             // 
             // NextItemBut
             // 
@@ -117,7 +131,7 @@
             this.NextItemBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.NextItemBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.NextItemBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextItemBut.Location = new System.Drawing.Point(540, 91);
+            this.NextItemBut.Location = new System.Drawing.Point(540, 96);
             this.NextItemBut.Name = "NextItemBut";
             this.NextItemBut.OnHoverBorderColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.NextItemBut.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
@@ -129,12 +143,28 @@
             this.NextItemBut.UseVisualStyleBackColor = true;
             this.NextItemBut.Click += new System.EventHandler(this.NextItemBut_Click);
             // 
+            // PayBut
+            // 
+            this.PayBut.BackColor = System.Drawing.Color.SeaGreen;
+            this.PayBut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PayBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PayBut.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.PayBut.Location = new System.Drawing.Point(704, 310);
+            this.PayBut.Name = "PayBut";
+            this.PayBut.Size = new System.Drawing.Size(551, 72);
+            this.PayBut.TabIndex = 36;
+            this.PayBut.Text = "PAY";
+            this.PayBut.UseVisualStyleBackColor = false;
+            this.PayBut.Click += new System.EventHandler(this.PayBut_Click);
+            // 
             // InvoiceFormL
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1282, 903);
+            this.Controls.Add(this.PayBut);
+            this.Controls.Add(this.CustomerInfoTxtList);
             this.Controls.Add(this.NextItemBut);
             this.Controls.Add(this.QuantityTxtBox);
             this.Controls.Add(this.QuantityLbl);
@@ -158,5 +188,7 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox QuantityTxtBox;
         private System.Windows.Forms.Label QuantityLbl;
         private ePOSOne.btnProduct.Button_WOC NextItemBut;
+        private System.Windows.Forms.ListBox CustomerInfoTxtList;
+        private System.Windows.Forms.Button PayBut;
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HardwareStore.BusinessLogic
 {
-    class CartItem
+    public class CartItem
     {
         public string Barcode { get; set; }
         public int Quantity { get; set; }

@@ -8,252 +8,120 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HardwareStore.BusinessLogic;
+using HardwareStore.Models;
 
 namespace HardwareStore.View
 {
     public partial class InvoiceForm : Form
     {
-        TextBox TextBox;
-        InvoiceBLL MainFormBLL;
-        //Keeps the last focused textbox
+        OfficeStoreContext officeStoreContext;//this should be not here
+        List<CartItem> cartItems;
 
-        public InvoiceForm()
+        public InvoiceForm(List<CartItem> cartItems)
         {
             InitializeComponent();
-            TextBox = BarcodeTxtBox;
-            this.MainFormBLL = new InvoiceBLL();
+            this.cartItems = cartItems;
+            this.ChangeTxtBox.ReadOnly = true;
+            this.officeStoreContext = new OfficeStoreContext();
         }
 
         private void OneBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += OneBut.Text;  //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += OneBut.Text; //Adds the digit to textbox
-            }
-
+            CashAmount.Text += OneBut.Text;  //Adds the digit to textbox
         }
 
         private void TwoBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += TwoBut.Text; //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += TwoBut.Text; //Adds the digit to textbox
-            }
+            CashAmount.Text += TwoBut.Text; //Adds the digit to textbox
         }
 
         private void ThreeBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += ThreeBut.Text; //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += ThreeBut.Text; //Adds the digit to textbox
-            }
+            CashAmount.Text += ThreeBut.Text; //Adds the digit to textbox
         }
 
         private void FourBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += FourBut.Text; //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += FourBut.Text; //Adds the digit to textbox
-            }
+            CashAmount.Text += FourBut.Text; //Adds the digit to textbox
         }
 
         private void FiveBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += FiveBut.Text; //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += FiveBut.Text;//Adds the digit to textbox
-            }
+            CashAmount.Text += FiveBut.Text; //Adds the digit to textbox
         }
 
         private void SixBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += SixBut.Text; //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += SixBut.Text; //Adds the digit to textbox
-            }
+            CashAmount.Text += SixBut.Text; //Adds the digit to textbox
         }
 
         private void SevenBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += SevenBut.Text; //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += SevenBut.Text; //Adds the digit to textbox
-            }
+            CashAmount.Text += SevenBut.Text; //Adds the digit to textbox
         }
 
         private void EightBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += EightBut.Text; //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += EightBut.Text; //Adds the digit to textbox
-            }
+            CashAmount.Text += EightBut.Text; //Adds the digit to textbox
         }
 
         private void NineBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += NineBut.Text; //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += NineBut.Text; //Adds the digit to textbox
-            }
+            CashAmount.Text += NineBut.Text; //Adds the digit to textbox
         }
 
         private void DoubleZeroBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += DoubleZeroBut.Text; //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += DoubleZeroBut.Text; //Adds the digit to textbox
-            }
+            CashAmount.Text += DoubleZeroBut.Text; //Adds the digit to textbox
         }
 
         private void ComaBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += ComaBut.Text; //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += ComaBut.Text; //Adds the digit to textbox
-            }
+            CashAmount.Text += ComaBut.Text; //Adds the digit to textbox
         }
 
         private void ZeroBut_Click(object sender, EventArgs e)
         {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Text += ZeroBut.Text; //Adds the digit to textbox
-            }
-            else
-            {
-                QuantityTxtBox.Text += ZeroBut.Text; //Adds the digit to textbox
-            }
-        }
-
-        private void PlusBut_Click(object sender, EventArgs e)
-        //Adds the one to quantitytxtBox
-        {
-            if (QuantityTxtBox.Text != String.Empty) 
-                //checks if QuantityTxtBox is emppty
-            {
-                int EndValue = int.Parse(QuantityTxtBox.Text) + int.Parse(OneBut.Text);
-                QuantityTxtBox.Text = EndValue.ToString();
-            }
-            else
-            {
-                QuantityTxtBox.Text = OneBut.Text;
-            }
-        }
-
-        private void DeleteNumberBut_Click(object sender, EventArgs e)
-        {
-            if (TextBox == BarcodeTxtBox)
-            {
-                BarcodeTxtBox.Clear(); //clears the last focused textbox
-            }
-            else
-            {
-                QuantityTxtBox.Clear(); //clears the last focused textbox
-            }
-        }
-
-        private void BarcodeTxtBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            TextBox = BarcodeTxtBox;
-            //changes the last focused box
-        }
-        private void QuantityTxtBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            TextBox = QuantityTxtBox;
-            //changes the last focused box
-        }
-        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
-            //Closes the Form
-        }
-
-        private void BarcodeTxtBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                this.ActiveControl = QuantityTxtBox;
-                QuantityTxtBox.Focus();
-            }
-
-            //focus the next textbox
-        }
-        private void QuantityTxtBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                NextItemBut.PerformClick();
-            }
-            //presses the AddItemBut button
-        }
-
-        private void NextItemBut_Click(object sender, EventArgs e)
-        {
-            int ItemBarcode = int.Parse(this.BarcodeTxtBox.Text);
-            int ItemQuantity = int.Parse(this.QuantityTxtBox.Text);
-
-            MainFormBLL.NextItemProceed(ItemBarcode, ItemQuantity);
-
-            this.BarcodeTxtBox.Clear();
-            this.QuantityTxtBox.Clear();
-
-            this.ActiveControl = QuantityTxtBox;
-            BarcodeTxtBox.Focus();
+            CashAmount.Text += ZeroBut.Text; //Adds the digit to textbox
         }
 
         private void EndTransactionBut_Click(object sender, EventArgs e)
         {
-           // MainFormBLL.EndTransactionProceed(this.EmployeeName);
+            var Id = this.officeStoreContext.Invoice.Count()+1;
+            foreach (var item in this.cartItems)
+            {
+                InvoiceItems InvoiceItem = new InvoiceItems()
+                {
+                    ItemId = item.Barcode,
+                    Quantity = item.Quantity,
+                    SinglePrice = item.SinglePrice,
+                    Total = item.Total,
+                    InvoiceId = Id
+                };
+                this.officeStoreContext.InvoiceItems.Add(InvoiceItem);
+            }
+            Invoice invoice = new Invoice()
+            {
+                OrderNo = Id + 1000,
+                Date = DateTime.Now.Date,
+                Time = DateTime.Now.TimeOfDay,
+                EmployeeId = this.officeStoreContext.LastLogin.Last().EmployeeId,
+                Total = this.cartItems.Sum(a => a.Total),
+                PaymentMethodId = 1,
+                StoreInfoId = 1
+            };
+
+
+            this.officeStoreContext.Invoice.Add(invoice);
+            this.officeStoreContext.SaveChanges();
+
         }
 
-        private void ShowReceiptBut_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-           // MainFormBLL.ShowInvoice(EmployeeName);
+            this.Close();
         }
+       
 
     }
 }
