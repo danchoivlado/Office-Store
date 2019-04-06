@@ -39,6 +39,7 @@
             // ItemsGridView
             // 
             this.ItemsGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ItemsGridView.BackgroundColor = System.Drawing.Color.Gray;
             this.ItemsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
@@ -51,78 +52,81 @@
             this.ItemsGridView.Location = new System.Drawing.Point(27, 37);
             this.ItemsGridView.Name = "ItemsGridView";
             this.ItemsGridView.RowTemplate.Height = 24;
-            this.ItemsGridView.Size = new System.Drawing.Size(925, 273);
+            this.ItemsGridView.Size = new System.Drawing.Size(1161, 336);
             this.ItemsGridView.TabIndex = 0;
             // 
             // DeleteBut
             // 
-            this.DeleteBut.BorderColor = System.Drawing.Color.Silver;
-            this.DeleteBut.ButtonColor = System.Drawing.SystemColors.Highlight;
+            this.DeleteBut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.DeleteBut.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.DeleteBut.ButtonColor = System.Drawing.Color.SeaGreen;
             this.DeleteBut.FlatAppearance.BorderSize = 0;
-            this.DeleteBut.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.DeleteBut.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.DeleteBut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.DeleteBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.DeleteBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.DeleteBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeleteBut.Location = new System.Drawing.Point(707, 409);
+            this.DeleteBut.Location = new System.Drawing.Point(943, 476);
             this.DeleteBut.Name = "DeleteBut";
-            this.DeleteBut.OnHoverBorderColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.DeleteBut.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(100)))), ((int)(((byte)(254)))));
-            this.DeleteBut.OnHoverTextColor = System.Drawing.Color.SandyBrown;
+            this.DeleteBut.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.DeleteBut.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
+            this.DeleteBut.OnHoverTextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.DeleteBut.Size = new System.Drawing.Size(245, 80);
             this.DeleteBut.TabIndex = 3;
             this.DeleteBut.Text = "Delete";
             this.DeleteBut.TextColor = System.Drawing.Color.White;
-            this.DeleteBut.UseVisualStyleBackColor = true;
+            this.DeleteBut.UseVisualStyleBackColor = false;
             this.DeleteBut.Click += new System.EventHandler(this.DeleteBut_Click);
             // 
             // UpdateBut
             // 
-            this.UpdateBut.BorderColor = System.Drawing.Color.Silver;
-            this.UpdateBut.ButtonColor = System.Drawing.SystemColors.Highlight;
+            this.UpdateBut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.UpdateBut.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.UpdateBut.ButtonColor = System.Drawing.Color.SeaGreen;
             this.UpdateBut.FlatAppearance.BorderSize = 0;
-            this.UpdateBut.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.UpdateBut.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.UpdateBut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.UpdateBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.UpdateBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UpdateBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBut.Location = new System.Drawing.Point(367, 409);
+            this.UpdateBut.Location = new System.Drawing.Point(485, 476);
             this.UpdateBut.Name = "UpdateBut";
-            this.UpdateBut.OnHoverBorderColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.UpdateBut.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(100)))), ((int)(((byte)(254)))));
-            this.UpdateBut.OnHoverTextColor = System.Drawing.Color.SandyBrown;
+            this.UpdateBut.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.UpdateBut.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
+            this.UpdateBut.OnHoverTextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.UpdateBut.Size = new System.Drawing.Size(245, 80);
             this.UpdateBut.TabIndex = 2;
             this.UpdateBut.Text = "Update";
             this.UpdateBut.TextColor = System.Drawing.Color.White;
-            this.UpdateBut.UseVisualStyleBackColor = true;
+            this.UpdateBut.UseVisualStyleBackColor = false;
             this.UpdateBut.Click += new System.EventHandler(this.UpdateBut_Click);
             // 
             // CreateBut
             // 
-            this.CreateBut.BorderColor = System.Drawing.Color.Silver;
-            this.CreateBut.ButtonColor = System.Drawing.SystemColors.Highlight;
+            this.CreateBut.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.CreateBut.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.CreateBut.ButtonColor = System.Drawing.Color.SeaGreen;
             this.CreateBut.FlatAppearance.BorderSize = 0;
-            this.CreateBut.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.CreateBut.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.CreateBut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.CreateBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.CreateBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CreateBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CreateBut.Location = new System.Drawing.Point(27, 409);
+            this.CreateBut.Location = new System.Drawing.Point(27, 476);
             this.CreateBut.Name = "CreateBut";
-            this.CreateBut.OnHoverBorderColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.CreateBut.OnHoverButtonColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(100)))), ((int)(((byte)(254)))));
-            this.CreateBut.OnHoverTextColor = System.Drawing.Color.SandyBrown;
+            this.CreateBut.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.CreateBut.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
+            this.CreateBut.OnHoverTextColor = System.Drawing.SystemColors.ButtonHighlight;
             this.CreateBut.Size = new System.Drawing.Size(245, 80);
             this.CreateBut.TabIndex = 1;
             this.CreateBut.Text = "Create";
             this.CreateBut.TextColor = System.Drawing.Color.White;
-            this.CreateBut.UseVisualStyleBackColor = true;
+            this.CreateBut.UseVisualStyleBackColor = false;
             this.CreateBut.Click += new System.EventHandler(this.CreateBut_Click);
             // 
             // StoreItemsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.ClientSize = new System.Drawing.Size(983, 516);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ClientSize = new System.Drawing.Size(1217, 573);
             this.Controls.Add(this.DeleteBut);
             this.Controls.Add(this.UpdateBut);
             this.Controls.Add(this.CreateBut);
@@ -130,9 +134,8 @@
             this.MaximizeBox = false;
             this.Name = "StoreItemsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "StoreItemsForm";
+            this.Text = "Store Items";
             this.Activated += new System.EventHandler(this.StoreItemsForm_Activated);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.StoreItemsForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.ItemsGridView)).EndInit();
             this.ResumeLayout(false);
 

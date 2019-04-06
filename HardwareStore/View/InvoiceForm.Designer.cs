@@ -28,290 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.OneBut = new System.Windows.Forms.Button();
-            this.TwoBut = new System.Windows.Forms.Button();
-            this.ThreeBut = new System.Windows.Forms.Button();
-            this.SixBut = new System.Windows.Forms.Button();
-            this.FiveBut = new System.Windows.Forms.Button();
-            this.FourBut = new System.Windows.Forms.Button();
-            this.NineBut = new System.Windows.Forms.Button();
-            this.EightBut = new System.Windows.Forms.Button();
-            this.SevenBut = new System.Windows.Forms.Button();
-            this.DoubleZeroBut = new System.Windows.Forms.Button();
-            this.ComaBut = new System.Windows.Forms.Button();
-            this.ZeroBut = new System.Windows.Forms.Button();
-            this.EndTransactionBut = new System.Windows.Forms.Button();
-            this.CashAmount = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.AllFive = new System.Windows.Forms.Button();
-            this.AllTen = new System.Windows.Forms.Button();
-            this.AllTwenty = new System.Windows.Forms.Button();
-            this.AllFifty = new System.Windows.Forms.Button();
-            this.AllHundred = new System.Windows.Forms.Button();
+            this.ItemsDataGrid = new System.Windows.Forms.DataGridView();
             this.ScanBarcodeLbl = new System.Windows.Forms.Label();
-            this.ChangeTxtBox = new System.Windows.Forms.TextBox();
-            this.button5 = new System.Windows.Forms.Button();
-            this.TotalTxtBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ScanBarcodeTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.QuantityTxtBox = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.QuantityLbl = new System.Windows.Forms.Label();
+            this.CustomerInfoTxtList = new System.Windows.Forms.ListBox();
+            this.PayBut = new System.Windows.Forms.Button();
+            this.DeleteItemBut = new System.Windows.Forms.Button();
+            this.QuantityMinusBut = new System.Windows.Forms.Button();
+            this.MainMenu = new System.Windows.Forms.Button();
+            this.QuantityPlusBut = new System.Windows.Forms.Button();
+            this.InvalidQuantityLbl = new System.Windows.Forms.Label();
+            this.InvalidBarcodeLbl = new System.Windows.Forms.Label();
+            this.InvalidItemsLbl = new System.Windows.Forms.Label();
+            this.InvalidItemQuantyLbl = new System.Windows.Forms.Label();
+            this.NextItemBut = new ePOSOne.btnProduct.Button_WOC();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // OneBut
+            // ItemsDataGrid
             // 
-            this.OneBut.BackColor = System.Drawing.Color.Green;
-            this.OneBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OneBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.OneBut.Location = new System.Drawing.Point(31, 300);
-            this.OneBut.Name = "OneBut";
-            this.OneBut.Size = new System.Drawing.Size(79, 55);
-            this.OneBut.TabIndex = 7;
-            this.OneBut.Text = "1";
-            this.OneBut.UseVisualStyleBackColor = false;
-            this.OneBut.Click += new System.EventHandler(this.OneBut_Click);
-            // 
-            // TwoBut
-            // 
-            this.TwoBut.BackColor = System.Drawing.Color.Green;
-            this.TwoBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TwoBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.TwoBut.Location = new System.Drawing.Point(127, 300);
-            this.TwoBut.Name = "TwoBut";
-            this.TwoBut.Size = new System.Drawing.Size(79, 55);
-            this.TwoBut.TabIndex = 8;
-            this.TwoBut.Text = "2";
-            this.TwoBut.UseVisualStyleBackColor = false;
-            this.TwoBut.Click += new System.EventHandler(this.TwoBut_Click);
-            // 
-            // ThreeBut
-            // 
-            this.ThreeBut.BackColor = System.Drawing.Color.Green;
-            this.ThreeBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThreeBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ThreeBut.Location = new System.Drawing.Point(223, 300);
-            this.ThreeBut.Name = "ThreeBut";
-            this.ThreeBut.Size = new System.Drawing.Size(79, 55);
-            this.ThreeBut.TabIndex = 9;
-            this.ThreeBut.Text = "3";
-            this.ThreeBut.UseVisualStyleBackColor = false;
-            this.ThreeBut.Click += new System.EventHandler(this.ThreeBut_Click);
-            // 
-            // SixBut
-            // 
-            this.SixBut.BackColor = System.Drawing.Color.Green;
-            this.SixBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SixBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.SixBut.Location = new System.Drawing.Point(223, 226);
-            this.SixBut.Name = "SixBut";
-            this.SixBut.Size = new System.Drawing.Size(79, 55);
-            this.SixBut.TabIndex = 12;
-            this.SixBut.Text = "6";
-            this.SixBut.UseVisualStyleBackColor = false;
-            this.SixBut.Click += new System.EventHandler(this.SixBut_Click);
-            // 
-            // FiveBut
-            // 
-            this.FiveBut.BackColor = System.Drawing.Color.Green;
-            this.FiveBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FiveBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.FiveBut.Location = new System.Drawing.Point(127, 226);
-            this.FiveBut.Name = "FiveBut";
-            this.FiveBut.Size = new System.Drawing.Size(79, 55);
-            this.FiveBut.TabIndex = 11;
-            this.FiveBut.Text = "5";
-            this.FiveBut.UseVisualStyleBackColor = false;
-            this.FiveBut.Click += new System.EventHandler(this.FiveBut_Click);
-            // 
-            // FourBut
-            // 
-            this.FourBut.BackColor = System.Drawing.Color.Green;
-            this.FourBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FourBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.FourBut.Location = new System.Drawing.Point(31, 226);
-            this.FourBut.Name = "FourBut";
-            this.FourBut.Size = new System.Drawing.Size(79, 55);
-            this.FourBut.TabIndex = 10;
-            this.FourBut.Text = "4";
-            this.FourBut.UseVisualStyleBackColor = false;
-            this.FourBut.Click += new System.EventHandler(this.FourBut_Click);
-            // 
-            // NineBut
-            // 
-            this.NineBut.BackColor = System.Drawing.Color.Green;
-            this.NineBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NineBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.NineBut.Location = new System.Drawing.Point(223, 152);
-            this.NineBut.Name = "NineBut";
-            this.NineBut.Size = new System.Drawing.Size(79, 55);
-            this.NineBut.TabIndex = 15;
-            this.NineBut.Text = "9";
-            this.NineBut.UseVisualStyleBackColor = false;
-            this.NineBut.Click += new System.EventHandler(this.NineBut_Click);
-            // 
-            // EightBut
-            // 
-            this.EightBut.BackColor = System.Drawing.Color.Green;
-            this.EightBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EightBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.EightBut.Location = new System.Drawing.Point(127, 152);
-            this.EightBut.Name = "EightBut";
-            this.EightBut.Size = new System.Drawing.Size(79, 55);
-            this.EightBut.TabIndex = 14;
-            this.EightBut.Text = "8";
-            this.EightBut.UseVisualStyleBackColor = false;
-            this.EightBut.Click += new System.EventHandler(this.EightBut_Click);
-            // 
-            // SevenBut
-            // 
-            this.SevenBut.BackColor = System.Drawing.Color.Green;
-            this.SevenBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SevenBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.SevenBut.Location = new System.Drawing.Point(31, 152);
-            this.SevenBut.Name = "SevenBut";
-            this.SevenBut.Size = new System.Drawing.Size(79, 55);
-            this.SevenBut.TabIndex = 13;
-            this.SevenBut.Text = "7";
-            this.SevenBut.UseVisualStyleBackColor = false;
-            this.SevenBut.Click += new System.EventHandler(this.SevenBut_Click);
-            // 
-            // DoubleZeroBut
-            // 
-            this.DoubleZeroBut.BackColor = System.Drawing.Color.Green;
-            this.DoubleZeroBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DoubleZeroBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.DoubleZeroBut.Location = new System.Drawing.Point(31, 369);
-            this.DoubleZeroBut.Name = "DoubleZeroBut";
-            this.DoubleZeroBut.Size = new System.Drawing.Size(125, 55);
-            this.DoubleZeroBut.TabIndex = 16;
-            this.DoubleZeroBut.Text = "00";
-            this.DoubleZeroBut.UseVisualStyleBackColor = false;
-            this.DoubleZeroBut.Click += new System.EventHandler(this.DoubleZeroBut_Click);
-            // 
-            // ComaBut
-            // 
-            this.ComaBut.BackColor = System.Drawing.Color.Green;
-            this.ComaBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComaBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ComaBut.Location = new System.Drawing.Point(162, 369);
-            this.ComaBut.Name = "ComaBut";
-            this.ComaBut.Size = new System.Drawing.Size(44, 55);
-            this.ComaBut.TabIndex = 17;
-            this.ComaBut.Text = ".";
-            this.ComaBut.UseVisualStyleBackColor = false;
-            this.ComaBut.Click += new System.EventHandler(this.ComaBut_Click);
-            // 
-            // ZeroBut
-            // 
-            this.ZeroBut.BackColor = System.Drawing.Color.Green;
-            this.ZeroBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZeroBut.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ZeroBut.Location = new System.Drawing.Point(223, 369);
-            this.ZeroBut.Name = "ZeroBut";
-            this.ZeroBut.Size = new System.Drawing.Size(79, 55);
-            this.ZeroBut.TabIndex = 18;
-            this.ZeroBut.Text = "0";
-            this.ZeroBut.UseVisualStyleBackColor = false;
-            this.ZeroBut.Click += new System.EventHandler(this.ZeroBut_Click);
-            // 
-            // EndTransactionBut
-            // 
-            this.EndTransactionBut.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.EndTransactionBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EndTransactionBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EndTransactionBut.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.EndTransactionBut.Location = new System.Drawing.Point(645, 259);
-            this.EndTransactionBut.Name = "EndTransactionBut";
-            this.EndTransactionBut.Size = new System.Drawing.Size(137, 182);
-            this.EndTransactionBut.TabIndex = 22;
-            this.EndTransactionBut.Text = "End Transaction";
-            this.EndTransactionBut.UseVisualStyleBackColor = false;
-            this.EndTransactionBut.Click += new System.EventHandler(this.EndTransactionBut_Click);
-            // 
-            // CashAmount
-            // 
-            this.CashAmount.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.CashAmount.BorderColorFocused = System.Drawing.Color.SeaGreen;
-            this.CashAmount.BorderColorIdle = System.Drawing.Color.Silver;
-            this.CashAmount.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
-            this.CashAmount.BorderThickness = 3;
-            this.CashAmount.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.CashAmount.Font = new System.Drawing.Font("Century Gothic", 17F);
-            this.CashAmount.ForeColor = System.Drawing.Color.Silver;
-            this.CashAmount.isPassword = false;
-            this.CashAmount.Location = new System.Drawing.Point(31, 83);
-            this.CashAmount.Margin = new System.Windows.Forms.Padding(4);
-            this.CashAmount.Name = "CashAmount";
-            this.CashAmount.Size = new System.Drawing.Size(271, 44);
-            this.CashAmount.TabIndex = 30;
-            this.CashAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // AllFive
-            // 
-            this.AllFive.BackColor = System.Drawing.Color.SeaGreen;
-            this.AllFive.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AllFive.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AllFive.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AllFive.Location = new System.Drawing.Point(12, 562);
-            this.AllFive.Name = "AllFive";
-            this.AllFive.Size = new System.Drawing.Size(118, 62);
-            this.AllFive.TabIndex = 37;
-            this.AllFive.Text = "5$";
-            this.AllFive.UseVisualStyleBackColor = false;
-            this.AllFive.Click += new System.EventHandler(this.AllFive_Click);
-            // 
-            // AllTen
-            // 
-            this.AllTen.BackColor = System.Drawing.Color.SeaGreen;
-            this.AllTen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AllTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AllTen.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AllTen.Location = new System.Drawing.Point(175, 562);
-            this.AllTen.Name = "AllTen";
-            this.AllTen.Size = new System.Drawing.Size(118, 62);
-            this.AllTen.TabIndex = 38;
-            this.AllTen.Text = "10$";
-            this.AllTen.UseVisualStyleBackColor = false;
-            this.AllTen.Click += new System.EventHandler(this.AllTen_Click);
-            // 
-            // AllTwenty
-            // 
-            this.AllTwenty.BackColor = System.Drawing.Color.SeaGreen;
-            this.AllTwenty.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AllTwenty.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AllTwenty.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AllTwenty.Location = new System.Drawing.Point(338, 562);
-            this.AllTwenty.Name = "AllTwenty";
-            this.AllTwenty.Size = new System.Drawing.Size(118, 62);
-            this.AllTwenty.TabIndex = 39;
-            this.AllTwenty.Text = "20$";
-            this.AllTwenty.UseVisualStyleBackColor = false;
-            this.AllTwenty.Click += new System.EventHandler(this.AllTwenty_Click);
-            // 
-            // AllFifty
-            // 
-            this.AllFifty.BackColor = System.Drawing.Color.SeaGreen;
-            this.AllFifty.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AllFifty.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AllFifty.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AllFifty.Location = new System.Drawing.Point(501, 562);
-            this.AllFifty.Name = "AllFifty";
-            this.AllFifty.Size = new System.Drawing.Size(118, 62);
-            this.AllFifty.TabIndex = 40;
-            this.AllFifty.Text = "50$";
-            this.AllFifty.UseVisualStyleBackColor = false;
-            this.AllFifty.Click += new System.EventHandler(this.AllFifty_Click);
-            // 
-            // AllHundred
-            // 
-            this.AllHundred.BackColor = System.Drawing.Color.SeaGreen;
-            this.AllHundred.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.AllHundred.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AllHundred.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.AllHundred.Location = new System.Drawing.Point(664, 562);
-            this.AllHundred.Name = "AllHundred";
-            this.AllHundred.Size = new System.Drawing.Size(118, 62);
-            this.AllHundred.TabIndex = 41;
-            this.AllHundred.Text = "100$";
-            this.AllHundred.UseVisualStyleBackColor = false;
-            this.AllHundred.Click += new System.EventHandler(this.AllHundred_Click);
+            this.ItemsDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.ItemsDataGrid.BackgroundColor = System.Drawing.Color.Gray;
+            this.ItemsDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ItemsDataGrid.Location = new System.Drawing.Point(25, 194);
+            this.ItemsDataGrid.Name = "ItemsDataGrid";
+            this.ItemsDataGrid.RowHeadersWidth = 50;
+            this.ItemsDataGrid.RowTemplate.Height = 24;
+            this.ItemsDataGrid.Size = new System.Drawing.Size(648, 681);
+            this.ItemsDataGrid.TabIndex = 0;
             // 
             // ScanBarcodeLbl
             // 
@@ -319,140 +65,262 @@
             this.ScanBarcodeLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ScanBarcodeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ScanBarcodeLbl.ForeColor = System.Drawing.Color.White;
-            this.ScanBarcodeLbl.Location = new System.Drawing.Point(24, 40);
+            this.ScanBarcodeLbl.Location = new System.Drawing.Point(18, 72);
             this.ScanBarcodeLbl.Name = "ScanBarcodeLbl";
-            this.ScanBarcodeLbl.Size = new System.Drawing.Size(189, 39);
-            this.ScanBarcodeLbl.TabIndex = 42;
-            this.ScanBarcodeLbl.Text = "Insert Price";
+            this.ScanBarcodeLbl.Size = new System.Drawing.Size(231, 39);
+            this.ScanBarcodeLbl.TabIndex = 2;
+            this.ScanBarcodeLbl.Text = "Scan Barcode";
             // 
-            // ChangeTxtBox
+            // ScanBarcodeTxtBox
             // 
-            this.ChangeTxtBox.BackColor = System.Drawing.Color.Black;
-            this.ChangeTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChangeTxtBox.ForeColor = System.Drawing.Color.Green;
-            this.ChangeTxtBox.Location = new System.Drawing.Point(593, 124);
-            this.ChangeTxtBox.Name = "ChangeTxtBox";
-            this.ChangeTxtBox.ReadOnly = true;
-            this.ChangeTxtBox.Size = new System.Drawing.Size(189, 53);
-            this.ChangeTxtBox.TabIndex = 45;
-            this.ChangeTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ScanBarcodeTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.ScanBarcodeTxtBox.BorderColorFocused = System.Drawing.Color.SeaGreen;
+            this.ScanBarcodeTxtBox.BorderColorIdle = System.Drawing.Color.Silver;
+            this.ScanBarcodeTxtBox.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
+            this.ScanBarcodeTxtBox.BorderThickness = 3;
+            this.ScanBarcodeTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ScanBarcodeTxtBox.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.ScanBarcodeTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.ScanBarcodeTxtBox.isPassword = false;
+            this.ScanBarcodeTxtBox.Location = new System.Drawing.Point(25, 115);
+            this.ScanBarcodeTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.ScanBarcodeTxtBox.Name = "ScanBarcodeTxtBox";
+            this.ScanBarcodeTxtBox.Size = new System.Drawing.Size(297, 44);
+            this.ScanBarcodeTxtBox.TabIndex = 29;
+            this.ScanBarcodeTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ScanBarcodeTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ScanBarcodeTxtBox_KeyDown);
             // 
-            // button5
+            // QuantityTxtBox
             // 
-            this.button5.BackColor = System.Drawing.Color.Crimson;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.Location = new System.Drawing.Point(645, 472);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(137, 62);
-            this.button5.TabIndex = 46;
-            this.button5.Text = "Cencel";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.QuantityTxtBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.QuantityTxtBox.BorderColorFocused = System.Drawing.Color.SeaGreen;
+            this.QuantityTxtBox.BorderColorIdle = System.Drawing.Color.Silver;
+            this.QuantityTxtBox.BorderColorMouseHover = System.Drawing.Color.SeaGreen;
+            this.QuantityTxtBox.BorderThickness = 3;
+            this.QuantityTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.QuantityTxtBox.Font = new System.Drawing.Font("Century Gothic", 17F);
+            this.QuantityTxtBox.ForeColor = System.Drawing.Color.Silver;
+            this.QuantityTxtBox.isPassword = false;
+            this.QuantityTxtBox.Location = new System.Drawing.Point(344, 115);
+            this.QuantityTxtBox.Margin = new System.Windows.Forms.Padding(4);
+            this.QuantityTxtBox.Name = "QuantityTxtBox";
+            this.QuantityTxtBox.Size = new System.Drawing.Size(178, 44);
+            this.QuantityTxtBox.TabIndex = 31;
+            this.QuantityTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // TotalTxtBox
+            // QuantityLbl
             // 
-            this.TotalTxtBox.BackColor = System.Drawing.Color.Black;
-            this.TotalTxtBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalTxtBox.ForeColor = System.Drawing.Color.Green;
-            this.TotalTxtBox.Location = new System.Drawing.Point(593, 40);
-            this.TotalTxtBox.Name = "TotalTxtBox";
-            this.TotalTxtBox.ReadOnly = true;
-            this.TotalTxtBox.Size = new System.Drawing.Size(189, 53);
-            this.TotalTxtBox.TabIndex = 48;
-            this.TotalTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.QuantityLbl.AutoSize = true;
+            this.QuantityLbl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.QuantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityLbl.ForeColor = System.Drawing.Color.White;
+            this.QuantityLbl.Location = new System.Drawing.Point(337, 72);
+            this.QuantityLbl.Name = "QuantityLbl";
+            this.QuantityLbl.Size = new System.Drawing.Size(143, 39);
+            this.QuantityLbl.TabIndex = 30;
+            this.QuantityLbl.Text = "Quantity";
             // 
-            // label2
+            // CustomerInfoTxtList
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(408, 138);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 39);
-            this.label2.TabIndex = 47;
-            this.label2.Text = "Change ";
+            this.CustomerInfoTxtList.BackColor = System.Drawing.SystemColors.MenuText;
+            this.CustomerInfoTxtList.Font = new System.Drawing.Font("Microsoft Tai Le", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerInfoTxtList.ForeColor = System.Drawing.Color.Green;
+            this.CustomerInfoTxtList.FormattingEnabled = true;
+            this.CustomerInfoTxtList.ItemHeight = 51;
+            this.CustomerInfoTxtList.Location = new System.Drawing.Point(704, 45);
+            this.CustomerInfoTxtList.Name = "CustomerInfoTxtList";
+            this.CustomerInfoTxtList.Size = new System.Drawing.Size(551, 259);
+            this.CustomerInfoTxtList.TabIndex = 35;
             // 
-            // label1
+            // PayBut
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(408, 54);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 39);
-            this.label1.TabIndex = 49;
-            this.label1.Text = "Total";
+            this.PayBut.BackColor = System.Drawing.Color.SeaGreen;
+            this.PayBut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.PayBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PayBut.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.PayBut.Location = new System.Drawing.Point(704, 310);
+            this.PayBut.Name = "PayBut";
+            this.PayBut.Size = new System.Drawing.Size(551, 72);
+            this.PayBut.TabIndex = 36;
+            this.PayBut.Text = "PAY";
+            this.PayBut.UseVisualStyleBackColor = false;
+            this.PayBut.Click += new System.EventHandler(this.PayBut_Click);
+            // 
+            // DeleteItemBut
+            // 
+            this.DeleteItemBut.BackColor = System.Drawing.Color.DarkGray;
+            this.DeleteItemBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteItemBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DeleteItemBut.ForeColor = System.Drawing.Color.Maroon;
+            this.DeleteItemBut.Location = new System.Drawing.Point(1118, 418);
+            this.DeleteItemBut.Name = "DeleteItemBut";
+            this.DeleteItemBut.Size = new System.Drawing.Size(137, 118);
+            this.DeleteItemBut.TabIndex = 37;
+            this.DeleteItemBut.Text = "Delete Item";
+            this.DeleteItemBut.UseVisualStyleBackColor = false;
+            this.DeleteItemBut.Click += new System.EventHandler(this.DeleteItemBut_Click);
+            // 
+            // QuantityMinusBut
+            // 
+            this.QuantityMinusBut.BackColor = System.Drawing.Color.DarkGray;
+            this.QuantityMinusBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.QuantityMinusBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityMinusBut.ForeColor = System.Drawing.Color.Black;
+            this.QuantityMinusBut.Location = new System.Drawing.Point(911, 418);
+            this.QuantityMinusBut.Name = "QuantityMinusBut";
+            this.QuantityMinusBut.Size = new System.Drawing.Size(137, 118);
+            this.QuantityMinusBut.TabIndex = 38;
+            this.QuantityMinusBut.Text = "Quantity Minus";
+            this.QuantityMinusBut.UseVisualStyleBackColor = false;
+            this.QuantityMinusBut.Click += new System.EventHandler(this.ChangeQuantityBut_Click);
+            // 
+            // MainMenu
+            // 
+            this.MainMenu.BackColor = System.Drawing.Color.DarkGray;
+            this.MainMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MainMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MainMenu.ForeColor = System.Drawing.Color.Black;
+            this.MainMenu.Location = new System.Drawing.Point(1118, 589);
+            this.MainMenu.Name = "MainMenu";
+            this.MainMenu.Size = new System.Drawing.Size(137, 118);
+            this.MainMenu.TabIndex = 39;
+            this.MainMenu.Text = "Main Menu";
+            this.MainMenu.UseVisualStyleBackColor = false;
+            this.MainMenu.Click += new System.EventHandler(this.MainMenu_Click);
+            // 
+            // QuantityPlusBut
+            // 
+            this.QuantityPlusBut.BackColor = System.Drawing.Color.DarkGray;
+            this.QuantityPlusBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.QuantityPlusBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.QuantityPlusBut.ForeColor = System.Drawing.Color.Black;
+            this.QuantityPlusBut.Location = new System.Drawing.Point(704, 418);
+            this.QuantityPlusBut.Name = "QuantityPlusBut";
+            this.QuantityPlusBut.Size = new System.Drawing.Size(137, 118);
+            this.QuantityPlusBut.TabIndex = 40;
+            this.QuantityPlusBut.Text = "Quantity Plus";
+            this.QuantityPlusBut.UseVisualStyleBackColor = false;
+            this.QuantityPlusBut.Click += new System.EventHandler(this.QuantityPlusBut_Click);
+            // 
+            // InvalidQuantityLbl
+            // 
+            this.InvalidQuantityLbl.AutoSize = true;
+            this.InvalidQuantityLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidQuantityLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidQuantityLbl.Location = new System.Drawing.Point(339, 166);
+            this.InvalidQuantityLbl.Name = "InvalidQuantityLbl";
+            this.InvalidQuantityLbl.Size = new System.Drawing.Size(142, 25);
+            this.InvalidQuantityLbl.TabIndex = 41;
+            this.InvalidQuantityLbl.Text = "Invalid Quantty";
+            this.InvalidQuantityLbl.Visible = false;
+            // 
+            // InvalidBarcodeLbl
+            // 
+            this.InvalidBarcodeLbl.AutoSize = true;
+            this.InvalidBarcodeLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidBarcodeLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidBarcodeLbl.Location = new System.Drawing.Point(20, 163);
+            this.InvalidBarcodeLbl.Name = "InvalidBarcodeLbl";
+            this.InvalidBarcodeLbl.Size = new System.Drawing.Size(146, 25);
+            this.InvalidBarcodeLbl.TabIndex = 42;
+            this.InvalidBarcodeLbl.Text = "Invalid Barcode";
+            this.InvalidBarcodeLbl.Visible = false;
+            // 
+            // InvalidItemsLbl
+            // 
+            this.InvalidItemsLbl.AutoSize = true;
+            this.InvalidItemsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidItemsLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidItemsLbl.Location = new System.Drawing.Point(938, 385);
+            this.InvalidItemsLbl.Name = "InvalidItemsLbl";
+            this.InvalidItemsLbl.Size = new System.Drawing.Size(89, 25);
+            this.InvalidItemsLbl.TabIndex = 43;
+            this.InvalidItemsLbl.Text = "No Items";
+            this.InvalidItemsLbl.Visible = false;
+            // 
+            // InvalidItemQuantyLbl
+            // 
+            this.InvalidItemQuantyLbl.AutoSize = true;
+            this.InvalidItemQuantyLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvalidItemQuantyLbl.ForeColor = System.Drawing.Color.Red;
+            this.InvalidItemQuantyLbl.Location = new System.Drawing.Point(699, 548);
+            this.InvalidItemQuantyLbl.Name = "InvalidItemQuantyLbl";
+            this.InvalidItemQuantyLbl.Size = new System.Drawing.Size(328, 25);
+            this.InvalidItemQuantyLbl.TabIndex = 44;
+            this.InvalidItemQuantyLbl.Text = "Item Quantity Cannot Be Below Zero";
+            this.InvalidItemQuantyLbl.Visible = false;
+            // 
+            // NextItemBut
+            // 
+            this.NextItemBut.BorderColor = System.Drawing.Color.Silver;
+            this.NextItemBut.ButtonColor = System.Drawing.Color.SeaGreen;
+            this.NextItemBut.FlatAppearance.BorderSize = 0;
+            this.NextItemBut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.NextItemBut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
+            this.NextItemBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.NextItemBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NextItemBut.Location = new System.Drawing.Point(540, 96);
+            this.NextItemBut.Name = "NextItemBut";
+            this.NextItemBut.OnHoverBorderColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.NextItemBut.OnHoverButtonColor = System.Drawing.Color.MediumSeaGreen;
+            this.NextItemBut.OnHoverTextColor = System.Drawing.Color.White;
+            this.NextItemBut.Size = new System.Drawing.Size(133, 63);
+            this.NextItemBut.TabIndex = 34;
+            this.NextItemBut.Text = "Next Item";
+            this.NextItemBut.TextColor = System.Drawing.Color.White;
+            this.NextItemBut.UseVisualStyleBackColor = true;
+            this.NextItemBut.Click += new System.EventHandler(this.NextItemBut_Click);
             // 
             // InvoiceForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(797, 636);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.TotalTxtBox);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.ChangeTxtBox);
+            this.ClientSize = new System.Drawing.Size(1282, 903);
+            this.Controls.Add(this.InvalidItemQuantyLbl);
+            this.Controls.Add(this.InvalidItemsLbl);
+            this.Controls.Add(this.InvalidBarcodeLbl);
+            this.Controls.Add(this.InvalidQuantityLbl);
+            this.Controls.Add(this.QuantityPlusBut);
+            this.Controls.Add(this.MainMenu);
+            this.Controls.Add(this.QuantityMinusBut);
+            this.Controls.Add(this.DeleteItemBut);
+            this.Controls.Add(this.PayBut);
+            this.Controls.Add(this.CustomerInfoTxtList);
+            this.Controls.Add(this.NextItemBut);
+            this.Controls.Add(this.QuantityTxtBox);
+            this.Controls.Add(this.QuantityLbl);
+            this.Controls.Add(this.ScanBarcodeTxtBox);
             this.Controls.Add(this.ScanBarcodeLbl);
-            this.Controls.Add(this.AllHundred);
-            this.Controls.Add(this.AllFifty);
-            this.Controls.Add(this.AllTwenty);
-            this.Controls.Add(this.AllTen);
-            this.Controls.Add(this.AllFive);
-            this.Controls.Add(this.CashAmount);
-            this.Controls.Add(this.EndTransactionBut);
-            this.Controls.Add(this.ZeroBut);
-            this.Controls.Add(this.ComaBut);
-            this.Controls.Add(this.DoubleZeroBut);
-            this.Controls.Add(this.NineBut);
-            this.Controls.Add(this.EightBut);
-            this.Controls.Add(this.SevenBut);
-            this.Controls.Add(this.SixBut);
-            this.Controls.Add(this.FiveBut);
-            this.Controls.Add(this.FourBut);
-            this.Controls.Add(this.ThreeBut);
-            this.Controls.Add(this.TwoBut);
-            this.Controls.Add(this.OneBut);
+            this.Controls.Add(this.ItemsDataGrid);
             this.MaximizeBox = false;
             this.Name = "InvoiceForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Invoice";
+            this.Text = "Invoice Form";
+            this.Activated += new System.EventHandler(this.InvoiceForm_Activated);
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsDataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Button OneBut;
-        private System.Windows.Forms.Button TwoBut;
-        private System.Windows.Forms.Button ThreeBut;
-        private System.Windows.Forms.Button SixBut;
-        private System.Windows.Forms.Button FiveBut;
-        private System.Windows.Forms.Button FourBut;
-        private System.Windows.Forms.Button NineBut;
-        private System.Windows.Forms.Button EightBut;
-        private System.Windows.Forms.Button SevenBut;
-        private System.Windows.Forms.Button DoubleZeroBut;
-        private System.Windows.Forms.Button ComaBut;
-        private System.Windows.Forms.Button ZeroBut;
-        private System.Windows.Forms.Button EndTransactionBut;
-        private Bunifu.Framework.UI.BunifuMetroTextbox CashAmount;
-        private System.Windows.Forms.Button AllFive;
-        private System.Windows.Forms.Button AllTen;
-        private System.Windows.Forms.Button AllTwenty;
-        private System.Windows.Forms.Button AllFifty;
-        private System.Windows.Forms.Button AllHundred;
+
+        private System.Windows.Forms.DataGridView ItemsDataGrid;
         private System.Windows.Forms.Label ScanBarcodeLbl;
-        private System.Windows.Forms.TextBox ChangeTxtBox;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TextBox TotalTxtBox;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox ScanBarcodeTxtBox;
+        private Bunifu.Framework.UI.BunifuMetroTextbox QuantityTxtBox;
+        private System.Windows.Forms.Label QuantityLbl;
+        private ePOSOne.btnProduct.Button_WOC NextItemBut;
+        private System.Windows.Forms.ListBox CustomerInfoTxtList;
+        private System.Windows.Forms.Button PayBut;
+        private System.Windows.Forms.Button DeleteItemBut;
+        private System.Windows.Forms.Button QuantityMinusBut;
+        private System.Windows.Forms.Button MainMenu;
+        private System.Windows.Forms.Button QuantityPlusBut;
+        private System.Windows.Forms.Label InvalidQuantityLbl;
+        private System.Windows.Forms.Label InvalidBarcodeLbl;
+        private System.Windows.Forms.Label InvalidItemsLbl;
+        private System.Windows.Forms.Label InvalidItemQuantyLbl;
     }
 }

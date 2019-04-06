@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HardwareStore.BusinessLogic
 {
-    class UpdateCreateSalesReportBLL
+    public class UpdateCreateSalesReportBLL
     {
         OfficeStoreContext officeStoreContext;
 
@@ -17,14 +17,21 @@ namespace HardwareStore.BusinessLogic
             this.officeStoreContext = new OfficeStoreContext();
         }
 
+        public UpdateCreateSalesReportBLL(OfficeStoreContext MockContext)
+        {
+            this.officeStoreContext = MockContext;
+        }
+
         public void CreateItem(Items item)
         {
+            //Creates item
             this.officeStoreContext.Items.Add(item);
             this.officeStoreContext.SaveChanges();
         }
 
         public void UpdateItem(Items Item1, string ItemId)
         {
+            //Updates current item
             var Item2 = officeStoreContext.Items.FirstOrDefault(a => a.Id == ItemId);
             Item2.Id = Item1.Id;
             Item2.ProductName = Item1.ProductName;
@@ -38,6 +45,7 @@ namespace HardwareStore.BusinessLogic
 
         public bool IsItemExists(string Barcode)
         {
+            //Checks if item exists
             var Item = this.officeStoreContext.Items.FirstOrDefault(a => a.Id == Barcode);
             if (Item == null)
             {
@@ -48,17 +56,18 @@ namespace HardwareStore.BusinessLogic
 
         public List<Items> GetAllInfo()
         {
+            //Collects info from database
             var list = this.officeStoreContext.Items.ToList();
             return list;
         }
 
         public List<DailySales> SalesReprotInfo()
         {
-            List<DailySales> lis = new List<DailySales>();
-            var l = DateTime.Now.Date;
+            List<DailySales> DailySalesList = new List<DailySales>();
+            var Date = DateTime.Now.Date;
 
-            var Invoices = this.officeStoreContext.Invoice.Where(a => a.Date.ToString("d") == l.Date.ToString("d"));
-
+            var Invoices = this.officeStoreContext.Invoice.Where(a => a.Date.ToString("d") == Date.Date.ToString("d"));
+            //Finds the current invoice
             foreach (var Invoice in Invoices)
             {
                 var InvoiceItems = this.officeStoreContext.InvoiceItems.Where(a => a.InvoiceId == Invoice.Id);
@@ -70,9 +79,9 @@ namespace HardwareStore.BusinessLogic
                     var Desciption = this.officeStoreContext.Items.First(a => a.Id == InvoiceItem.ItemId);
 
                     dailySales.ProductNumber = InvoiceItem.ItemId;
-                    if (lis.Any(a => a.Description == Desciption.ProductName))
+                    if (DailySalesList.Any(a => a.Description == Desciption.ProductName))
                     {
-                        var item = lis.First(a => a.Description == Desciption.ProductName);
+                        var item = DailySalesList.First(a => a.Description == Desciption.ProductName);
 
                         item.Quantity += InvoiceItem.Quantity;
                         item.SinglePrice = InvoiceItem.SinglePrice;
@@ -84,11 +93,11 @@ namespace HardwareStore.BusinessLogic
                         dailySales.Quantity = InvoiceItem.Quantity;
                         dailySales.SinglePrice = InvoiceItem.SinglePrice;
                         dailySales.Total = InvoiceItem.Total;
-                        lis.Add(dailySales);
+                        DailySalesList.Add(dailySales);
                     }
                 }
             }
-            return lis;
+            return DailySalesList;
         }
 
         public string StatusText(bool IsChecked)
@@ -111,13 +120,25 @@ namespace HardwareStore.BusinessLogic
 
         public void Delete(string Id)
         {
-            var item = this.officeStoreContext.Items.First(a => a.Id == Id);
-            foreach (var item2 in this.officeStoreContext.InvoiceItems.Where(a => a.ItemId == item.Id))
+            var ItemToDelete = this.officeStoreContext.Items.First(a => a.Id == Id);
+            foreach (var CurrentItem in this.officeStoreContext.InvoiceItems.Where(a => a.ItemId == ItemToDelete.Id))
             {
-                this.officeStoreContext.InvoiceItems.Remove(item2);
+                //Deletes item info everywher from the database
+                this.officeStoreContext.InvoiceItems.Remove(CurrentItem);
             }
-            this.officeStoreContext.Items.Remove(item);
+            this.officeStoreContext.Items.Remove(ItemToDelete);
             this.officeStoreContext.SaveChanges();
+        }
+
+        public double GenerateProfitOfTheDay(List<DailySales> dailySalesList)
+        {
+            double Total = 0d;
+            foreach (var item in dailySalesList)
+            {
+                var DataBaseItem = this.officeStoreContext.Items.First(a => a.Id == item.ProductNumber);
+                Total += (DataBaseItem.SalesPrice - DataBaseItem.OriginalPrice)*item.Quantity;
+            }
+            return Total;
         }
     }
 }

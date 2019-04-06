@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrom));
+            this.LogoPicBox = new System.Windows.Forms.PictureBox();
             this.StoreItemsPicBox = new System.Windows.Forms.PictureBox();
             this.NewInvoiceBut = new System.Windows.Forms.PictureBox();
             this.NewEmployeeBut = new System.Windows.Forms.PictureBox();
             this.DailySalesBut = new System.Windows.Forms.PictureBox();
             this.AddItemBut = new System.Windows.Forms.PictureBox();
             this.StoreInfoBut = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreItemsPicBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewInvoiceBut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewEmployeeBut)).BeginInit();
@@ -42,6 +44,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.AddItemBut)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreInfoBut)).BeginInit();
             this.SuspendLayout();
+            // 
+            // LogoPicBox
+            // 
+            this.LogoPicBox.Image = ((System.Drawing.Image)(resources.GetObject("LogoPicBox.Image")));
+            this.LogoPicBox.Location = new System.Drawing.Point(266, 57);
+            this.LogoPicBox.Name = "LogoPicBox";
+            this.LogoPicBox.Size = new System.Drawing.Size(724, 111);
+            this.LogoPicBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.LogoPicBox.TabIndex = 6;
+            this.LogoPicBox.TabStop = false;
+            this.LogoPicBox.MouseLeave += new System.EventHandler(this.LogoPicBox_MouseLeave);
+            this.LogoPicBox.MouseMove += new System.Windows.Forms.MouseEventHandler(this.LogoPicBox_MouseMove);
             // 
             // StoreItemsPicBox
             // 
@@ -127,6 +141,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(49)))), ((int)(((byte)(60)))));
             this.ClientSize = new System.Drawing.Size(1282, 653);
+            this.Controls.Add(this.LogoPicBox);
             this.Controls.Add(this.StoreItemsPicBox);
             this.Controls.Add(this.NewInvoiceBut);
             this.Controls.Add(this.NewEmployeeBut);
@@ -136,7 +151,8 @@
             this.MaximizeBox = false;
             this.Name = "MainFrom";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Main";
+            this.Text = "Main Menu";
+            ((System.ComponentModel.ISupportInitialize)(this.LogoPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.StoreItemsPicBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewInvoiceBut)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NewEmployeeBut)).EndInit();
@@ -155,5 +171,6 @@
         private System.Windows.Forms.PictureBox DailySalesBut;
         private System.Windows.Forms.PictureBox StoreItemsPicBox;
         private System.Windows.Forms.PictureBox NewInvoiceBut;
+        private System.Windows.Forms.PictureBox LogoPicBox;
     }
 }

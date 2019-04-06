@@ -15,9 +15,9 @@ namespace HardwareStore.View
 {
     public partial class NewItemForm : Form
     {
-        UpdateCreateSalesReportBLL updateCreateSalesReportBLL = new UpdateCreateSalesReportBLL();
-        // private string FirsBarcode;
+        UpdateCreateSalesReportBLL updateCreateSalesReportBLL= new UpdateCreateSalesReportBLL();
         Items Item;
+        //Keeps the item data
         StoreItemsForm StoreItemsForm;
 
         public NewItemForm()
@@ -25,6 +25,7 @@ namespace HardwareStore.View
             InitializeComponent();
             this.Item = new Items();
             this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.ActiveControl = this.BarcodeTxtBox;
         }
 
         public NewItemForm(Items Item)
@@ -43,21 +44,23 @@ namespace HardwareStore.View
 
             string BarcodeText = this.BarcodeTxtBox.Text;
 
-            if (!this.updateCreateSalesReportBLL.IsItemExists(Item.Id))
+            if (!this.updateCreateSalesReportBLL.IsItemExists(Item.Id))//Checks if item not exists
             {
+                //Creates new item
                 if (!Validate(this.BarcodeTxtBox.Text, this.ProductNameTxtBox.Text,this.OriginalPriceTxtBox.Text,
                     this.SalesPriceTxtBox.Text,this.QuantityTxtBox.Text))
                 {
-                    this.updateCreateSalesReportBLL.CreateItem(this.ToClass());
+                    this.updateCreateSalesReportBLL.CreateItem(this.ToClass());//Sent it to the BLL
                     ClearDataFromTxtBoxes();
                 }
             }
             else
             {
+                //Updates the item
                 if (!Validate(this.BarcodeTxtBox.Text, this.ProductNameTxtBox.Text,this.OriginalPriceTxtBox.Text,
                     this.SalesPriceTxtBox.Text, this.QuantityTxtBox.Text))
                 {
-                    this.updateCreateSalesReportBLL.UpdateItem(ToClass(), Item.Id);
+                    this.updateCreateSalesReportBLL.UpdateItem(ToClass(), Item.Id);//Sent to BLL
                     GenerateForm();
                 }
             }
@@ -65,28 +68,16 @@ namespace HardwareStore.View
 
         private void GenerateForm()
         {
+            //Creates new form and closes the old one
             this.StoreItemsForm = new StoreItemsForm();
             this.Hide();
             this.StoreItemsForm.ShowDialog();
             this.Close();
         }
 
-
-
-        private void BarcodeTxtBox_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                this.ActiveControl = ProductNameTxtBox;
-                ProductNameTxtBox.Focus();
-            }
-
-        }
-
-
-
         private void ClearDataFromTxtBoxes()
         {
+            //clears the info from all the fields
             this.BarcodeTxtBox.ResetText();
             this.ProductNameTxtBox.ResetText();
             this.OriginalPriceTxtBox.ResetText();
@@ -97,6 +88,7 @@ namespace HardwareStore.View
 
         private void PasteItemInfo(Items Item)
         {
+            //Paste the info from the class to the form
             this.BarcodeTxtBox.Text = Item.Id;
             this.ProductNameTxtBox.Text = Item.ProductName;
             this.OriginalPriceTxtBox.Text = Item.OriginalPrice.ToString();
@@ -109,6 +101,7 @@ namespace HardwareStore.View
 
         private Items ToClass()
         {
+            //Gets the from the field and converts it to class
             Items item = new Items()
             {
                 Id = this.BarcodeTxtBox.Text,
@@ -179,6 +172,13 @@ namespace HardwareStore.View
             return IsInvalid;
         }
 
-   
+        private void BarcodeTxtBox_KeyDown_1(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.ActiveControl = ProductNameTxtBox;
+                ProductNameTxtBox.Focus();
+            }
+        }
     }
 }

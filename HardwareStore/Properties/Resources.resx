@@ -142,6 +142,9 @@
   <data name="Item2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Item2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Layer_logo_form" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Layer_logo_form.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Not_Selected" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Not Selected.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -153,5 +156,8 @@
   </data>
   <data name="StoreInfo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\StoreInfo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="without" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\without.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

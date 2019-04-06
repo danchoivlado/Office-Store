@@ -144,6 +144,7 @@
             this.BarcodeTxtBox.Size = new System.Drawing.Size(319, 44);
             this.BarcodeTxtBox.TabIndex = 28;
             this.BarcodeTxtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.BarcodeTxtBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.BarcodeTxtBox_KeyDown_1);
             // 
             // ProductNameTxtBox
             // 

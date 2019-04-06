@@ -143,6 +143,16 @@ namespace HardwareStore.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Layer_logo_form {
+            get {
+                object obj = ResourceManager.GetObject("Layer_logo_form", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Not_Selected {
             get {
                 object obj = ResourceManager.GetObject("Not_Selected", resourceCulture);
@@ -176,6 +186,16 @@ namespace HardwareStore.Properties {
         internal static System.Drawing.Bitmap StoreInfo1 {
             get {
                 object obj = ResourceManager.GetObject("StoreInfo1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap without {
+            get {
+                object obj = ResourceManager.GetObject("without", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

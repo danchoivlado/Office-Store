@@ -15,17 +15,16 @@ namespace HardwareStore.View
     public partial class RegisterForm : Form
     {
         RegisterLoginInfoBLL registerLoginBLL;
-        private const string AdminPassword = "3073";
+        private const string AdminPassword = "0878752578";
 
 
         public RegisterForm()
         {
             InitializeComponent();
-            this.ActiveControl = FirstNameTxtBox;
-            FirstNameTxtBox.Focus();
+            this.ActiveControl = this.FirstNameTxtBox;
             this.registerLoginBLL = new RegisterLoginInfoBLL();
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
-            this.AdminPasswordTxtBox._TextBox.PasswordChar = '*';
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;//Disables resizing
+            this.AdminPasswordTxtBox._TextBox.PasswordChar = '*'; 
             this.PasswordTxtBox._TextBox.PasswordChar = '*';
 
         }
@@ -33,11 +32,11 @@ namespace HardwareStore.View
         private void SignUpBut_Click(object sender, EventArgs e)
         {
             if (!Validate(this.FirstNameTxtBox.text,
-               this.LastNameTxtBox.text,this.TownTxtBox.text, this.PasswordTxtBox.text))
+               this.LastNameTxtBox.text,this.TownTxtBox.text, this.PasswordTxtBox.text)) //Checks for invalid fields
             {
                 registerLoginBLL.Register(FirstNameTxtBox.text,
                     LastNameTxtBox.text, TownTxtBox.text, PasswordTxtBox.text);
-                //send the info to BusinessLogic
+                //Sent to BLL all the info from the form
                 this.Close();
             }
         }

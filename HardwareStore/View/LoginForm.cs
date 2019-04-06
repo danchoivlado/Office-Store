@@ -9,7 +9,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using HardwareStore.BusinessLogic;
-using HardwareStore.Database;
 using HardwareStore.View;
 
 namespace HardwareStore
@@ -25,16 +24,17 @@ namespace HardwareStore
         {
             InitializeComponent();
             this.registerLoginBLL = new RegisterLoginInfoBLL();
-            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;//Disables resizing
             this.PasswordTxtBox._TextBox.PasswordChar = '*';
         }
 
 
         private void SignInBut_Click(object sender, EventArgs e)
         {
-            if (this.registerLoginBLL.Login(this.NameTxtBox.text, this.PasswordTxtBox.text))
+            if (this.registerLoginBLL.Login(this.NameTxtBox.text, this.PasswordTxtBox.text))//If user exists
             {
                 this.registerLoginBLL.SaveLogined(this.NameTxtBox.text);
+                //Send to BLL
                 MainForm = new MainFrom();
                 this.Hide();
                 MainForm.ShowDialog();
@@ -46,6 +46,7 @@ namespace HardwareStore
 
         private void SignUpBut_Click(object sender, EventArgs e)
         {
+            //Creates new form
             this.RegisterForm = new RegisterForm();
             RegisterForm.ShowDialog();
         }

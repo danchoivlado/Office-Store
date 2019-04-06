@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HardwareStore.BusinessLogic
 {
-    class DailySales
+   public class DailySales
     {
         public string ProductNumber { get; set; }
         public string Description { get; set; }

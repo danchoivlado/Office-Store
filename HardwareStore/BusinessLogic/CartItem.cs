@@ -13,13 +13,24 @@ namespace HardwareStore.BusinessLogic
         public int Quantity { get; set; }
         public double SinglePrice { get; set; }
         public double Total { get; set; }
-       // public int InvoiceId { get; set; }
         OfficeStoreContext officestoreContext;
 
         public CartItem()
         {
 
         }
+
+        public CartItem(string Barcode, string Quantity,OfficeStoreContext MockContext)
+        {
+            this.officestoreContext = MockContext;
+            var Item = this.officestoreContext.Items.First(a => a.Id == Barcode);
+
+            this.Barcode = Barcode;
+            this.Quantity = int.Parse(Quantity);
+            this.SinglePrice = Math.Round(Item.SalesPrice, 2);
+            this.Total = Math.Round(this.Quantity * this.SinglePrice, 2);
+        }
+
         public CartItem(string Barcode, string Quantity)
         {
             this.officestoreContext = new OfficeStoreContext();
@@ -27,14 +38,19 @@ namespace HardwareStore.BusinessLogic
 
             this.Barcode = Barcode;
             this.Quantity = int.Parse(Quantity);
-            this.SinglePrice = Item.SalesPrice;
-            this.Total = this.Quantity*this.SinglePrice;
-            //this.InvoiceId = InvoiceId;
+            this.SinglePrice = Math.Round(Item.SalesPrice,2);
+            this.Total =Math.Round(this.Quantity*this.SinglePrice,2);
         }
 
         public void QuantityMinus()
         {
             this.Quantity--;
+            this.Total = this.Quantity * this.SinglePrice;
+        }
+
+        public void QuantityPlus()
+        {
+            this.Quantity++;
             this.Total = this.Quantity * this.SinglePrice;
         }
     }
